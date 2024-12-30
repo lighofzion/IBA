@@ -5,8 +5,98 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+document.addEventListener("DOMContentLoaded", function () {
+  const videoCarousel = document.getElementById("videoCarousel");
+  const leftArrow = document.getElementById("carouselLeft");
+  const rightArrow = document.getElementById("carouselRight");
+  const videoModal = document.getElementById("videoModal");
+  const videoPlayer = document.getElementById("videoPlayer");
+  const modalClose = document.getElementById("modalClose");
 
-(function() {
+  // Example videos (replace with your own data)
+  const videos = [
+    { id: "MgpaULjZOl8" },
+    { id: "SNNTVD_dTxU" },
+    { id: "1Gh90HUejv8" },
+    { id: "RZeJTtUrhwA" },
+    { id: "gCGs6t3tOCU" },
+    { id: "I45WeEjqmE4" }
+  ];
+
+  // Populate the carousel
+  videos.forEach(video => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="https://img.youtube.com/vi/${video.id}/0.jpg">
+    `;
+    card.addEventListener("click", () => {
+      openVideo(video.id);
+    });
+    videoCarousel.appendChild(card);
+  });
+
+  // Handle left/right navigation
+  let currentScroll = 0;
+
+  function updateScroll(direction) {
+    const visibleWidth = videoCarousel.offsetWidth; // Width of visible area
+    const scrollableWidth = videoCarousel.scrollWidth; // Total scrollable width
+    const cardWidth = videoCarousel.children[0].offsetWidth + 16; // Card width + gap
+
+    if (direction === "right") {
+      if (currentScroll >= scrollableWidth - visibleWidth) {
+        // Wrap around to the first card
+        currentScroll = 0;
+      } else {
+        // Scroll right
+        currentScroll = Math.min(currentScroll + cardWidth, scrollableWidth - visibleWidth);
+      }
+    } else if (direction === "left") {
+      if (currentScroll <= 0) {
+        // Wrap around to the last card
+        currentScroll = scrollableWidth - visibleWidth;
+      } else {
+        // Scroll left
+        currentScroll = Math.max(currentScroll - cardWidth, 0);
+      }
+    }
+
+    videoCarousel.scrollTo({ left: currentScroll, behavior: "smooth" });
+  }
+
+  leftArrow.addEventListener("click", () => updateScroll("left"));
+  rightArrow.addEventListener("click", () => updateScroll("right"));
+
+  // Open video in modal
+  function openVideo(videoId) {
+    videoModal.style.display = "flex";
+    videoPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  }
+
+  // Close video modal
+  function closeModal() {
+    videoModal.style.display = "none";
+    videoPlayer.src = ""; // Stop video playback
+  }
+
+  // Close modal when clicking outside of it or on the close button
+  videoModal.addEventListener("click", (e) => {
+    if (e.target === videoModal || e.target === modalClose) {
+      closeModal();
+    }
+  });
+
+  // Close modal on Escape key press
+  videoModal.addEventListener("keyup", (e) => {
+    if (e.key === "Escape") {
+      closeModal(); // Close modal on Escape key press
+    }
+  });
+
+});
+
+(function () {
   "use strict";
 
   /**
@@ -50,7 +140,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
