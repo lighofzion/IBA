@@ -7,15 +7,27 @@
   <title>IBA</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
   <!-- Favicons -->
   <!-- <link href="assets/img/favicon.png" rel="icon">-->
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +39,23 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
 </head>
+<style>
+  #suggestionsList {
+    background-color: white;
+    max-height: 200px;
+
+    z-index: 999;
+  }
+
+  #suggestionsList li {
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  #suggestionsList li:hover {
+    background-color: #ddd;
+  }
+</style>
 
 <body class="index-page">
 
@@ -41,14 +70,14 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-            <li><a href="index.html#hero">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#services">IBA Studies</a></li>
-            <li><a href="index.html#features">Features</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <li><a href="program.html" class="active">Program</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-          </ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">IBA Studies</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="program.html" class="active">Program</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+        </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
@@ -58,85 +87,207 @@
   <main class="main">
 
     <!-- Program Section -->
-    <section id="program" class="program section">
+    <!-- Program Section -->
+    <section id="program" class="program section py-5">
+      <div class="container">
 
-        <div class="container">
-  
-            <div class="row gy-4">
-    
-              <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-                <h3>Our Program</h3>
-                <p class="fst-italic">
-                  Our program is a fully-online learning experience offered to anyone who desires to perceive the deep things in the Bible and gain full knowledge and understanding of God and His Word. This time-and cost-efficient certificate offers a foundational theological education that is fit for a wide range of students–including pastors, church leaders, elders, ministers, or ordinary church members without formal training.
-                </p>
-              </div>
-              <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
-                    <img src="assets/img/BibleStudy.jpg" class="img-fluid" alt="">
-                </div>
-    
-              </div>
-    
-
-            <div class="row gy-4">
-    
-                <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
-                    <img src="assets/img/BibleStudy1.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-                  <h1>There are two courses available for registration.</h1>
-                  <p class="fst-italic">
-                    The Comprehensive Bible Course begins with the basics of the Bible and the true meaning of the secrets of the kingdom of heaven, and then focuses on a general overview of the Old and New Testament, covering the main books of the Bible by its main points, as well as the book of Revelation chapter by chapter. The Seminary Course is a course that includes the Comprehensive Bible Course, but also includes additional in-depth studies that allow you to become a missionary for HZTC. You can apply for either course regardless of your former experience in ministry. Both will provide its graduates with a form of certification.
-                  </p>
-
-<h3>1. The Comprehensive Bible Course</h3>
-<p>An exhaustive study of the Bible through a systematic curriculum</p>
-
-<p>Description: This full-scale study of the Bible introduces the students to everything to master when it comes to learning the Bible. It covers the basics of the Holy Scriptures, including the study of Man with Spirit; Religion; Basic Knowledge of the Bible; and other topic from Old testament and New Testament, emphasizing how these ancient writings point to our lives and knowledge of the Bible. This course also introduces the true meaning of the secrets of the kingdom of heaven, as well as details about the major books of the Bible. It also includes a breakdown of the New Testament book of prophecy, Revelation. You will have mastered the Bible after finishing this course. You will be provided with a certificate of completion.</p>
-
-<h3>2. Seminary Course</h3>
-<p>Equipping you with a teacher’s level of understanding after your completion of the Comprehensive Bible Course</p>
-
-<p>Description: Seminary Course is the Comprehensive Bible Course, with one or two more years of added training that allows you to attain the level of a teacher of the curriculum. In this course, you will learn how to digest the material you learned from the Comprehensive Bible Course, allowing you to become a self-sufficient educator of the studies. You will be provided with a Bachelor’s degree in Theology.</p>
-
-
-                </div>
-      
-                </div>
-
-            <!-- <div class="row gy-4">
-    
-                <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-                  <h1>There are two courses available for registration.</h1>
-                  <p class="fst-italic">
-                    The Comprehensive Bible Course begins with the basics of the Bible and the true meaning of the secrets of the kingdom of heaven, and then focuses on a general overview of the Old and New Testament, covering the main books of the Bible by its main points, as well as the book of Revelation chapter by chapter. The Seminary Course is a course that includes the Comprehensive Bible Course, but also includes additional in-depth studies that allow you to become a missionary for HZTC. You can apply for either course regardless of your former experience in ministry. Both will provide its graduates with a form of certification.
-                  </p>
-                </div>
-                <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
-                      <img src="assets/img/BibleStudy2.jpg" class="img-fluid" alt="">
-                  </div>
-      
-                </div>
-      
-  
-            </div> -->
-
-<div  class="gy-4">
-            <h2>Why Pursue a Certificate</h2>
-            <h3>in International Bible Academy?</h3>
-            <h4>1. Enjoy the Flexibility of a Fully Online and Time Efficient program</h4>
-            <p>You can pursue this fully online program at you own pace and elect to take its online classes.</p>
-            <h4>2. All the courses are free.</h4>
-            <p>For one, we make the cost of operations as efficient as possible. Classes focus more on what’s being taught rather than the classroom itself, staff members share offices, and the faculty teach moved by our vision more than a salary.
-                But, free tuition actually does come at a price—in the form of countless prayers and dedicated sacrifice, from people who also believe that learning about God should come free-of-cost.</p>
-                <h4>3. Receive deeper lessons about God and His Word and gain knowledge.</h4>
-            <p>Dive into the Old and New Testaments, including each book’s history, era, purpose and background. Understand the basics of how to interpret and study the Scriptures correctly. Examine the central doctrines of the Christian faith—from the theology of God to Eschatology to the afterlife.</p>
+        <!-- Header Section -->
+        <div class="text-center mb-5">
+          <h2 class="section-title display-4 fw-bold text-gradient">Transform Your Faith. Elevate Your Life.</h2>
+          <p class="section-subtitle fst-italic text-muted">
+            Immerse yourself in a world of spiritual growth, dynamic learning, and leadership development with our
+            cutting-edge Bible study programs.
+          </p>
         </div>
+
+        <!-- Program Overview -->
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="fw-bold text-dark">What We Offer</h3>
+            <p class="fst-italic text-muted">
+              Unlock deep insights into Scripture, theology, and faith with a tailored online experience. Whether you’re
+              looking for personal spiritual growth or to take your leadership skills to the next level, our flexible
+              courses are designed for your unique journey.
+            </p>
+            <ul class="list-unstyled mt-3 text-muted">
+              <li><i class="fas fa-check-circle text-success me-2"></i> Study at your pace, from anywhere, anytime</li>
+              <li><i class="fas fa-check-circle text-success me-2"></i> Expert guidance with a cutting-edge learning
+                platform</li>
+              <li><i class="fas fa-check-circle text-success me-2"></i> Earn globally recognized certifications to
+                elevate your future</li>
+            </ul>
+          </div>
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/img/BibleStudy1.jpg"
+              style="max-height: 300px; width: 100%; object-fit: cover; border-radius: 20px;"
+              class="img-fluid shadow-lg border border-light" alt="Explore Our Bible Study Program">
+          </div>
+        </div>
+
+
+    </section>
+
+
+    <section id="courses" class="courses section py-5">
+      <div class="container">
+
+        <!-- Header Section -->
+        <div class="text-center mb-5">
+          <h2 class="section-title display-4 fw-bold text-gradient">Our Bible Courses</h2>
+          <p class="section-subtitle fst-italic text-muted">
+            Enhance your understanding of the Scriptures through our well-structured Bible study courses.
+          </p>
+        </div>
+
+        <!-- Course Cards -->
+        <div class="row gy-4">
+
+          <!-- Course Card 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card border-0 shadow rounded">
+              <img src="assets/img/course3.webp" class="card-img-top rounded-top" alt="Bible Study Basics">
+              <div class="card-body">
+                <h4 class="card-title fw-bold">Bible Study Basics</h4>
+                <p class="card-text text-muted">
+                  A foundational course covering key themes and stories in the Bible, perfect for beginners starting
+                  their faith journey.
+                </p>
+                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#courseModal">Course
+                  Details →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 2 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 shadow rounded">
+              <img src="assets/img/course2.webp" class="card-img-top rounded-top" alt="Old Testament Studies">
+              <div class="card-body">
+                <h4 class="card-title fw-bold">Old Testament Studies</h4>
+                <p class="card-text text-muted">
+                  Dive deep into the Old Testament, exploring the history, prophecies, and wisdom literature that shaped
+                  biblical faith.
+                </p>
+                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#courseModal">Course
+                  Details →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card border-0 shadow rounded">
+              <img src="assets/img/course1.webp" class="card-img-top rounded-top" alt="New Testament Insights">
+              <div class="card-body">
+                <h4 class="card-title fw-bold">New Testament Insights</h4>
+                <p class="card-text text-muted">
+                  Learn about the life of Jesus, the growth of the early church, and key theological teachings in the
+                  New Testament.
+                </p>
+                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#courseModal">Course
+                  Details →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-5">
+        <a href="#enroll" class="btn btn-primary btn-lg px-5 py-3 rounded-3 shadow-lg" data-bs-toggle="modal"
+          data-bs-target="#courseModal">Start Your Journey Today</a>
+      </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="courseModalLabel">Sign Up for the Course</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="courseForm">
+              <!-- Name Field -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+              </div>
+
+              <!-- Mobile Number Field -->
+              <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile Number</label>
+                <input type="tel" class="form-control" id="mobile" placeholder="Enter your mobile number"
+                  pattern="[0-9]{10}" required>
+              </div>
+
+              <!-- City Field -->
+              <div class="mb-3">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
+              </div>
+
+              <!-- Course Dropdown -->
+              <div class="mb-3">
+                <label for="course" class="form-label">Select Course</label>
+                <select class="form-select" id="course" required>
+                  <option value="" selected disabled>Select a course</option>
+                  <option value="Bible Study Basics">Bible Study Basics</option>
+                  <option value="Old Testament Studies">Old Testament Studies</option>
+                  <option value="New Testament Insights">New Testament Insights</option>
+                </select>
+              </div>
+
+              <!-- Referral Name Field with Auto-Suggestions -->
+              <div class="mb-3" style="position: relative;">
+                <label for="referral" class="form-label">Referral Name (Optional)</label>
+                <input type="text" class="form-control" id="referral" placeholder="Start typing a referral name..."
+                  oninput="getSuggestions()">
+                <ul id="suggestionsList"
+                  style="position: absolute; top: 100%; left: 0; right: 0; background-color: white; border: 1px solid #ccc; z-index: 1000; margin-top: 5px; padding: 0; list-style-type: none;">
+                </ul>
+              </div>
+
+              <!-- Additional Information -->
+              <div class="mb-3">
+                <label for="info" class="form-label">Additional Information (Optional)</label>
+                <textarea class="form-control" id="info" rows="3"
+                  placeholder="Share any specific expectations or questions you have..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button id="submitBtn" class="btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-      </section><!-- /program Section -->
-  
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">Already Registered</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>You are already registered for this course. Someone will contact you soon!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
   </main>
+
+
 
   <footer id="footer" class="footer light-background">
 
@@ -158,7 +309,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -171,6 +323,130 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    const referralNames = [
+      "John Doe", "Jane Smith", "Paul Johnson", "Emily Davis", "Michael Brown",
+      "Alice Cooper", "Bob Marley", "Charlie Brown", "Daniel Craig", "Ella Fitzgerald"
+    ];
+
+    function getSuggestions() {
+      const input = document.getElementById("referral").value;
+      const suggestionsList = document.getElementById("suggestionsList");
+
+      if (input.length > 1) {
+        const filteredNames = referralNames.filter(function (name) {
+          return name.toLowerCase().includes(input.toLowerCase());
+        });
+
+        // Clear the previous suggestions
+        suggestionsList.innerHTML = "";
+
+        if (filteredNames.length > 0) {
+          filteredNames.forEach(function (name) {
+            const li = document.createElement("li");
+            li.textContent = name;
+            li.onclick = function () {
+              document.getElementById("referral").value = name; // Set input to selected name
+              suggestionsList.innerHTML = ""; // Clear suggestions
+            };
+            suggestionsList.appendChild(li);
+          });
+        } else {
+          suggestionsList.innerHTML = "<li>No matches found</li>";
+        }
+      } else {
+        suggestionsList.innerHTML = ""; // Clear suggestions if input is short
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/umd/supabase.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const supabaseUrl = 'https://fcxdbxvuxvuoownippzm.supabase.co'; // Replace with your Supabase URL
+      const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZjeGRieHZ1eHZ1b293bmlwcHptIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNTAxMTQzNSwiZXhwIjoyMDUwNTg3NDM1fQ.HH3H1ZrB8tnyDSwsCO3Yj-YChJ9nYRKvnLxQ-Iw_xTA'; // Replace with your Supabase Key
+      const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+      document.getElementById('courseForm').addEventListener('submit', async function (e) {
+        e.preventDefault(); // Prevent default form submission behavior
+        console.log("Form Submitted");
+
+        const studentData = {
+          name: document.getElementById('name').value,
+          phone_number: document.getElementById('mobile').value,
+          networker: document.getElementById('referral').value || null,
+          maintainer: null,
+          reg_number: null,
+          city: document.getElementById('city').value || null,
+          course_type: document.getElementById('course').value || null,
+          additional_info: document.getElementById('info').value || null,
+        };
+
+        // Check for duplicate registration
+        const isDuplicate = await checkDuplicateStudent(studentData.phone_number);
+
+        if (isDuplicate) {
+          // If duplicate found, show success modal for already registered user
+          $('#courseModal').modal('hide');  // Close the form modal
+          $('#successModal').modal('show');  // Show success modal
+          return;
+        }
+
+        // Insert the student data into Supabase if no duplicate is found
+        const isSuccessful = await insertStudentData(studentData);
+
+        if (isSuccessful) {
+          // After successful insertion, show the success modal
+          $('#courseModal').modal('hide');  // Close the form modal
+          $('#successModal').modal('show');  // Show success modal
+        }
+      });
+
+      async function checkDuplicateStudent(phoneNumber) {
+        try {
+          const { data, error } = await supabaseClient
+            .from('students_cp') // Update this table name if needed
+            .select('*')
+            .eq('phone_number', phoneNumber);
+
+          if (error) {
+            console.error('Error checking for duplicate student:', error.message);
+            return false;
+          }
+
+          // If any records are returned, it's a duplicate
+          return data && data.length > 0;
+        } catch (err) {
+          console.error('Unexpected error during duplicate check:', err);
+          return false;
+        }
+      }
+
+      async function insertStudentData(studentData) {
+        try {
+          const { data, error } = await supabaseClient
+            .from('students_cp') // Update this table name if needed
+            .insert([studentData]);
+
+          if (error) {
+            console.error('Error inserting student:', error.message, error.details);
+            alert('Error: Could not submit the data. Please try again.');
+            return false;
+          } else {
+            console.log('Student successfully inserted:', data);
+            return true;
+          }
+        } catch (err) {
+          console.error('Unexpected error:', err);
+          alert('An unexpected error occurred. Please try again.');
+          return false;
+        }
+      }
+    });
+
+
+  </script>
+
 
 </body>
 
