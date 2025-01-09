@@ -268,12 +268,6 @@
                     </select>
                   </div>
 
-                  <!-- Religion Field -->
-                  <div class="mb-3">
-                    <label for="religion" class="form-label">Religion</label>
-                    <input type="text" class="form-control" id="religion" placeholder="Enter your religion">
-                  </div>
-
                 </div>
 
                 <!-- Right Column -->
@@ -343,12 +337,6 @@
                       <option value="ENGLISH">English</option>
                     </select>
                   </div>
-
-                  <!-- Consent Checkbox -->
-
-
-                  <!-- Submit Button -->
-
                 </div>
 
                 <!-- Full-Width Fields: Address and Additional Information -->
@@ -498,9 +486,9 @@
         <a href=""><i class="bi bi-instagram"></i></a>
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
-      <div class="credits">
+      <!-- <div class="credits">
         Designed by <a href="#">IBA Team</a>
-      </div>
+      </div> -->
     </div>
 
   </footer>
@@ -611,11 +599,8 @@
         const studentData = {
           name: document.getElementById('name')?.value || null,
           phone_number: document.getElementById('phone_number')?.value || null,
-          alternate_contact_number: document.getElementById('alternate_contact_number')?.value || null,
           email: document.getElementById('email')?.value || null,
           networker: document.getElementById('networker')?.value || null,
-          referrer: document.getElementById('referrer')?.value || null,
-          referrer_email: document.getElementById('referrer_email')?.value || null,
           city: document.getElementById('city')?.value || null,
           district: document.getElementById('district')?.value || null,
           state: document.getElementById('state')?.value || null,
@@ -625,16 +610,12 @@
           job_occupation: document.getElementById('job_occupation')?.value || null,
           gender: document.getElementById('gender')?.value || null,
           marital_status: document.getElementById('marital_status')?.value || null,
-          religion: document.getElementById('religion')?.value || null,
           years_of_faith: parseInt(document.getElementById('years_of_faith')?.value) || null,
           education_level: document.getElementById('education_level')?.value || null,
           course_type: document.getElementById('course_type')?.value || null,
           course_language: document.getElementById('course_language')?.value || null,
-          preferred_language: document.getElementById('preferred_language')?.value || null,
-          how_did_you_hear: document.getElementById('how_did_you_hear')?.value || null,
           address: document.getElementById('address')?.value || null,
-          additional_info: document.getElementById('additional_info')?.value || null,
-          additional_notes: document.getElementById('additional_notes')?.value || null
+          additional_info: document.getElementById('additional_info')?.value || null
         };
 
         // Check for duplicate registration
@@ -700,6 +681,16 @@
         }
       }
     });
+
+    // Listen for the modal being hidden to refresh the page
+    $('#successModal').on('hidden.bs.modal', function () {
+      location.reload();  // Reload the page when the modal is closed
+    });
+    $('#alreadyRegisteredModal').on('hidden.bs.modal', function () {
+      setTimeout(function () {
+        location.reload();  // Reload the page when the modal is closed
+      }); // Delay the reload to ensure modal actions complete
+    });
   </script>
 
 
@@ -707,11 +698,16 @@
     document.addEventListener("DOMContentLoaded", () => {
       // Check if the URL hash is '#registration'
       if (window.location.hash === '#registration') {
+        // Reset the form fields
+        document.getElementById('courseForm').reset();  // Reset all form fields
+        document.getElementById('suggestionsList').innerHTML = '';  // Clear suggestions if any
+
         // Open the modal
         const registrationModal = new bootstrap.Modal(document.getElementById('courseModal'));
         registrationModal.show();
       }
     });
+
 
 
 
