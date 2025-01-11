@@ -403,14 +403,46 @@
                 </div>
               </div>
 
-              <!-- Consent -->
-              <div class="alert alert-info" role="alert">
-                <p>By continuing, you agree to our terms and policies.</p>
-              </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="consent" required>
-                <label class="form-check-label" for="consent">I agree to the terms and conditions</label>
+                <label class="form-check-label" for="consent">
+                  I agree to the <a href="#" data-bs-toggle="collapse" data-bs-target="#termsCollapse"
+                    aria-expanded="false" aria-controls="termsCollapse">terms and conditions</a>
+                </label>
               </div>
+              <!-- Collapsible Section for Terms and Conditions -->
+              <div class="collapse" id="termsCollapse">
+                <div class="alert alert-info" role="alert">
+                  <div class="card card-body">
+                    <h6>Terms and Conditions</h6>
+                    <p>
+                      By signing up for this course, you agree to the following:
+                    </p>
+                    <ul>
+                      <li>You will attend classes regularly.</li>
+                      <li>You consent to the collection of personal information for communication purposes.</li>
+                      <li>You may withdraw your consent at any time by contacting us.</li>
+                      <li>
+                        Our students come from various parts of the world, from various religions and denominations.
+                        To better assist you in the course, we want to get to know you.
+                      </li>
+                      <li>
+                        The following personal and basic information is required for enrollment in the education center,
+                        which will allow you to participate in the basic, intermediate, and advanced levels of Bible
+                        study
+                        classes.
+                      </li>
+                      <li>
+                        These informations will not transfer to any other person/institution and will be protected.
+                      </li>
+                      <li>
+                        For further details, please contact support.
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
 
               <button id="submitBtn" class="btn btn-primary">Submit</button>
             </form>
@@ -525,6 +557,7 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/umd/supabase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
     // Supabase setup
@@ -748,6 +781,19 @@
       document.getElementById('courseForm').addEventListener('submit', handleFormSubmission);
       setupModalCloseListeners();
       checkRegistrationHash();
+    });
+
+    var consentCheckbox = document.getElementById('consent');
+    var termsLink = document.querySelector('a[data-bs-toggle="collapse"]');
+
+    consentCheckbox.addEventListener('change', function () {
+      if (this.checked) {
+        termsLink.setAttribute('aria-expanded', 'true');
+        document.getElementById('termsCollapse').classList.add('show');
+      } else {
+        termsLink.setAttribute('aria-expanded', 'false');
+        document.getElementById('termsCollapse').classList.remove('show');
+      }
     });
   </script>
 
