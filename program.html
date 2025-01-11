@@ -467,9 +467,6 @@
         </div>
       </div>
     </div>
-
-
-
   </main>
 
 
@@ -581,70 +578,89 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/umd/supabase.min.js"></script>
 
+  <!-- Update Modal (for already registered users who update their info) -->
+
+  <!-- Update Modal (for already registered users who update their info) -->
+
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener("DOMContentLoaded", () => {
       // Supabase setup
-      const supabaseUrl = 'https://lqugerdmxqpvigfchfgz.supabase.co'; // Replace with your Supabase URL
-      const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxxdWdlcmRteHFwdmlnZmNoZmd6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNTcwOTY1OCwiZXhwIjoyMDUxMjg1NjU4fQ.rYe9asgVqtbiJmPJwb30THyM913FYwrMAnGHm_4AEDY'; // Replace with your Supabase Key
+      const supabaseUrl = "https://lqugerdmxqpvigfchfgz.supabase.co"; // Replace with your Supabase URL
+      const supabaseKey =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxxdWdlcmRteHFwdmlnZmNoZmd6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNTcwOTY1OCwiZXhwIjoyMDUxMjg1NjU4fQ.rYe9asgVqtbiJmPJwb30THyM913FYwrMAnGHm_4AEDY"; // Replace with your Supabase Key
 
       // Initialize Supabase client
       const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey, {
-        db: { schema: 'schoolmanagement' } // Custom schema
+        db: { schema: "schoolmanagement" }, // Custom schema
       });
 
       // Handle form submission
-      document.getElementById('courseForm').addEventListener('submit', async function (e) {
-        e.preventDefault(); // Prevent default form submission behavior
+      document
+        .getElementById("courseForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault(); // Prevent default form submission behavior
 
-        const studentData = {
-          name: document.getElementById('name')?.value || null,
-          phone_number: document.getElementById('phone_number')?.value || null,
-          email: document.getElementById('email')?.value || null,
-          networker: document.getElementById('networker')?.value || null,
-          city: document.getElementById('city')?.value || null,
-          district: document.getElementById('district')?.value || null,
-          state: document.getElementById('state')?.value || null,
-          nationality: document.getElementById('nationality')?.value || null,
-          age: parseInt(document.getElementById('age')?.value) || null,
-          birthdate: document.getElementById('birthdate')?.value || null,
-          job_occupation: document.getElementById('job_occupation')?.value || null,
-          gender: document.getElementById('gender')?.value || null,
-          marital_status: document.getElementById('marital_status')?.value || null,
-          years_of_faith: parseInt(document.getElementById('years_of_faith')?.value) || null,
-          education_level: document.getElementById('education_level')?.value || null,
-          course_type: document.getElementById('course_type')?.value || null,
-          course_language: document.getElementById('course_language')?.value || null,
-          address: document.getElementById('address')?.value || null,
-          additional_info: document.getElementById('additional_info')?.value || null
-        };
+          const studentData = {
+            name: document.getElementById("name")?.value || null,
+            phone_number: document.getElementById("phone_number")?.value || null,
+            email: document.getElementById("email")?.value || null,
+            networker: document.getElementById("networker")?.value || null,
+            city: document.getElementById("city")?.value || null,
+            district: document.getElementById("district")?.value || null,
+            state: document.getElementById("state")?.value || null,
+            nationality: document.getElementById("nationality")?.value || null,
+            age: parseInt(document.getElementById("age")?.value) || null,
+            birthdate: document.getElementById("birthdate")?.value || null,
+            job_occupation: document.getElementById("job_occupation")?.value || null,
+            gender: document.getElementById("gender")?.value || null,
+            marital_status: document.getElementById("marital_status")?.value || null,
+            years_of_faith:
+              parseInt(document.getElementById("years_of_faith")?.value) || null,
+            education_level:
+              document.getElementById("education_level")?.value || null,
+            course_type: document.getElementById("course_type")?.value || null,
+            course_language:
+              document.getElementById("course_language")?.value || null,
+            address: document.getElementById("address")?.value || null,
+            additional_info:
+              document.getElementById("additional_info")?.value || null,
+          };
 
-        // Check for duplicate registration
-        const isDuplicate = await checkDuplicateStudent(studentData.phone_number);
+          // Normalize the name for comparison
+          // Normalize the name for query
+          const normalizedInputName = normalizeName(studentData.name);
 
-        if (isDuplicate) {
-          // If duplicate found, show "Already Registered" modal
-          $('#courseModal').modal('hide');  // Close the form modal
-          $('#alreadyRegisteredModal').modal('show');  // Show "Already Registered" modal
-          return;
-        }
+          // Check for duplicate registration
+          const isDuplicate = await checkDuplicateStudent(studentData.phone_number, normalizedInputName);
 
-        // Insert the student data into Supabase if no duplicate is found
-        const isSuccessful = await insertStudentData(studentData);
+          if (isDuplicate) {
+            $('#courseModal').modal('hide');
+            $('#alreadyRegisteredModal').modal('show');
+            return;
+          }
 
-        if (isSuccessful) {
-          // After successful insertion, show the "Successfully Registered" modal
-          $('#courseModal').modal('hide');  // Close the form modal
-          $('#successModal').modal('show');  // Show success modal
-        }
-      });
+          const isSuccessful = await insertStudentData(studentData);
 
-      // Function to check if a student is already registered
-      async function checkDuplicateStudent(phoneNumber) {
+          if (isSuccessful) {
+            $('#courseModal').modal('hide');
+            $('#successModal').modal('show');
+          }
+        });
+
+      // Normalize name function
+      function normalizeName(name) {
+        if (!name) return '';
+        return name.trim().toLowerCase().replace(/\s+/g, '');
+      }
+
+      async function checkDuplicateStudent(phoneNumber, normalizedInputName) {
         try {
           const { data, error } = await supabaseClient
-            .from('restricted_udl_students') // Update this table name if needed
-            .select('*')
-            .eq('phone_number', phoneNumber);
+            .from('restricted_udl_students')
+            .select('name, phone_number')
+            .or(
+              `phone_number.eq.${phoneNumber},lower(replace(name, ' ', '')).eq.${normalizedInputName}`
+            );
 
           if (error) {
             console.error('Error checking for duplicate student:', error.message);
@@ -659,11 +675,10 @@
         }
       }
 
-      // Function to insert student data into Supabase
       async function insertStudentData(studentData) {
         try {
           const { data, error } = await supabaseClient
-            .from('restricted_udl_students') // Update this table name if needed
+            .from('restricted_udl_students')
             .insert([studentData]);
 
           if (error) {
@@ -682,17 +697,15 @@
       }
     });
 
-    // Listen for the modal being hidden to refresh the page
     $('#successModal').on('hidden.bs.modal', function () {
-      location.reload();  // Reload the page when the modal is closed
+      location.reload();
     });
     $('#alreadyRegisteredModal').on('hidden.bs.modal', function () {
       setTimeout(function () {
-        location.reload();  // Reload the page when the modal is closed
-      }); // Delay the reload to ensure modal actions complete
+        location.reload();
+      });
     });
   </script>
-
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
