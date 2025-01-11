@@ -659,21 +659,22 @@
             .from('restricted_udl_students')
             .select('name, phone_number')
             .or(
-              `phone_number.eq.${phoneNumber},lower(replace(name, ' ', '')).eq.${normalizedInputName}`
+              `phone_number.eq.${phoneNumber}, lower(replace(name, ' ', '')).eq.${normalizedInputName}`
             );
-
+      
           if (error) {
             console.error('Error checking for duplicate student:', error.message);
             return false;
           }
-
-          // If any records are returned, it's a duplicate
+      
+          // Check if any records match
           return data && data.length > 0;
         } catch (err) {
           console.error('Unexpected error during duplicate check:', err);
           return false;
         }
       }
+
 
       async function insertStudentData(studentData) {
         try {
