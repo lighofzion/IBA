@@ -1,5 +1,4 @@
-
 window.env = {
-    SUPABASE_URL: '{{SUPABASE_URL}}',
-    SUPABASE_KEY: '{{SUPABASE_KEY}}'
+    SUPABASE_URL: process.env.SUPABASE_URL || '',
+    SUPABASE_KEY: process.env.SUPABASE_KEY || ''
 };
