@@ -15,13 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Example videos (replace with your own data)
   const videos = [
-    { id: "MgpaULjZOl8" },
-    { id: "SNNTVD_dTxU" },
-    { id: "1Gh90HUejv8" },
-    { id: "RZeJTtUrhwA" },
-    { id: "gCGs6t3tOCU" },
-    { id: "I45WeEjqmE4" }
+    { id: "RtCHhhdKyHY" }
   ];
+
+  // Hide arrows if only one video
+  if (videos.length <= 1) {
+    leftArrow.style.display = 'none';
+    rightArrow.style.display = 'none';
+    videoCarousel.style.justifyContent = 'center';
+  }
 
   // Populate the carousel
   videos.forEach(video => {
@@ -36,37 +38,39 @@ document.addEventListener("DOMContentLoaded", function () {
     videoCarousel.appendChild(card);
   });
 
-  // Handle left/right navigation
-  let currentScroll = 0;
+  // Only set up scroll functionality if more than one video
+  if (videos.length > 1) {
+    let currentScroll = 0;
 
-  function updateScroll(direction) {
-    const visibleWidth = videoCarousel.offsetWidth; // Width of visible area
-    const scrollableWidth = videoCarousel.scrollWidth; // Total scrollable width
-    const cardWidth = videoCarousel.children[0].offsetWidth + 16; // Card width + gap
+    function updateScroll(direction) {
+      const visibleWidth = videoCarousel.offsetWidth; // Width of visible area
+      const scrollableWidth = videoCarousel.scrollWidth; // Total scrollable width
+      const cardWidth = videoCarousel.children[0].offsetWidth + 16; // Card width + gap
 
-    if (direction === "right") {
-      if (currentScroll >= scrollableWidth - visibleWidth) {
-        // Wrap around to the first card
-        currentScroll = 0;
-      } else {
-        // Scroll right
-        currentScroll = Math.min(currentScroll + cardWidth, scrollableWidth - visibleWidth);
+      if (direction === "right") {
+        if (currentScroll >= scrollableWidth - visibleWidth) {
+          // Wrap around to the first card
+          currentScroll = 0;
+        } else {
+          // Scroll right
+          currentScroll = Math.min(currentScroll + cardWidth, scrollableWidth - visibleWidth);
+        }
+      } else if (direction === "left") {
+        if (currentScroll <= 0) {
+          // Wrap around to the last card
+          currentScroll = scrollableWidth - visibleWidth;
+        } else {
+          // Scroll left
+          currentScroll = Math.max(currentScroll - cardWidth, 0);
+        }
       }
-    } else if (direction === "left") {
-      if (currentScroll <= 0) {
-        // Wrap around to the last card
-        currentScroll = scrollableWidth - visibleWidth;
-      } else {
-        // Scroll left
-        currentScroll = Math.max(currentScroll - cardWidth, 0);
-      }
+
+      videoCarousel.scrollTo({ left: currentScroll, behavior: "smooth" });
     }
 
-    videoCarousel.scrollTo({ left: currentScroll, behavior: "smooth" });
+    leftArrow.addEventListener("click", () => updateScroll("left"));
+    rightArrow.addEventListener("click", () => updateScroll("right"));
   }
-
-  leftArrow.addEventListener("click", () => updateScroll("left"));
-  rightArrow.addEventListener("click", () => updateScroll("right"));
 
   // Open video in modal
   function openVideo(videoId) {
