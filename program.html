@@ -16,9 +16,6 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 
@@ -786,6 +783,7 @@
       document.getElementById('courseForm').addEventListener('submit', handleFormSubmission);
       setupModalCloseListeners();
       checkRegistrationHash();
+      AOS.init();
     });
 
     var consentCheckbox = document.getElementById('consent');
