@@ -559,12 +559,15 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/umd/supabase.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script type="module">
-    import { getSupabaseConfig } from './assets/js/config.js';
+  <!-- Add this before your script -->
+  <script src="config.js"></script>
 
-    // Initialize Supabase client with config from environment
-    const config = getSupabaseConfig();
-    const supabaseClient = supabase.createClient(config.url, config.key);
+  <script type="module">
+    // Replace the hardcoded credentials with window.env references
+    const supabaseUrl = window.env.SUPABASE_URL;
+    const supabaseKey = window.env.SUPABASE_KEY;
+
+    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
     // Utility function to clear dropdown and set default options
     function resetDropdown(dropdownId, defaultText) {
