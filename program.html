@@ -564,8 +564,8 @@
 
   <script type="module">
     // Replace the hardcoded credentials with window.env references
-    const supabaseUrl = window.env.SUPABASE_URL;
-    const supabaseKey = window.env.SUPABASE_KEY;
+    const supabaseUrl = window.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = window.env.NEXT_PUBLIC_SUPABASE_KEY;
 
     const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
