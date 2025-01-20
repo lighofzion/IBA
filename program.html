@@ -564,8 +564,9 @@
 
   <script>
     // Supabase setup
-    const supabaseUrl = 'https://lqugerdmxqpvigfchfgz.supabase.co';
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxxdWdlcmRteHFwdmlnZmNoZmd6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNTcwOTY1OCwiZXhwIjoyMDUxMjg1NjU4fQ.rYe9asgVqtbiJmPJwb30THyM913FYwrMAnGHm_4AEDY';
+    const supabaseUrl = "{{ SUPABASE_URL }}";
+    const supabaseKey = "{{ SUPABASE_KEY }}";
+
 
     // Initialize Supabase client (only once)
     const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
@@ -579,15 +580,20 @@
     // Function to populate dropdowns
     function populateDropdown(dropdownId, data, valueKey) {
       const dropdown = document.getElementById(dropdownId);
+      const uniqueValues = new Set(); // To keep track of unique values
+
       data.forEach(item => {
-        if (item[valueKey]) {
+        const value = item[valueKey];
+        if (value && !uniqueValues.has(value)) {
+          uniqueValues.add(value); // Add to the set
           const option = document.createElement('option');
-          option.value = item[valueKey];
-          option.textContent = item[valueKey];
+          option.value = value;
+          option.textContent = value;
           dropdown.appendChild(option);
         }
       });
     }
+
 
     // Fetch course details from Supabase and populate dropdowns
     async function fetchCourseDetails() {
@@ -621,7 +627,7 @@
       const referralNames = [];
       try {
         const { data, error } = await supabaseClient
-          .from('dim_networkers')
+          .from('networker')
           .select('Name');
 
         if (error) throw new Error(error.message);
