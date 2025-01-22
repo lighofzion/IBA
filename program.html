@@ -516,7 +516,10 @@
       </div>
     </div>
 
-
+    <!-- Update the registration section ID to match the anchor -->
+    <section id="registration" class="registration-section">
+      <!-- Your registration form content -->
+    </section>
 
   </main>
 
@@ -810,6 +813,19 @@
       } else {
         termsLink.setAttribute('aria-expanded', 'false');
         document.getElementById('termsCollapse').classList.remove('show');
+      }
+    });
+  </script>
+
+  <!-- Add this script before the closing body tag -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Check if there's a hash in the URL
+      if (window.location.hash) {
+        const targetElement = document.querySelector(window.location.hash);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     });
   </script>
