@@ -6,5 +6,8 @@
         "src": "dist/**",
         "use": "@vercel/static"
       }
-    ]
+    ],
+    "scripts": {
+      "build": "node build.js"
+    }
   }

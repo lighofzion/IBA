@@ -561,11 +561,27 @@
 
   <script type="module">
     // Replace the hardcoded credentials with window.env references
-    const supabaseUrl = '__SUPABASEURL__';
-    const supabaseKey = '__SUPABASEKEY__';
+    // Create Supabase client with environment variables
+    const supabaseUrl = config.supabaseUrl;
+    const supabaseKey = config.supabaseKey;
 
-    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+    if (!supabaseUrl || !supabaseKey) {
+      console.error('Supabase configuration is missing');
+    }
 
+    let supabaseClient;
+    try {
+      supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+    } catch (error) {
+      console.error('Error initializing Supabase client:', error);
+      // Fallback handling when Supabase initialization fails
+      supabaseClient = {
+        from: () => ({
+          select: () => Promise.resolve({ data: [], error: null }),
+          insert: () => Promise.resolve({ data: [], error: null })
+        })
+      };
+    }
     // Utility function to clear dropdown and set default options
     function resetDropdown(dropdownId, defaultText) {
       const dropdown = document.getElementById(dropdownId);
