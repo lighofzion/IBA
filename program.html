@@ -562,8 +562,8 @@
   <script type="module">
     // Replace the hardcoded credentials with window.env references
     // Create Supabase client with environment variables
-    const supabaseUrl = config.supabaseUrl;
-    const supabaseKey = config.supabaseKey;
+    const supabaseUrl = "https://lqugerdmxqpvigfchfgz.supabase.co";
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxxdWdlcmRteHFwdmlnZmNoZmd6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNTcwOTY1OCwiZXhwIjoyMDUxMjg1NjU4fQ.rYe9asgVqtbiJmPJwb30THyM913FYwrMAnGHm_4AEDY";
 
     if (!supabaseUrl || !supabaseKey) {
       console.error('Supabase configuration is missing');
