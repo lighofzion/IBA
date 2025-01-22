@@ -132,10 +132,10 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
+          <!-- <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#services">IBA Studies</a></li>
-          <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#features">Features</a></li>-->
+          <li><a href="aboutus.html#contact">Contact</a></li>
           <li><a href="program.html" class="active">Program</a></li>
           <li><a href="aboutus.html">About Us</a></li>
           <!-- <li class="login-icon">
@@ -265,7 +265,7 @@
       <!-- Call to Action -->
       <div class="text-center mt-5">
         <a href="#enroll" class="btn btn-primary btn-lg px-5 py-3 rounded-3 shadow-lg" data-bs-toggle="modal"
-          data-bs-target="#courseModal">Start Your Journey Today</a>
+          data-bs-target="#courseModal">Apply Today</a>
       </div>
       </div>
     </section>
@@ -516,10 +516,7 @@
       </div>
     </div>
 
-    <!-- Update the registration section ID to match the anchor -->
-    <section id="registration" class="registration-section">
-      <!-- Your registration form content -->
-    </section>
+
 
   </main>
 
@@ -813,19 +810,6 @@
       } else {
         termsLink.setAttribute('aria-expanded', 'false');
         document.getElementById('termsCollapse').classList.remove('show');
-      }
-    });
-  </script>
-
-  <!-- Add this script before the closing body tag -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Check if there's a hash in the URL
-      if (window.location.hash) {
-        const targetElement = document.querySelector(window.location.hash);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
       }
     });
   </script>
