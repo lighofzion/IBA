@@ -1,26 +1,50 @@
 const fs = require('fs');
 const path = require('path');
 
-const buildConfig = () => {
+function ensureDirectoryExists(directory) {
+    if (!fs.existsSync(directory)) {
+        fs.mkdirSync(directory, { recursive: true });
+    }
+}
+
+function copyDirectory(source, destination) {
+    ensureDirectoryExists(destination);
+
+    const files = fs.readdirSync(source);
+
+    files.forEach(file => {
+        const sourcePath = path.join(source, file);
+        const destPath = path.join(destination, file);
+
+        if (fs.lstatSync(sourcePath).isDirectory()) {
+            copyDirectory(sourcePath, destPath);
+        } else {
+            fs.copyFileSync(sourcePath, destPath);
+        }
+    });
+}
+
+function main() {
+    // Create public directory
+    ensureDirectoryExists('public');
+
+    // Build config.js
     const config = {
         supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL || '',
         supabaseKey: process.env.NEXT_PUBLIC_SUPABASE_KEY || ''
     };
 
-    // Create the config file
     fs.writeFileSync(
-        path.join(__dirname, 'config.js'),
+        path.join(__dirname, 'public', 'config.js'),
         `export default ${JSON.stringify(config, null, 2)};`
     );
-};
 
-buildConfig();
-
-function main() {
-    if (!fs.existsSync('dist')) {
-        fs.mkdirSync('dist');
+    // Copy assets directory if it exists
+    if (fs.existsSync('assets')) {
+        copyDirectory('assets', path.join('public', 'assets'));
     }
 
+    // Copy and process HTML files
     let html = fs.readFileSync('program.html', 'utf8');
 
     const envVars = {
@@ -35,8 +59,16 @@ function main() {
         html = html.replace(placeholder, value || '');
     }
 
-    fs.writeFileSync('dist/program.html', html);
-    console.log('Build completed successfully!');
+    fs.writeFileSync('public/program.html', html);
+
+    // Copy other HTML files if they exist
+    ['index.html', 'aboutus.html'].forEach(file => {
+        if (fs.existsSync(file)) {
+            fs.copyFileSync(file, `public/${file}`);
+        }
+    });
+
+    console.log('Build completed successfully! Output directory: public');
 }
 
 main();
