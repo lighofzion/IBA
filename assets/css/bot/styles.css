@@ -377,7 +377,7 @@ header h2 {
 
     .chatbot {
         right: 0;
-        bottom: 1;
+        bottom: 0;
         height: 65%;
         width: 100%;
         transition: all 0.3s ease;
