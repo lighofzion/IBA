@@ -92,18 +92,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateResponse = async (incomingChatLi) => {
         const messageElement = incomingChatLi.querySelector("p");
         const typingIndicator = showTypingIndicator();
-
+    
         try {
             // Enrollment-related keywords
             const enrollmentKeywords = [
                 'apply', 'enrollment', 'registration', 'sign up', 'how to join', 'procedure'
             ];
-
+    
             // Check if the message is about enrollment
             const isEnrollmentQuery = enrollmentKeywords.some(keyword =>
                 userMessage.toLowerCase().includes(keyword)
             );
-
+    
             // Prepare the request to Gemini API
             const response = await fetch(API_URL, {
                 method: 'POST',
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     'Provide a brief, encouraging response about the enrollment process, highlighting its simplicity and accessibility.'
                                     :
                                     `Respond to the query: "${userMessage}" about IBA programs. 
-                                Be conversational and helpful.`
+                            Be conversational and helpful.`
                                 }
                             
                             Context for reference: ${documentContent}`
@@ -128,37 +128,41 @@ document.addEventListener('DOMContentLoaded', () => {
                     }]
                 })
             });
-
+    
             if (!response.ok) {
                 throw new Error('Gemini API request failed');
             }
-
+    
             const data = await response.json();
             const responseText = data.candidates[0]?.content?.parts[0]?.text ||
                 "Sorry, I couldn't generate a response.";
-
+    
             typingIndicator.remove();
-
+    
             // Clean up the response
             const cleanedResponseText = responseText
                 .replace(/\*\*/g, '')  // Remove bold markdown
                 .replace(/\n+/g, ' ')  // Replace multiple newlines with a single space
                 .trim();
-
+    
             // Create response container
             const responseContainer = document.createElement('div');
-
-            // Create text response
+    
+            // Create text response with automatic link detection
             const textResponse = document.createElement('p');
-            textResponse.textContent = cleanedResponseText;
+            textResponse.innerHTML = cleanedResponseText.replace(
+                /((https?:\/\/[^\s]+))/g, 
+                '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+            );
             responseContainer.appendChild(textResponse);
-
-            // Add apply button for enrollment queries
+    
+            // Improved apply button for enrollment queries
             if (isEnrollmentQuery) {
                 const applyButton = document.createElement('a');
                 applyButton.href = '/program.html#registration';
                 applyButton.textContent = 'Apply Now';
                 applyButton.classList.add('apply-btn');
+                applyButton.setAttribute('target', '_blank');
                 applyButton.style.cssText = `
                     display: inline-block;
                     margin-top: 10px;
@@ -171,11 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 responseContainer.appendChild(applyButton);
             }
-
+    
             // Replace message content with new container
             messageElement.innerHTML = '';
             messageElement.appendChild(responseContainer);
-
+    
             // Add timestamp
             const timestamp = document.createElement("div");
             timestamp.className = "chat-status";
@@ -187,9 +191,9 @@ document.addEventListener('DOMContentLoaded', () => {
             messageElement.textContent = "Oops! Something went wrong. Please try again.";
             console.error('Error:', error);
         }
-
+    
         chatbox.scrollTo(0, chatbox.scrollHeight);
-    }
+    };
 
     const handleChat = () => {
         userMessage = chatInput.value.trim();
