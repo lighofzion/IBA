@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Add apply button only for explicit enrollment queries
             if (isEnrollmentQuery) {
                 const applyButton = document.createElement('a');
-                applyButton.href = '#registration';
+                applyButton.href = 'program.html#registration';
                 applyButton.textContent = 'Start Application';
                 applyButton.classList.add('apply-btn');
                 applyButton.style.cssText = `
