@@ -62,12 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         5. IBA upholds the integrity of the Book of Revelation, believing that nothing should be added or removed from its words. We emphasize the importance of understanding and observing its teachings to be prepared for Jesus's return.
 
         6. In response to Jesus's command to feed His sheep, IBA is committed to teaching His truth, helping God's children mature spiritually, develop discernment between good and evil, and faithfully follow His commands.
-
-        Link for registration:
-        https://www.internationalbibleacademy.in/program.html#registration
-
-        address on google map:
-        https://maps.app.goo.gl/2WgEewZxkeALuAEo8
         `;
 
     const createChatLi = (message, className) => {
