@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             // Enrollment-related keywords
             const enrollmentKeywords = [
-                'apply', 'enrollment', 'registration', 'sign up', 'how to join', 'procedure'
+                'apply', 'enrollment', 'registration', 'sign up', 'how to join', 'procedure','enroll','register'
             ];
     
             // Check if the message is about enrollment
@@ -148,21 +148,17 @@ document.addEventListener('DOMContentLoaded', () => {
             // Create response container
             const responseContainer = document.createElement('div');
     
-            // Create text response with automatic link detection
+            // Create text response
             const textResponse = document.createElement('p');
-            textResponse.innerHTML = cleanedResponseText.replace(
-                /((https?:\/\/[^\s]+))/g, 
-                '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
-            );
+            textResponse.textContent = cleanedResponseText;
             responseContainer.appendChild(textResponse);
     
-            // Improved apply button for enrollment queries
+            // Add apply button only for explicit enrollment queries
             if (isEnrollmentQuery) {
                 const applyButton = document.createElement('a');
-                applyButton.href = '/program.html#registration';
-                applyButton.textContent = 'Apply Now';
+                applyButton.href = '#registration';
+                applyButton.textContent = 'Start Application';
                 applyButton.classList.add('apply-btn');
-                applyButton.setAttribute('target', '_blank');
                 applyButton.style.cssText = `
                     display: inline-block;
                     margin-top: 10px;
