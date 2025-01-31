@@ -276,128 +276,181 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-  <h5 class="modal-title" id="courseModalLabel">Sign Up for the Course</h5>
-  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body">
-  <form id="courseForm">
-    <div class="form-section">
-      <h6>Personal Details</h6>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+            <h5 class="modal-title" id="courseModalLabel">Sign Up for the Course</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="mb-3">
-            <label for="phone_number" class="form-label">Phone Number <span class="text-danger">*</span></label>
-            <input type="tel" class="form-control" id="phone_number" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-          </div>
-          <div class="mb-3">
-            <label for="city" class="form-label">City <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
-          </div>
-          <div class="mb-3">
-            <label for="job_occupation" class="form-label">Occupation <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="job_occupation" placeholder="Enter your occupation" required>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="mb-3">
-            <label for="gender" class="form-label">Gender <span class="text-danger">*</span></label>
-            <select class="form-select" id="gender" required>
-              <option value="" selected disabled>Select your gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
-              <option value="Prefer not to say">Prefer not to say</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="marital_status" class="form-label">Marital Status <span class="text-danger">*</span></label>
-            <select class="form-select" id="marital_status" required>
-              <option value="" selected disabled>Select your marital status</option>
-              <option value="Single">Single</option>
-              <option value="Married">Married</option>
-              <option value="Widowed">Widowed</option>
-              <option value="Divorced">Divorced</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="birthdate" class="form-label">Birthdate <span class="text-danger">*</span></label>
-            <input type="date" class="form-control" id="birthdate" required>
-          </div>
-          <div class="mb-3">
-            <label for="district" class="form-label">District <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="district" placeholder="Enter your district" required>
-          </div>
-          <div class="mb-3">
-            <label for="state" class="form-label">State <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="state" placeholder="Enter your state" required>
+          <div class="modal-body">
+            <form id="courseForm">
+              <!-- Personal Details Section -->
+              <div class="form-section">
+                <h6>Personal Details</h6>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="phone_number" class="form-label">Phone Number <span
+                          class="text-danger">*</span></label>
+                      <input type="tel" class="form-control" id="phone_number" placeholder="Enter your phone number"
+                        pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="city" class="form-label">City <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="job_occupation" class="form-label">Occupation <span
+                          class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="job_occupation" placeholder="Enter your occupation"
+                        required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="gender" class="form-label">Gender <span class="text-danger">*</span></label>
+                      <select class="form-select" id="gender" required>
+                        <option value="" selected disabled>Select your gender</option>
+                        <option value="Male">Male </option>
+                        <option value="Female">Female </option>
+                        <option value="Other">Other</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="marital_status" class="form-label">Marital Status <span
+                          class="text-danger">*</span></label>
+                      <select class="form-select" id="marital_status" required>
+                        <option value="" selected disabled>Select your marital status</option>
+                        <option value="Single">Single </option>
+                        <option value="Married">Married </option>
+                        <option value="Widowed">Widowed </option>
+                        <option value="Divorced">Divorced </option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="birthdate" class="form-label">Birthdate <span
+                          class="text-danger">*</span></label>
+                      <input type="date" class="form-control" id="birthdate" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="district" class="form-label">District <span
+                          class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="district" placeholder="Enter your district" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="state" class="form-label">State <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="state" placeholder="Enter your state" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Course Details Section -->
+              <div class="form-section">
+                <h6>Course Details</h6>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="course_language" class="form-label">Course Language<span
+                          class="text-danger">*</span></label>
+                      <select class="form-select" id="course_language" required>
+                        <option value="" selected disabled>Select a language</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="course_type" class="form-label">Course Type <span
+                          class="text-danger">*</span></label>
+                      <select class="form-select" id="course_type" required>
+                        <option value="" selected disabled>Select from choice</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="nationality" class="form-label">Nationality <span
+                          class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="nationality" placeholder="Enter your nationality"
+                        required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="years_of_faith" class="form-label">Years of Faith<span
+                          class="text-danger">*</span></label>
+                      <input type="number" class="form-control" id="years_of_faith" placeholder="Enter years of faith"
+                        min="0">
+                    </div>
+
+                  </div>
+                  <div class="mb-3" style="position: relative;">
+                    <label for="referral" class="form-label">Referral Name (Optional)</label>
+                    <input type="text" class="form-control" id="referral" placeholder="Start typing a referral name...">
+                    <ul id="suggestionsList" class="suggestions-list"></ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Additional Information Section -->
+              <div class="form-section">
+                <h6>Additional Information</h6>
+                <div class="mb-3">
+                  <label for="additional_info" class="form-label">Additional Information</label>
+                  <textarea class="form-control" id="additional_info" rows="3"
+                    placeholder="Share any specific expectations or questions..."></textarea>
+                </div>
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="consent" required>
+                <label class="form-check-label" for="consent">
+                  I agree to the <a href="#" data-bs-toggle="collapse" data-bs-target="#termsCollapse"
+                    aria-expanded="false" aria-controls="termsCollapse">terms and conditions</a>
+                </label>
+              </div>
+              <!-- Collapsible Section for Terms and Conditions -->
+              <div class="collapse" id="termsCollapse">
+                <div class="alert alert-info" role="alert">
+                  <div class="card card-body">
+                    <h6>Terms and Conditions</h6>
+                    <p>
+                      By signing up for this course, you agree to the following:
+                    </p>
+                    <ul>
+                      <li>You will attend classes regularly.</li>
+                      <li>You consent to the collection of personal information for communication purposes.</li>
+                      <li>You may withdraw your consent at any time by contacting us.</li>
+                      <li>
+                        Our students come from various parts of the world, from various religions and denominations.
+                        To better assist you in the course, we want to get to know you.
+                      </li>
+                      <li>
+                        The following personal and basic information is required for enrollment in the education center,
+                        which will allow you to participate in the basic, intermediate, and advanced levels of Bible
+                        study
+                        classes.
+                      </li>
+                      <li>
+                        These informations will not transfer to any other person/institution and will be protected.
+                      </li>
+                      <li>
+                        For further details, please contact support.
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <button id="submitBtn" class="btn btn-primary">Submit</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="form-section">
-      <h6>Course Details</h6>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="mb-3">
-            <label for="course_language" class="form-label">Course Language <span class="text-danger">*</span></label>
-            <select class="form-select" id="course_language" required>
-              <option value="" selected disabled>Select a language</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="course_type" class="form-label">Course Type <span class="text-danger">*</span></label>
-            <select class="form-select" id="course_type" required>
-              <option value="" selected disabled>Select from choice</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="mb-3">
-            <label for="nationality" class="form-label">Nationality <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="nationality" placeholder="Enter your nationality" required>
-          </div>
-          <div class="mb-3">
-            <label for="years_of_faith" class="form-label">Years of Faith <span class="text-danger">*</span></label>
-            <input type="number" class="form-control" id="years_of_faith" placeholder="Enter years of faith" min="0">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="form-section">
-      <h6>Additional Information</h6>
-      <div class="mb-3">
-        <label for="additional_info" class="form-label">Additional Information</label>
-        <textarea class="form-control" id="additional_info" rows="3" placeholder="Share any specific expectations or questions..."></textarea>
-      </div>
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="consent" required>
-      <label class="form-check-label" for="consent">I agree to the <a href="#" data-bs-toggle="collapse" data-bs-target="#termsCollapse" aria-expanded="false" aria-controls="termsCollapse">terms and conditions</a></label>
-    </div>
-    <div class="collapse" id="termsCollapse">
-      <div class="alert alert-info" role="alert">
-        <div class="card card-body">
-          <h6>Terms and Conditions</h6>
-          <ul>
-            <li>You will attend classes regularly.</li>
-            <li>You consent to the collection of personal information for communication purposes.</li>
-            <li>You may withdraw your consent at any time by contacting us.</li>
-            <li>Your personal information will be protected and not shared with others.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <button id="submitBtn" class="btn btn-primary">Submit</button>
-  </form>
-</div>
 
 
     <div class="modal fade" id="consentModal" tabindex="-1" aria-labelledby="consentModalLabel" aria-hidden="true">
