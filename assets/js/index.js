@@ -86,7 +86,7 @@ const translations = {
         "bot-placeholder": "IBA பற்றி எதையும் கேளுங்கள்...",
         "nav-home": "முகப்பு",
         "nav-contact": "தொடர்பு",
-        "nav-program": "பாடத்திட்டம்",
+        "nav-program": "பாடநெறி",
         "nav-about": "எங்களை பற்றி"
     },
     hi: {
