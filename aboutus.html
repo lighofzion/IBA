@@ -16,7 +16,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-
+  <!-- Add this in the head section of aboutus.html -->
+  <script src="assets/js/aboutus.js"></script>
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -41,7 +42,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#hero" data-abt="nav-home">Home</a></li>
           <!-- <li><a href="index.html#services">IBA Studies</a></li>
           <li><a href="index.html#features">Features</a></li> -->
           <!-- <li><a href="#pricing">Pricing</a></li>
@@ -62,10 +63,19 @@
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li> -->
-          <li><a href="myvideo.html">Our Videos</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="program.html">Program</a></li>
-          <li><a href="aboutus.html" class="active">About Us</a></li>
+          <li><a href="myvideo.html" data-abt="our-videos">Our Videos</a></li>
+          <li><a href="aboutus.html#contact" data-abt="nav-contact">Contact</a></li>
+          <li><a href="program.html" data-abt="nav-program">Program</a></li>
+          <li><a href="aboutus.html" class="active" data-abt="nav-about">About Us</a></li>
+          <li class="dropdown">
+            <a href="#"><span id="currentLang">English</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#" data-lang="en">English</a></li>
+              <li><a href="#" data-lang="ta">தமிழ்</a></li>
+              <li><a href="#" data-lang="hi">हिंदी</a></li>
+              <li><a href="#" data-lang="kn">ಕನ್ನಡ</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -87,8 +97,10 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h1 data-aos="fade-up">About International Bible Academy</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Equipping disciples with the Word of God since 1967</p>
+            <h1 data-abt="about-title" data-aos="fade-up">About International Bible Academy</h1>
+            <p data-abt="equipment-section-title" data-aos="fade-up" data-aos-delay="100">Equipping disciples with the
+              Word of God since 1967
+            </p>
           </div>
         </div>
       </div>
@@ -141,15 +153,15 @@
     <!-- Faith Statement Section with enhanced layout -->
     <section id="faith-statement" class="about section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>About IBA</h2>
+        <h2 data-abt="about-section-title">About IBA</h2>
       </div>
 
       <div class="container">
         <div class="row gy-4 align-items-center">
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
             <div class="content-box p-4 border-start border-5 border-primary">
-              <h3 class="mb-4">IBA Faith Statement</h3>
-              <p class="fst-italic">
+              <h3 data-abt="faith-title" class="mb-4">IBA Faith Statement</h3>
+              <p data-abt="faith-desc" class="fst-italic">
                 We believe that God, the creator of heaven and earth and the father of all, Jesus, the son of God,
                 Christ
                 our savior and Lord, and the Holy Spirit and its work. We believe that Jesus died on the cross for the
@@ -161,15 +173,15 @@
             <div class="mt-4">
               <div class="d-flex align-items-center mb-3">
                 <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                <p class="mb-0">Biblical Foundation in Teaching</p>
+                <p data-abt="biblical-foundation" class="mb-0">Biblical Foundation in Teaching</p>
               </div>
               <div class="d-flex align-items-center mb-3">
                 <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                <p class="mb-0">Focus on Prophecy and Fulfillment</p>
+                <p data-abt="prophecy-focus" class="mb-0">Focus on Prophecy and Fulfillment</p>
               </div>
               <div class="d-flex align-items-center">
                 <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                <p class="mb-0">Emphasis on Spiritual Growth</p>
+                <p data-abt="spiritual-growth" class="mb-0">Emphasis on Spiritual Growth</p>
               </div>
             </div>
           </div>
@@ -184,12 +196,12 @@
     <!-- Mission Statement Section -->
     <section id="mission" class="services section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Our Mission</h2>
+        <h2 data-abt="mission-section-title">Our Mission</h2>
       </div>
 
       <div class="container section-title" data-aos="fade-up">
-        <h1>Guided by Faith, Committed to Excellence</h1>
-      </div><!-- End Section Title -->
+        <h1 data-abt="mission-subtitle">Guided by Faith, Committed to Excellence</h1>
+      </div>
 
       <div class="container">
         <div class="row gy-4">
@@ -198,35 +210,30 @@
               <div class="icon">
                 <i class="bi bi-book"></i>
               </div>
-              <a href="service-details.html" class="stretched-link"></a>
-              <p>1. IBA members are brothers and sisters in Christ, united as one family in God. Our vision is to
-                educate
-                and train disciples of Jesus to preach the gospel and become part of Christ's church.</p>
+              <p data-abt="mission-point1">1. IBA members are brothers and sisters in Christ, united as one family in
+                God. Our vision is to educate and train disciples of Jesus to preach the gospel and become part of
+                Christ's church.</p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon">
                 <i class="bi bi-book-half"></i>
               </div>
-              <a href="service-details.html" class="stretched-link"></a>
-              <p>2. Following the Great Commission, IBA provides free Biblical education to those who are poor in
-                spirit and who hunger and thirst for righteousness. We strictly adhere to Biblical teachings, ensuring
-                all our
-                educational materials are based solely on Scripture.</p>
+              <p data-abt="mission-point2">2. Following the Great Commission, IBA provides free Biblical education to
+                those who are poor in spirit and who hunger and thirst for righteousness. We strictly adhere to Biblical
+                teachings, ensuring all our educational materials are based solely on Scripture.</p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon">
                 <i class="bi bi-brightness-high"></i>
               </div>
-              <a href="service-details.html" class="stretched-link"></a>
-              <p>3. IBA affirms faith in the Holy Trinity and the forgiveness of sins through Jesus's blood. We
-                faithfully
-                await Jesus's return as promised.</p>
+              <p data-abt="mission-point3">3. IBA affirms faith in the Holy Trinity and the forgiveness of sins through
+                Jesus's blood. We faithfully await Jesus's return as promised.</p>
             </div>
           </div>
 
@@ -235,35 +242,32 @@
               <div class="icon">
                 <i class="bi bi-bookmark-heart"></i>
               </div>
-              <a href="service-details.html" class="stretched-link"></a>
-              <p>4. According to Hebrews 8:7-10, we believe in upholding the new covenant by inscribing Jesus's words in
-                our hearts and minds, especially as His promises are fulfilled.</p>
+              <p data-abt="mission-point4">4. According to Hebrews 8:7-10, we believe in upholding the new covenant by
+                inscribing Jesus's words in our hearts and minds, especially as His promises are fulfilled.</p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon">
                 <i class="bi bi-book"></i>
               </div>
-              <a href="service-details.html" class="stretched-link"></a>
-              <p>5. IBA upholds the integrity of the Book of Revelation, believing that nothing should be added or
-                removed from its words. We emphasize the importance of understanding and observing its teachings to be
-                prepared for Jesus's return.</p>
+              <p data-abt="mission-point5">5. IBA upholds the integrity of the Book of Revelation, believing that
+                nothing should be added or removed from its words. We emphasize the importance of understanding and
+                observing its teachings to be prepared for Jesus's return.</p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon">
                 <i class="bi bi-book-half"></i>
               </div>
-              <a href="service-details.html" class="stretched-link"></a>
-              <p>6. In response to Jesus's command to feed His sheep, IBA is committed to teaching His truth, helping
-                God's children mature spiritually, develop discernment between good and evil, and faithfully follow His
-                commands.</p>
+              <p data-abt="mission-point6">6. In response to Jesus's command to feed His sheep, IBA is committed to
+                teaching His truth, helping God's children mature spiritually, develop discernment between good and
+                evil, and faithfully follow His commands.</p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
         </div>
       </div>
     </section>
@@ -326,7 +330,7 @@
     <!-- Timeline Section -->
     <section id="history" class="section light-background">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Our Journey</h2>
+        <h2 data-abt="journey-section-title">Our Journey</h2>
       </div>
       <div class="container">
         <div class="horizontal-timeline" data-aos="fade-up">
@@ -337,13 +341,13 @@
             <div class="timeline-event active">
               <div class="timeline-point"></div>
               <div class="timeline-content">
-                <div class="timeline-date">January 2024</div>
+                <div data-abt="january" class="timeline-date">January 2024</div>
                 <div class="timeline-card">
                   <div class="timeline-image">
                     <img src="assets/img/found.webp" alt="Foundation">
                   </div>
-                  <h4>Foundation</h4>
-                  <p>Establishment of IBA with initial programs in Asia</p>
+                  <h4 data-abt="foundation-title">Foundation</h4>
+                  <p data-abt="foundation-desc">Establishment of IBA with initial programs in Asia</p>
                   <i class="bi bi-building timeline-icon"></i>
                 </div>
               </div>
@@ -352,13 +356,13 @@
             <div class="timeline-event">
               <div class="timeline-point"></div>
               <div class="timeline-content">
-                <div class="timeline-date">February 2024</div>
+                <div data-abt="february" class="timeline-date">February 2024</div>
                 <div class="timeline-card">
                   <div class="timeline-image">
                     <img src="assets/img/launch.webp" alt="Program Launch">
                   </div>
-                  <h4>Program Launch</h4>
-                  <p>Successfully launched all courses</p>
+                  <h4 data-abt="launch-title">Program Launch</h4>
+                  <p data-abt="launch-desc">Successfully launched all courses</p>
                   <i class="bi bi-rocket-takeoff timeline-icon"></i>
                 </div>
               </div>
@@ -367,13 +371,13 @@
             <div class="timeline-event">
               <div class="timeline-point"></div>
               <div class="timeline-content">
-                <div class="timeline-date">March 2024</div>
+                <div data-abt="march" class="timeline-date">March 2024</div>
                 <div class="timeline-card">
                   <div class="timeline-image">
                     <img src="assets/img/global.webp" alt="Global Expansion">
                   </div>
-                  <h4>Global Expansion</h4>
-                  <p>Extended reach across continents</p>
+                  <h4 data-abt="expansion-title">Global Expansion</h4>
+                  <p data-abt="expansion-desc">Extended reach across continents</p>
                   <i class="bi bi-globe timeline-icon"></i>
                 </div>
               </div>
@@ -382,13 +386,13 @@
             <div class="timeline-event">
               <div class="timeline-point"></div>
               <div class="timeline-content">
-                <div class="timeline-date">Current</div>
+                <div data-abt="current" class="timeline-date">Current</div>
                 <div class="timeline-card">
                   <div class="timeline-image">
                     <img src="assets/img/community.webp" alt="Growing Community">
                   </div>
-                  <h4>Growing Community</h4>
-                  <p>Building global network</p>
+                  <h4 data-abt="community-title">Growing Community</h4>
+                  <p data-abt="community-desc">Building global network</p>
                   <i class="bi bi-people timeline-icon"></i>
                 </div>
               </div>
@@ -607,7 +611,7 @@
     <!-- Enhanced Leadership Section -->
     <section id="leadership" class="section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Our Leadership Team</h2>
+        <h2 data-abt="leadership-section-title">Our Leadership Team</h2>
       </div>
       <div class="container">
         <div class="row gy-4 justify-content-center">
@@ -615,21 +619,21 @@
             <div class="team-member text-center">
               <img src="assets/img/team/leader1.jpg" class="rounded-circle mb-3" alt="Bible Teacher">
               <h4>John Smith</h4>
-              <p class="text-muted">Bible Teacher</p>
+              <p class="text-muted" data-abt="bible-teacher">Bible Teacher</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member text-center">
               <img src="assets/img/team/leader2.jpg" class="rounded-circle mb-3" alt="Program Director">
               <h4>Sarah Johnson</h4>
-              <p class="text-muted">Program Director</p>
+              <p class="text-muted" data-abt="program-director">Program Director</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member text-center">
               <img src="assets/img/team/leader3.jpg" class="rounded-circle mb-3" alt="Course Coordinator">
               <h4>David Wilson</h4>
-              <p class="text-muted">Course Coordinator</p>
+              <p class="text-muted" data-abt="course-coordinator">Course Coordinator</p>
             </div>
           </div>
         </div>
@@ -639,7 +643,7 @@
     <!-- Replace Gallery with Course Overview -->
     <section id="courses" class="section light-background">
       <div class="container section-title" data-aos="fade-up">
-        <h2>International Bible Academy Course</h2>
+        <h2 data-abt="courses-section-title">International Bible Academy Course</h2>
       </div>
       <div class="container">
         <div class="row g-4 mb-5">
@@ -649,9 +653,9 @@
                 <img src="assets/img/BB.webp" alt="Elementary Course">
               </div>
               <div class="course-icon">1</div>
-              <h3>Elementary</h3>
-              <p>Understanding of the parables regarding the secrets of the Kingdom of heaven spoken by Jesus.</p>
-              <span class="duration">3 months</span>
+              <h3 data-abt="elementary-heading">Elementary</h3>
+              <p data-abt="elementary-desc"></p>
+              <span class="duration" data-abt="elementary-duration">3 months</span>
             </div>
           </div>
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
@@ -660,8 +664,10 @@
                 <img src="assets/img/KOW.webp" alt="Intermediate Course">
               </div>
               <div class="course-icon">2</div>
-              <h3>Intermediate</h3>
-              <p>An overview of the whole Bible including the Pentateuch, the prophets and the four gospels.</p>
+              <h3 data-abt="intermediate-title">Intermediate</h3>
+              <p data-abt="intermediate-desc">An overview of the whole Bible including the Pentateuch, the prophets and
+                the four gospels.
+              </p>
               <span class="duration">1 month</span>
             </div>
           </div>
@@ -671,8 +677,9 @@
                 <img src="assets/img/FN.webp" alt="Advanced Course">
               </div>
               <div class="course-icon">3</div>
-              <h3>Advanced</h3>
-              <p>A detailed look at each chapter of Revelation and the meaning of the figurative language within.</p>
+              <h3 data-abt="advanced-title">Advanced</h3>
+              <p data-abt="advanced-desc">A detailed look at each chapter of Revelation and the meaning of the
+                figurative language within.</p>
               <span class="duration">4 months</span>
             </div>
           </div>
@@ -819,8 +826,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <div><span>Need Help?</span> <span class="description-title">Contact Us</span></div>
+        <h2 data-abt="contact-title">Contact</h2>
+        <div><span data-abt="need-help">Need Help?</span> <span class="description-title"
+            data-abt="contact-subtitle">Contact Us</span></div>
       </div>
 
       <div class="container" data-aos="fade" data-aos-delay="100">
@@ -832,9 +840,8 @@
                 <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
                   <i class="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
-                    <h3>Address</h3>
-                    <p>Light Of Zion Church, 31, Sembakkam Main Road, Thillai Ganga Nagar, Chennai, Tamil Nadu 600073
-                    </p>
+                    <h3 data-abt="contact-address">Address</h3>
+                    <p data-abt="church-address"></p>
                   </div>
                 </div>
               </div>
@@ -842,8 +849,8 @@
                 <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                   <i class="bi bi-envelope flex-shrink-0"></i>
                   <div>
-                    <h3>Email Us</h3>
-                    <p>ibacademy2024@gmail.com</p>
+                    <h3 data-abt="contact-email">Email Us</h3>
+                    <p data-abt="church-email"></p>
                   </div>
                 </div>
               </div>
@@ -860,7 +867,8 @@
                   referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
                 <div class="map-overlay-hint">
-                  <span><i class="bi bi-box-arrow-up-right"></i> Click to open in Google Maps</span>
+                  <span><i class="bi bi-box-arrow-up-right"></i> <span data-abt="maps-hint">Click to open in Google
+                      Maps</span></span>
                 </div>
               </a>
             </div>
@@ -934,7 +942,8 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">IBA</strong> <span>All Rights Reserved</span></p>
+        <p>© <span data-abt="copyright-text">Copyright</span> <strong class="px-1 sitename">IBA</strong> <span
+            data-abt="all-rights-reserved">All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
