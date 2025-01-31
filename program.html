@@ -17,7 +17,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+  <script src="assets/js/pro.js"></script>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -36,7 +36,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <script src="assets/js/program.js"></script>
 </head>
 <style>
   /* Custom Modal Styling */
@@ -131,14 +131,23 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#hero" data-pro="nav-home">Home</a></li>
           <!-- <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#services">IBA Studies</a></li>
           <li><a href="index.html#features">Features</a></li>-->
-          <li><a href="myvideo.html">Our Videos</a></li>
-          <li><a href="aboutus.html#contact">Contact</a></li>
-          <li><a href="program.html" class="active">Program</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="myvideo.html" data-pro="our-videos">Our Videos</a></li>
+          <li><a href="aboutus.html#contact" data-pro="nav-contact">Contact</a></li>
+          <li><a href="program.html" class="active" data-pro="nav-program">Program</a></li>
+          <li><a href="aboutus.html" data-pro="nav-about">About Us</a></li>
+          <li class="dropdown">
+            <a href="#"><span id="currentLang">English</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#" data-lang="en">English</a></li>
+              <li><a href="#" data-lang="ta">தமிழ்</a></li>
+              <li><a href="#" data-lang="hi">हिंदी</a></li>
+              <li><a href="#" data-lang="kn">ಕನ್ನಡ</a></li>
+            </ul>
+          </li>
           <!-- <li class="login-icon">
             <a href="login.html" class="login-link">
 
@@ -161,8 +170,9 @@
 
         <!-- Header Section -->
         <div class="text-center mb-5">
-          <h2 class="section-title display-4 fw-bold text-gradient">Transform Your Faith. Elevate Your Life.</h2>
-          <p class="section-subtitle fst-italic text-muted">
+          <h2 class="section-title display-4 fw-bold text-gradient" data-pro="program-title">Transform Your Faith.
+            Elevate Your Life.</h2>
+          <p class="section-subtitle fst-italic text-muted" data-pro="program-subtitle">
             Immerse yourself in a world of spiritual growth, dynamic learning, and leadership development with our
             cutting-edge Bible study programs.
           </p>
@@ -171,17 +181,20 @@
         <!-- Program Overview -->
         <div class="row align-items-center gy-4">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="fw-bold text-dark">What We Offer</h3>
-            <p class="fst-italic text-muted">
+            <h3 class="fw-bold text-dark" data-pro="program-overview-title">What We Offer</h3>
+            <p class="fst-italic text-muted" data-pro="program-overview-desc">
               Unlock deep insights into Scripture, theology, and faith with a tailored online experience. Whether you’re
               looking for personal spiritual growth or to take your leadership skills to the next level, our flexible
               courses are designed for your unique journey.
             </p>
             <ul class="list-unstyled mt-3 text-muted">
-              <li><i class="fas fa-check-circle text-success me-2"></i> Study at your pace, from anywhere, anytime</li>
-              <li><i class="fas fa-check-circle text-success me-2"></i> Expert guidance with a cutting-edge learning
+              <li data-pro="program-overview-point1"><i class="fas fa-check-circle text-success me-2"></i> Study at
+                your pace, from anywhere, anytime</li>
+              <li data-pro="program-overview-point2"><i class="fas fa-check-circle text-success me-2"></i> Expert
+                guidance with a cutting-edge learning
                 platform</li>
-              <li><i class="fas fa-check-circle text-success me-2"></i> Earn globally recognized certifications to
+              <li data-pro="program-overview-point3"><i class="fas fa-check-circle text-success me-2"></i> Earn
+                globally recognized certifications to
                 elevate your future</li>
             </ul>
           </div>
@@ -200,8 +213,8 @@
       <div class="container">
         <!-- Header Section -->
         <div class="text-center mb-5">
-          <h2 class="section-title display-4 fw-bold text-gradient">Our Bible Courses</h2>
-          <p class="section-subtitle fst-italic text-muted">
+          <h2 class="section-title display-4 fw-bold text-gradient" data-pro="courses-title">Our Bible Courses</h2>
+          <p class="section-subtitle fst-italic text-muted" data-pro="courses-subtitle">
             Enhance your understanding of the Scriptures through our well-structured Bible study courses.
           </p>
         </div>
@@ -214,13 +227,14 @@
             <div class="card border-0 shadow rounded">
               <img src="assets/img/course3.webp" class="card-img-top rounded-top" alt="Bible Study Basics">
               <div class="card-body">
-                <h4 class="card-title fw-bold">Bible Study Basics</h4>
-                <p class="card-text text-muted">
+                <h4 class="card-title fw-bold" data-pro="course1-title">Bible Study Basics</h4>
+                <p class="card-text text-muted" data-pro="course1-desc">
                   A foundational course covering key themes and stories in the Bible, perfect for beginners starting
                   their faith journey.
                 </p>
                 <a href="#" class="btn btn-outline-primary course-details" data-course="Bible Study Basics"
-                  data-description="A foundational course covering key themes and stories in the Bible, perfect for beginners starting their faith journey.">Course
+                  data-description="A foundational course covering key themes and stories in the Bible, perfect for beginners starting their faith journey."
+                  data-pro="course-details">Course
                   Details →</a>
               </div>
             </div>
@@ -231,13 +245,14 @@
             <div class="card border-0 shadow rounded">
               <img src="assets/img/course2.webp" class="card-img-top rounded-top" alt="Old Testament Studies">
               <div class="card-body">
-                <h4 class="card-title fw-bold">Old Testament Studies</h4>
-                <p class="card-text text-muted">
+                <h4 class="card-title fw-bold" data-pro="course2-title">Old Testament Studies</h4>
+                <p class="card-text text-muted" data-pro="course2-desc">
                   Dive deep into the Old Testament, exploring the history, prophecies, and wisdom literature that shaped
                   biblical faith.
                 </p>
                 <a href="#" class="btn btn-outline-primary course-details" data-course="Old Testament Studies"
-                  data-description="Dive deep into the Old Testament, exploring the history, prophecies, and wisdom literature that shaped biblical faith.">Course
+                  data-description="Dive deep into the Old Testament, exploring the history, prophecies, and wisdom literature that shaped biblical faith."
+                  data-pro="course-details">Course
                   Details →</a>
               </div>
             </div>
@@ -248,13 +263,14 @@
             <div class="card border-0 shadow rounded">
               <img src="assets/img/course1.webp" class="card-img-top rounded-top" alt="New Testament Insights">
               <div class="card-body">
-                <h4 class="card-title fw-bold">New Testament Insights</h4>
-                <p class="card-text text-muted">
+                <h4 class="card-title fw-bold" data-pro="course3-title">New Testament Insights</h4>
+                <p class="card-text text-muted" data-pro="course3-desc">
                   Learn about the life of Jesus, the growth of the early church, and key theological teachings in the
                   New Testament.
                 </p>
                 <a href="#" class="btn btn-outline-primary course-details" data-course="New Testament Insights"
-                  data-description="Learn about the life of Jesus, the growth of the early church, and key theological teachings in the New Testament.">Course
+                  data-description="Learn about the life of Jesus, the growth of the early church, and key theological teachings in the New Testament."
+                  data-pro="course-details">Course
                   Details →</a>
               </div>
             </div>
@@ -266,7 +282,7 @@
       <!-- Call to Action -->
       <div class="text-center mt-5">
         <a href="#enroll" class="btn btn-primary btn-lg px-5 py-3 rounded-3 shadow-lg" data-bs-toggle="modal"
-          data-bs-target="#courseModal">Apply Today</a>
+          data-bs-target="#courseModal" data-pro="apply-today">Apply Today</a>
       </div>
       </div>
     </section>
@@ -276,75 +292,82 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="courseModalLabel">Sign Up for the Course</h5>
+            <h5 class="modal-title" id="courseModalLabel" data-pro="modal-title">Sign Up for the Course</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form id="courseForm">
               <!-- Personal Details Section -->
               <div class="form-section">
-                <h6>Personal Details</h6>
+                <h6 data-pro="personal-details-title">Personal Details</h6>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="name" class="form-label">Full Name / பெயர் <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                      <label for="name" class="form-label" data-pro="label-full-name">Full Name / பெயர் <span
+                          class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="name" placeholder="Enter your full name"
+                        data-pro-placeholder="label-full-name" required>
                     </div>
                     <div class="mb-3">
-                      <label for="phone_number" class="form-label">Phone Number / தொலைபேசி <span
-                          class="text-danger">*</span></label>
+                      <label for="phone_number" class="form-label" data-pro="label-phone-number">Phone Number /
+                        தொலைபேசி <span class="text-danger">*</span></label>
                       <input type="tel" class="form-control" id="phone_number" placeholder="Enter your phone number"
                         pattern="[0-9]{10}" required>
                     </div>
                     <div class="mb-3">
-                      <label for="email" class="form-label">Email / மின்னஞ்சல்</label>
+                      <label for="email" class="form-label" data-pro="label-email">Email / மின்னஞ்சல்</label>
                       <input type="email" class="form-control" id="email" placeholder="Enter your email">
                     </div>
                     <div class="mb-3">
-                      <label for="city" class="form-label">City / நகரம் <span class="text-danger">*</span></label>
+                      <label for="city" class="form-label" data-pro="label-city">City / நகரம் <span
+                          class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
                     </div>
                     <div class="mb-3">
-                      <label for="job_occupation" class="form-label">Occupation / தொழில் <span
-                          class="text-danger">*</span></label>
+                      <label for="job_occupation" class="form-label" data-pro="label-occupation">Occupation / தொழில்
+                        <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="job_occupation" placeholder="Enter your occupation"
                         required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="gender" class="form-label">Gender / பாலினம் <span class="text-danger">*</span></label>
+                      <label for="gender" class="form-label" data-pro="label-gender">Gender / பாலினம் <span
+                          class="text-danger">*</span></label>
                       <select class="form-select" id="gender" required>
-                        <option value="" selected disabled>Select your gender</option>
-                        <option value="Male">Male / ஆண்</option>
-                        <option value="Female">Female / பெண்</option>
-                        <option value="Other">Other / மற்றவை</option>
-                        <option value="Prefer not to say">Prefer not to say / கூற விரும்பவில்லை</option>
+                        <option value="" selected disabled data-pro="select-gender">Select your gender</option>
+                        <option value="Male" data-pro="gender-male">Male / ஆண்</option>
+                        <option value="Female" data-pro="gender-female">Female / பெண்</option>
+                        <option value="Other" data-pro="gender-other">Other / மற்றவை</option>
+                        <option value="Prefer not to say" data-pro="gender-prefer-not-to-say">Prefer not to say / கூற
+                          விரும்பவில்லை</option>
                       </select>
                     </div>
                     <div class="mb-3">
-                      <label for="marital_status" class="form-label">Marital Status / திருமண நிலை <span
-                          class="text-danger">*</span></label>
+                      <label for="marital_status" class="form-label" data-pro="label-marital-status">Marital Status /
+                        திருமண நிலை <span class="text-danger">*</span></label>
                       <select class="form-select" id="marital_status" required>
-                        <option value="" selected disabled>Select your marital status</option>
-                        <option value="Single">Single / ஒற்றை</option>
-                        <option value="Married">Married / திருமணமானவர்</option>
-                        <option value="Widowed">Widowed / விதவா</option>
-                        <option value="Divorced">Divorced / விவாகரத்து</option>
+                        <option value="" selected disabled data-pro="select-marital-status">Select your marital status
+                        </option>
+                        <option value="Single" data-pro="marital-status-single">Single / ஒற்றை</option>
+                        <option value="Married" data-pro="marital-status-married">Married / திருமணமானவர்</option>
+                        <option value="Widowed" data-pro="marital-status-widowed">Widowed / விதவா</option>
+                        <option value="Divorced" data-pro="marital-status-divorced">Divorced / விவாகரத்து</option>
                       </select>
                     </div>
                     <div class="mb-3">
-                      <label for="birthdate" class="form-label">Birthdate / பிறந்த தேதி <span
-                          class="text-danger">*</span></label>
+                      <label for="birthdate" class="form-label" data-pro="label-birthdate">Birthdate / பிறந்த தேதி
+                        <span class="text-danger">*</span></label>
                       <input type="date" class="form-control" id="birthdate" required>
                     </div>
                     <div class="mb-3">
-                      <label for="district" class="form-label">District / மாவட்டம் <span
+                      <label for="district" class="form-label" data-pro="label-district">District / மாவட்டம் <span
                           class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="district" placeholder="Enter your district" required>
                     </div>
                     <div class="mb-3">
-                      <label for="state" class="form-label">State / மாநிலம் <span class="text-danger">*</span></label>
+                      <label for="state" class="form-label" data-pro="label-state">State / மாநிலம் <span
+                          class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="state" placeholder="Enter your state" required>
                     </div>
                   </div>
@@ -353,41 +376,41 @@
 
               <!-- Course Details Section -->
               <div class="form-section">
-                <h6>Course Details</h6>
+                <h6 data-pro="course-details-title">Course Details</h6>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="course_language" class="form-label">Course Language / மொழி<span
-                          class="text-danger">*</span></label>
+                      <label for="course_language" class="form-label" data-pro="label-course-language">Course Language
+                        / மொழி<span class="text-danger">*</span></label>
                       <select class="form-select" id="course_language" required>
-                        <option value="" selected disabled>Select a language</option>
+                        <option value="" selected disabled data-pro="select-course-language">Select a language</option>
                       </select>
                     </div>
                     <div class="mb-3">
-                      <label for="course_type" class="form-label">Course Type / பாடநாள்<span
-                          class="text-danger">*</span></label>
+                      <label for="course_type" class="form-label" data-pro="label-course-type">Course Type /
+                        பாடநாள்<span class="text-danger">*</span></label>
                       <select class="form-select" id="course_type" required>
-                        <option value="" selected disabled>Select from choice</option>
+                        <option value="" selected disabled data-pro="select-course-type">Select from choice</option>
                       </select>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="nationality" class="form-label">Nationality / குடியுரிமை <span
-                          class="text-danger">*</span></label>
+                      <label for="nationality" class="form-label" data-pro="label-nationality">Nationality / குடியுரிமை
+                        <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="nationality" placeholder="Enter your nationality"
                         required>
                     </div>
                     <div class="mb-3">
-                      <label for="years_of_faith" class="form-label">Years of Faith / விசுவாச ஆண்டுகள்<span
-                          class="text-danger">*</span></label>
+                      <label for="years_of_faith" class="form-label" data-pro="label-years-of-faith">Years of Faith /
+                        விசுவாச ஆண்டுகள்<span class="text-danger">*</span></label>
                       <input type="number" class="form-control" id="years_of_faith" placeholder="Enter years of faith"
                         min="0">
                     </div>
 
                   </div>
                   <div class="mb-3" style="position: relative;">
-                    <label for="referral" class="form-label">Referral Name (Optional)</label>
+                    <label for="referral" class="form-label" data-pro="label-referral">Referral Name (Optional)</label>
                     <input type="text" class="form-control" id="referral" placeholder="Start typing a referral name...">
                     <ul id="suggestionsList" class="suggestions-list"></ul>
                   </div>
@@ -396,9 +419,10 @@
 
               <!-- Additional Information Section -->
               <div class="form-section">
-                <h6>Additional Information</h6>
+                <h6 data-pro="additional-info-title">Additional Information</h6>
                 <div class="mb-3">
-                  <label for="additional_info" class="form-label">Additional Information / கூடுதல் தகவல்</label>
+                  <label for="additional_info" class="form-label" data-pro="label-additional-info">Additional
+                    Information / கூடுதல் தகவல்</label>
                   <textarea class="form-control" id="additional_info" rows="3"
                     placeholder="Share any specific expectations or questions..."></textarea>
                 </div>
@@ -406,37 +430,39 @@
 
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="consent" required>
-                <label class="form-check-label" for="consent">
+                <label class="form-check-label" for="consent" data-pro="label-consent">
                   I agree to the <a href="#" data-bs-toggle="collapse" data-bs-target="#termsCollapse"
-                    aria-expanded="false" aria-controls="termsCollapse">terms and conditions</a>
+                    aria-expanded="false" aria-controls="termsCollapse" data-pro="terms-and-conditions">terms and
+                    conditions</a>
                 </label>
               </div>
               <!-- Collapsible Section for Terms and Conditions -->
               <div class="collapse" id="termsCollapse">
                 <div class="alert alert-info" role="alert">
                   <div class="card card-body">
-                    <h6>Terms and Conditions</h6>
-                    <p>
+                    <h6 data-pro="terms-title">Terms and Conditions</h6>
+                    <p data-pro="terms-desc">
                       By signing up for this course, you agree to the following:
                     </p>
                     <ul>
-                      <li>You will attend classes regularly.</li>
-                      <li>You consent to the collection of personal information for communication purposes.</li>
-                      <li>You may withdraw your consent at any time by contacting us.</li>
-                      <li>
+                      <li data-pro="terms-point1">You will attend classes regularly.</li>
+                      <li data-pro="terms-point2">You consent to the collection of personal information for
+                        communication purposes.</li>
+                      <li data-pro="terms-point3">You may withdraw your consent at any time by contacting us.</li>
+                      <li data-pro="terms-point4">
                         Our students come from various parts of the world, from various religions and denominations.
                         To better assist you in the course, we want to get to know you.
                       </li>
-                      <li>
+                      <li data-pro="terms-point5">
                         The following personal and basic information is required for enrollment in the education center,
                         which will allow you to participate in the basic, intermediate, and advanced levels of Bible
                         study
                         classes.
                       </li>
-                      <li>
+                      <li data-pro="terms-point6">
                         These informations will not transfer to any other person/institution and will be protected.
                       </li>
-                      <li>
+                      <li data-pro="terms-point7">
                         For further details, please contact support.
                     </ul>
 
@@ -445,7 +471,7 @@
               </div>
 
 
-              <button id="submitBtn" class="btn btn-primary">Submit</button>
+              <button id="submitBtn" class="btn btn-primary" data-pro="submit">Submit</button>
             </form>
           </div>
         </div>
@@ -457,23 +483,24 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="consentModalLabel">Terms and Conditions</h5>
+            <h5 class="modal-title" id="consentModalLabel" data-pro="consent-modal-title">Terms and Conditions</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>
+            <p data-pro="consent-modal-desc">
               <!-- Add your terms and conditions content here -->
               By signing up for this course, you agree to our privacy policy, course guidelines, and other related
               terms.
             </p>
             <ul>
-              <li>You agree to attend the course regularly.</li>
-              <li>You consent to the collection of personal information for course-related communication.</li>
-              <li>You may withdraw your consent at any time by contacting support.</li>
+              <li data-pro="consent-modal-point1">You agree to attend the course regularly.</li>
+              <li data-pro="consent-modal-point2">You consent to the collection of personal information for
+                course-related communication.</li>
+              <li data-pro="consent-modal-point3">You may withdraw your consent at any time by contacting support.</li>
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-pro="close">Close</button>
           </div>
         </div>
       </div>
@@ -485,14 +512,15 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="successModalLabel">Successfully Registered</h5>
+            <h5 class="modal-title" id="successModalLabel" data-pro="success-modal-title">Successfully Registered</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>Congratulations! You have successfully registered for the course. Someone will contact you soon!</p>
+            <p data-pro="success-modal-desc">Congratulations! You have successfully registered for the course. Someone
+              will contact you soon!</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-pro="close">Close</button>
           </div>
         </div>
       </div>
@@ -504,14 +532,16 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="alreadyRegisteredModalLabel">Already Registered</h5>
+            <h5 class="modal-title" id="alreadyRegisteredModalLabel" data-pro="already-registered-modal-title">Already
+              Registered</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>You are already registered for this course. Someone will contact you soon!</p>
+            <p data-pro="already-registered-modal-desc">You are already registered for this course. Someone will
+              contact you soon!</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-pro="close">Close</button>
           </div>
         </div>
       </div>
@@ -527,7 +557,8 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">IBA</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">IBA</strong> <span data-pro="all-rights-reserved">All
+            Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
