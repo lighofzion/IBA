@@ -1,584 +1,784 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>IBA</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/logo.webp"
+      type="image/x-icon"
+    />
+    <!-- Favicons -->
+    <!-- <link href="assets/img/favicon.png" rel="icon">-->
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>IBA</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <link rel="shortcut icon" href="/assets/img/logo.webp" type="image/x-icon">
-  <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon">-->
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <script src="assets/js/index.js"></script>
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="/assets/css/bot/styles.css" rel="stylesheet" />
+  </head>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <script src="assets/js/index.js"></script>
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
-  <link href="/assets/css/bot/styles.css" rel="stylesheet">
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <img
+          src="/assets//img/temp-logo.svg"
+          alt="International Bible Academy"
+        />
+        <!-- <a href="index.html" class="logo d-flex align-items-center">
+          <h1 data-i18n="IBA" class="sitename">
+            <span>International</span> Bible Academy
+          </h1>
+        </a> -->
 
-</head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <h1 data-i18n="IBA" class="sitename">
-          <span>International</span> Bible Academy
-        </h1>
-
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active" data-i18n="nav-home">Home</a></li>
-          <!-- <li><a href="myvideo.html" data-i18n="our-videos">Our Videos</a></li> -->
-          <li><a href="aboutus.html#contact" data-i18n="nav-contact">Contact</a></li>
-          <li><a href="program.html" data-i18n="nav-program">Program</a></li>
-          <li><a href="aboutus.html" data-i18n="nav-about">About Us</a></li>
-          <li class="dropdown">
-            <a href="#"><span id="currentLang">Language</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#" data-lang="en">English</a></li>
-              <li><a href="#" data-lang="ta">தமிழ்</a></li>
-              <li><a href="#" data-lang="hi">हिंदी</a></li>
-              <li><a href="#" data-lang="kn">ಕನ್ನಡ</a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
-
-      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-5">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h2 data-i18n="hero-title">Let the Word of God transform your life.</h2>
-            <p data-i18n="hero-subtitle">We are dedicated servants helping your faith grow through God's Word.</p>
-            <div class="d-flex">
-              <a href="program.html#registration" class="btn-get-started" data-i18n="apply-now">Apply Now</a>
-              <a href="#services" class="btn-learn-more"><span data-i18n="learn-more">Learn More</span></a>
-            </div>
-          </div>
-          <div class="col-lg-6 order-1 order-lg-2">
-            <img src="assets/img/hero-img.jpeg" class="img-fluid" alt="">
-          </div>
-        </div>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li>
+              <a href="#hero" class="active" data-i18n="nav-home">Home</a>
+            </li>
+            <!-- <li><a href="myvideo.html" data-i18n="our-videos">Our Videos</a></li> -->
+            <li>
+              <a href="aboutus.html#contact" data-i18n="nav-contact">Contact</a>
+            </li>
+            <li><a href="program.html" data-i18n="nav-program">Program</a></li>
+            <li><a href="aboutus.html" data-i18n="nav-about">About Us</a></li>
+            <li class="dropdown">
+              <a href="#"
+                ><span id="currentLang">Language</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="#" data-lang="en">English</a></li>
+                <li><a href="#" data-lang="ta">தமிழ்</a></li>
+                <li><a href="#" data-lang="hi">हिंदी</a></li>
+                <li><a href="#" data-lang="kn">ಕನ್ನಡ</a></li>
+              </ul>
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
       </div>
+    </header>
 
-      <div class="icon-boxes position-relative" data-aos="fade-up" data-aos-delay="200" hidden>
-        <div class="container position-relative">
-          <div class="row gy-4 mt-5">
-
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-easel"></i></div>
-                <h4 class="title"><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-              </div>
-            </div><!--End Icon Box -->
-
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-gem"></i></div>
-                <h4 class="title"><a href="" class="stretched-link">Sed ut perspiciatis</a></h4>
-              </div>
-            </div><!--End Icon Box -->
-
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-geo-alt"></i></div>
-                <h4 class="title"><a href="" class="stretched-link">Magni Dolores</a></h4>
-              </div>
-            </div><!--End Icon Box -->
-
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-command"></i></div>
-                <h4 class="title"><a href="" class="stretched-link">Nemo Enim</a></h4>
-              </div>
-            </div><!--End Icon Box -->
-
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-    <!-- Stats Section -->
-    <section id="stats" class="stats-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-10">
-            <div class="stats-panel" data-aos="fade-up">
-              <div class="section-title" data-aos="fade-up">
-                <h2 data-i18n="our-impact">Our Impact</h2>
-                <div><span data-i18n="global-presence">Global Presence</span></div>
-              </div>
-              <div class="stat-grid">
-                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-                  <div class="stat-icon">
-                    <i class="bi bi-flag-fill"></i>
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section light-background">
+        <div class="hero-carousel">
+          <!-- Slide 1 -->
+          <div class="carousel-slide active">
+            <div
+              class="container position-relative"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="row gy-5">
+                <div
+                  class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
+                >
+                  <h2 data-i18n="hero-title">
+                    Let the Word of God transform your life.
+                  </h2>
+                  <p data-i18n="hero-subtitle">
+                    We are dedicated servants helping your faith grow through
+                    God's Word.
+                  </p>
+                  <div class="d-flex">
+                    <a
+                      href="program.html#registration"
+                      class="btn-get-started"
+                      data-i18n="apply-now"
+                      >Apply Now</a
+                    >
+                    <a href="#services" class="btn-learn-more"
+                      ><span data-i18n="learn-more">Learn More</span></a
+                    >
                   </div>
-                  <div class="stat-value">
-                    <span class="counter" data-target="20">0</span>
-                  </div>
-                  <div class="stat-label" data-i18n="countries">Countries</div>
                 </div>
-                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                  <div class="stat-icon">
-                    <i class="bi bi-building-fill"></i>
+                <div class="col-lg-6 order-1 order-lg-2 hero-visuals">
+                  <div class="diamond-container">
+                    <div class="diamond diamond-1"></div>
+                    <div class="diamond diamond-2"></div>
+                    <div class="diamond diamond-3"></div>
                   </div>
-                  <div class="stat-value">
-                    <span class="counter" data-target="129">0</span>
-                  </div>
-                  <div class="stat-label" data-i18n="churches">Churches</div>
-                </div>
-                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                  <div class="stat-icon">
-                    <i class="bi bi-people-fill"></i>
-                  </div>
-                  <div class="stat-value">
-                    <span class="counter" data-target="100000">0</span>+
-                  </div>
-                  <div class="stat-label" data-i18n="students">Students</div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-slide">
+            <div
+              class="container position-relative"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="row gy-5">
+                <div
+                  class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
+                >
+                  <h2>Discover God's wisdom through Scripture.</h2>
+                  <p>
+                    Join our community of believers dedicated to spiritual
+                    growth and biblical understanding.
+                  </p>
+                  <div class="d-flex">
+                    <a href="program.html#registration" class="btn-get-started"
+                      >Join Us</a
+                    >
+                    <a href="#services" class="btn-learn-more"
+                      ><span>Our Programs</span></a
+                    >
+                  </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-visuals">
+                  <div class="diamond-container">
+                    <div class="diamond diamond-1 alt-color-1"></div>
+                    <div class="diamond diamond-2 alt-color-2"></div>
+                    <div class="diamond diamond-3 alt-color-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-slide">
+            <div
+              class="container position-relative"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="row gy-5">
+                <div
+                  class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
+                >
+                  <h2>Deepen your understanding of Scripture.</h2>
+                  <p>
+                    Access free, comprehensive Bible education from anywhere in
+                    the world.
+                  </p>
+                  <div class="d-flex">
+                    <a href="program.html#registration" class="btn-get-started"
+                      >Enroll Today</a
+                    >
+                    <a href="#services" class="btn-learn-more"
+                      ><span>Learn More</span></a
+                    >
+                  </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-visuals">
+                  <div class="diamond-container">
+                    <div class="diamond diamond-1 alt-color-4"></div>
+                    <div class="diamond diamond-2 alt-color-5"></div>
+                    <div class="diamond diamond-3 alt-color-6"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Dots -->
+          <div class="carousel-navigation">
+            <span class="nav-dot active" data-slide="0"></span>
+            <span class="nav-dot" data-slide="1"></span>
+            <span class="nav-dot" data-slide="2"></span>
+          </div>
         </div>
-      </div>
-    </section>
-    <!-- End Stats Section -->
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p class="who-we-are" data-i18n="who-we-are">Who We Are</p>
-            <h3 data-i18n="about-title">We are God's workers to help your life of faith grow in the Word.</h3>
-            <p class="fst-italic" data-i18n="about-description">
-              International Bible Academy is an online Bible college established through the collaboration of many
-              individuals devoted to theological education. We transcend religious and cultural boundaries in
-              achieving our mission. Time, location, and finances are not barriers as we reach out to anyone who hungers
-              for God's Word and has internet access.
-            </p>
-            <!-- <ul>
+      </section>
+      <!-- /Hero Section -->
+      <!-- Stats Section -->
+      <section id="stats" class="stats-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+              <div class="stats-panel" data-aos="fade-up">
+                <div class="section-title" data-aos="fade-up">
+                  <h2 data-i18n="our-impact">Our Impact</h2>
+                  <div>
+                    <span data-i18n="global-presence">Global Presence</span>
+                  </div>
+                </div>
+                <div class="stat-grid">
+                  <div
+                    class="stat-item"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <div class="stat-icon">
+                      <i class="bi bi-flag-fill"></i>
+                    </div>
+                    <div class="stat-value">
+                      <span class="counter" data-target="20">0</span>
+                    </div>
+                    <div class="stat-label" data-i18n="countries">
+                      Countries
+                    </div>
+                  </div>
+                  <div
+                    class="stat-item"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
+                    <div class="stat-icon">
+                      <i class="bi bi-building-fill"></i>
+                    </div>
+                    <div class="stat-value">
+                      <span class="counter" data-target="129">0</span>
+                    </div>
+                    <div class="stat-label" data-i18n="churches">Churches</div>
+                  </div>
+                  <div
+                    class="stat-item"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    <div class="stat-icon">
+                      <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div class="stat-value">
+                      <span class="counter" data-target="100000">0</span>+
+                    </div>
+                    <div class="stat-label" data-i18n="students">Students</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Stats Section -->
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-6 content"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <p class="who-we-are" data-i18n="who-we-are">Who We Are</p>
+              <h3 data-i18n="about-title">
+                We are God's workers to help your life of faith grow in the
+                Word.
+              </h3>
+              <p class="fst-italic" data-i18n="about-description">
+                International Bible Academy is an online Bible college
+                established through the collaboration of many individuals
+                devoted to theological education. We transcend religious and
+                cultural boundaries in achieving our mission. Time, location,
+                and finances are not barriers as we reach out to anyone who
+                hungers for God's Word and has internet access.
+              </p>
+              <!-- <ul>
               <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
               <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
               <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
             </ul>
             <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a> -->
-          </div>
+            </div>
 
-          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
-            <div class="row gy-4">
-              <div class="col-lg-6">
-                <img src="assets/img/about-company-1.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6">
-                <div class="row gy-4">
-                  <div class="col-lg-12">
-                    <img src="assets/img/about-company-2.jpg" class="img-fluid" alt="">
+            <div
+              class="col-lg-6 about-images"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="row gy-4">
+                <div class="col-lg-6">
+                  <img
+                    src="assets/img/about-company-1.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <div class="row gy-4">
+                    <div class="col-lg-12">
+                      <img
+                        src="assets/img/about-company-2.jpg"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-lg-12">
+                      <img
+                        src="assets/img/about-company-3.jpg"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                  <div class="col-lg-12">
-                    <img src="assets/img/about-company-3.jpg" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h1>IBA Studies</h1>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-door-open"></i>
+                </div>
+                <a href="javascript:void(0)" class="stretched-link">
+                  <h3 data-i18n="spiritual-direction-title">
+                    Spiritual Direction
+                  </h3>
+                </a>
+                <p data-i18n="spiritual-direction-desc">
+                  We help you to have a chance to cultivate spiritual growth by
+                  teaching the fundamentals of Bible.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-book"></i>
+                </div>
+                <a href="javascript:void(0)" class="stretched-link">
+                  <h3 data-i18n="christian-studies-title">Christian Studies</h3>
+                </a>
+                <p data-i18n="christian-studies-desc">
+                  No matter where you are, we help you to cultivate intimacy
+                  with God and deepen the life of prayer and openness of the
+                  heart through Bible.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-easel"></i>
+                </div>
+                <a href="javascript:void(0)" class="stretched-link">
+                  <h3 data-i18n="christian-ministries-title">
+                    Christian Ministries Studies
+                  </h3>
+                </a>
+                <p data-i18n="christian-ministries-desc">
+                  Preparing for the profound call of ministry, counseling,
+                  missions, and preaching through Bible.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Features Section -->
+      <section id="features" class="features section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2 data-i18n="features-title">Features</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-5 justify-content-between">
+            <div class="col-xl-5" data-aos="zoom-out" data-aos-delay="100">
+              <img
+                src="assets/assets/img//template/eStartup/features.svg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+
+            <div class="col-xl-6 d-flex">
+              <div class="row align-self-center gy-4">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h3 data-i18n="zero-tuition">Zero Tuition Fee</h3>
                   </div>
                 </div>
+                <!-- End Feature Item -->
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h3 data-i18n="course-duration">
+                      8 Months Course Duration
+                    </h3>
+                  </div>
+                </div>
+                <!-- End Feature Item -->
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h3 data-i18n="christian-fellowship">
+                      Christian Fellowship
+                    </h3>
+                  </div>
+                </div>
+                <!-- End Feature Item -->
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h3 data-i18n="religious-impartiality">
+                      Religious Impartiality
+                    </h3>
+                  </div>
+                </div>
+                <!-- End Feature Item -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Features Section -->
+
+      <!-- Faq Section -->
+      <section id="faq" class="faq section light-background">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="content px-xl-5">
+                <h3>
+                  <span data-i18n="graduates-say">What Our Graduates Say</span
+                  ><strong></strong>
+                </h3>
               </div>
             </div>
 
-          </div>
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <div class="faq-container">
+                <div class="faq-item faq-active">
+                  <h3><span class="num">1.</span> <span>Alex</span></h3>
+                  <div class="faq-content">
+                    <p data-i18n="testimonial-1">
+                      Studying God's Word at IBA was my first online learning
+                      experience, and it was truly transformative. I wasn't
+                      particularly engaged with the Bible before, but when a
+                      friend invited me to study at IBA, I took the opportunity,
+                      especially since it was free. What amazed me most was
+                      witnessing my own gradual transformation. Despite my busy
+                      work schedule, I prioritized these studies because the
+                      Word became precious to me. Each lesson revealed new
+                      aspects of God's mystery. God is truly alive! I hope many
+                      others will have the opportunity to study at IBA.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+                <div class="faq-item">
+                  <h3><span class="num">2.</span> <span>Christina</span></h3>
+                  <div class="faq-content">
+                    <p data-i18n="testimonial-2">
+                      I am truly blessed to learn God's Word at IBA. I had many
+                      questions about the Bible that went unanswered, but here I
+                      found not only answers but also discovered new insights.
+                      Through this study, I've gained a deeper understanding of
+                      God's will and His kingdom.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+                <div class="faq-item">
+                  <h3><span class="num">3.</span> <span>Joseph</span></h3>
+                  <div class="faq-content">
+                    <p data-i18n="testimonial-3">
+                      Having never attended seminary, I wanted to deepen my
+                      understanding of the gospels and their modern-day
+                      relevance. I was initially skeptical about IBA's free
+                      program, but one class taught me more than my 35 years of
+                      faith journey had.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
 
+                <div class="faq-item">
+                  <h3><span class="num">4.</span> <span>Sam</span></h3>
+                  <div class="faq-content">
+                    <p data-i18n="testimonial-4">
+                      Throughout this Bible class, I have learned the true
+                      meaning of parables, prophecies, and their fulfillment. It
+                      has been an eye-opening journey to see how everything
+                      aligns, making the fulfillment of Revelation truly clear
+                      and testified. This class has deepened my understanding,
+                      and I am excited to share this experience with my friends
+                      and family.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">5.</span> <span>Princy</span></h3>
+                  <div class="faq-content">
+                    <p data-i18n="testimonial-5">
+                      Deepening my understanding of the Gospels has always been
+                      a personal aspiration, particularly in uncovering their
+                      relevance to our lives today. Without formal theological
+                      education, I initially wondered how much depth I could
+                      gain from a free program offered by IBA. However, what I
+                      found far surpassed my expectations just introductory
+                      classes provided insights that profoundly transformed my
+                      perspective towards God's will. Currently, I have been
+                      actively involved in sharing this Word with others, and
+                      these teachings have enriched both my understanding and my
+                      ability to inspire others in their faith journey
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Faq Section -->
+
+      <section id="youtube-videos" class="youtube-videos section">
+        <div class="container section-title">
+          <h2 data-i18n="our-videos">Our Videos</h2>
+        </div>
+        <div class="carousel-container" id="carouselContainer">
+          <button class="arrow left" id="carouselLeft">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <div class="carousel" id="videoCarousel"></div>
+          <button class="arrow right" id="carouselRight">
+            <i class="bi bi-chevron-right"></i>
+          </button>
         </div>
 
+        <div class="video-modal" id="videoModal">
+          <div class="modal-content">
+            <button class="close" id="modalClose">&times;</button>
+            <iframe
+              id="videoPlayer"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <div class="welcome-popup">
+        <img
+          src="assets/img/assistant.png"
+          alt="Assistant"
+          class="assistant-img"
+        />
+        <div class="welcome-content">
+          <h3 data-i18n="welcome-greeting">Welcome to IBA! 👋</h3>
+          <p data-i18n="welcome-message">
+            I'm here to help you explore our programs.
+          </p>
+        </div>
       </div>
-    </section><!-- /About Section -->
 
+      <button class="chatbot-toggler">
+        <span class="material-symbols-rounded">support_agent</span>
+        <span class="material-symbols-outlined">close</span>
+      </button>
 
+      <!-- Update chatbot HTML structure -->
+      <div class="chatbot">
+        <header>
+          <h2 data-i18n="assistant-title">IBA Assistant</h2>
+          <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+          <li class="chat incoming">
+            <img
+              src="assets/img/assistant.png"
+              alt="Assistant"
+              class="chat-bot-icon"
+            />
+            <p>
+              <span data-i18n="bot-greeting">Hi there! 👋</span><br /><span
+                data-i18n="bot-intro"
+                >I'm your IBA assistant. I'm here to help you!</span
+              >
+            </p>
+          </li>
+        </ul>
+        <div class="chat-input">
+          <textarea
+            data-i18n-placeholder="bot-placeholder"
+            placeholder="Ask me anything about IBA..."
+            spellcheck="false"
+            required
+          ></textarea>
+          <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+      </div>
+    </main>
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h1>IBA Studies</h1>
-      </div><!-- End Section Title -->
-
+    <footer id="footer" class="footer light-background">
       <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="bi bi-door-open"></i>
-              </div>
-              <a href="javascript:void(0)" class="stretched-link">
-                <h3 data-i18n="spiritual-direction-title">Spiritual Direction</h3>
-              </a>
-              <p data-i18n="spiritual-direction-desc">We help you to have a chance to cultivate spiritual growth by
-                teaching the fundamentals of Bible.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-book"></i>
-              </div>
-              <a href="javascript:void(0)" class="stretched-link">
-                <h3 data-i18n="christian-studies-title">Christian Studies</h3>
-              </a>
-              <p data-i18n="christian-studies-desc">No matter where you are, we help you to cultivate intimacy with God
-                and deepen the life of prayer and
-                openness of the heart through Bible.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="javascript:void(0)" class="stretched-link">
-                <h3 data-i18n="christian-ministries-title">Christian Ministries Studies</h3>
-              </a>
-              <p data-i18n="christian-ministries-desc">Preparing for the profound call of ministry, counseling,
-                missions, and preaching through Bible.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-
-
+        <div class="copyright text-center">
+          <p>
+            <span data-i18n="copyright">Copyright</span>
+            <strong class="px-1 sitename">IBA</strong>
+            <span data-i18n="all-rights">All Rights Reserved</span>
+          </p>
         </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Features Section -->
-    <section id="features" class="features section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 data-i18n="features-title">Features</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-5 justify-content-between">
-
-          <div class="col-xl-5" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/assets/img//template/eStartup/features.svg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-xl-6 d-flex">
-            <div class="row align-self-center gy-4">
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3 data-i18n="zero-tuition">Zero Tuition Fee</h3>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3 data-i18n="course-duration">8 Months Course Duration</h3>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3 data-i18n="christian-fellowship">Christian Fellowship</h3>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3 data-i18n="religious-impartiality">Religious Impartiality</h3>
-                </div>
-              </div><!-- End Feature Item -->
-
-
-            </div>
-          </div>
-
+        <div class="social-links d-flex justify-content-center">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
         </div>
-
-      </div>
-
-    </section><!-- /Features Section -->
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section light-background">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="content px-xl-5">
-              <h3><span data-i18n="graduates-say">What Our Graduates Say</span><strong></strong></h3>
-            </div>
-          </div>
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="faq-container">
-              <div class="faq-item faq-active">
-                <h3><span class="num">1.</span> <span>Alex</span></h3>
-                <div class="faq-content">
-                  <p data-i18n="testimonial-1">Studying God's Word at IBA was my first online learning experience, and
-                    it was truly
-                    transformative.
-                    I wasn't particularly engaged with the Bible before, but when a friend invited me to study at IBA, I
-                    took
-                    the opportunity, especially since it was free. What amazed me most was witnessing my own gradual
-                    transformation.
-                    Despite my busy work schedule, I prioritized these studies because the Word became precious to me.
-                    Each lesson
-                    revealed new aspects of God's mystery. God is truly alive! I hope many others will have the
-                    opportunity to study at IBA.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-              <div class="faq-item">
-                <h3><span class="num">2.</span> <span>Christina</span></h3>
-                <div class="faq-content">
-                  <p data-i18n="testimonial-2">I am truly blessed to learn God's Word at IBA. I had many questions about
-                    the Bible that went
-                    unanswered,
-                    but here I found not only answers but also discovered new insights. Through this study, I've gained
-                    a deeper
-                    understanding of God's will and His kingdom.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-              <div class="faq-item">
-                <h3><span class="num">3.</span> <span>Joseph</span></h3>
-                <div class="faq-content">
-                  <p data-i18n="testimonial-3">Having never attended seminary, I wanted to deepen my understanding of
-                    the gospels and their
-                    modern-day
-                    relevance. I was initially skeptical about IBA's free program, but one class taught me more than my
-                    35 years
-                    of faith journey had.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">4.</span> <span>Sam</span></h3>
-                <div class="faq-content">
-                  <p data-i18n="testimonial-4">Throughout this Bible class, I have learned the true meaning of parables,
-                    prophecies, and their
-                    fulfillment. It has been an eye-opening journey to see how everything aligns, making the fulfillment
-                    of Revelation truly clear and testified. This class has deepened my understanding, and I am excited
-                    to share this experience with my friends and family.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">5.</span> <span>Princy</span></h3>
-                <div class="faq-content">
-                  <p data-i18n="testimonial-5">Deepening my understanding of the Gospels has always been a personal
-                    aspiration, particularly in
-                    uncovering their relevance to our lives today. Without formal theological education, I initially
-                    wondered how much depth I could gain from a free program offered by IBA. However, what I found far
-                    surpassed my expectations just introductory classes provided insights that profoundly transformed my
-                    perspective towards God's will. Currently, I have been actively involved in sharing this Word with
-                    others, and these teachings have enriched both my understanding and my ability to inspire others in
-                    their faith journey</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Faq Section -->
-
-    <section id="youtube-videos" class="youtube-videos section">
-      <div class="container section-title">
-        <h2 data-i18n="our-videos">Our Videos</h2>
-      </div>
-      <div class="carousel-container" id="carouselContainer">
-        <button class="arrow left" id="carouselLeft">
-          <i class="bi bi-chevron-left"></i>
-        </button>
-        <div class="carousel" id="videoCarousel">
-        </div>
-        <button class="arrow right" id="carouselRight">
-          <i class="bi bi-chevron-right"></i>
-        </button>
-      </div>
-
-      <div class="video-modal" id="videoModal">
-        <div class="modal-content">
-          <button class="close" id="modalClose">&times;</button>
-          <iframe id="videoPlayer" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-    <div class="welcome-popup">
-      <img src="assets/img/assistant.png" alt="Assistant" class="assistant-img">
-      <div class="welcome-content">
-        <h3 data-i18n="welcome-greeting">Welcome to IBA! 👋</h3>
-        <p data-i18n="welcome-message">I'm here to help you explore our programs.</p>
-      </div>
-    </div>
-
-    <button class="chatbot-toggler">
-      <span class="material-symbols-rounded">support_agent</span>
-      <span class="material-symbols-outlined">close</span>
-    </button>
-
-    <!-- Update chatbot HTML structure -->
-    <div class="chatbot">
-      <header>
-        <h2 data-i18n="assistant-title">IBA Assistant</h2>
-        <span class="close-btn material-symbols-outlined">close</span>
-      </header>
-      <ul class="chatbox">
-        <li class="chat incoming">
-          <img src="assets/img/assistant.png" alt="Assistant" class="chat-bot-icon">
-          <p><span data-i18n="bot-greeting">Hi there! 👋</span><br><span data-i18n="bot-intro">I'm your IBA assistant.
-              I'm here to help you!</span></p>
-        </li>
-      </ul>
-      <div class="chat-input">
-        <textarea data-i18n-placeholder="bot-placeholder" placeholder="Ask me anything about IBA..." spellcheck="false"
-          required></textarea>
-        <span id="send-btn" class="material-symbols-rounded">send</span>
-      </div>
-    </div>
-
-  </main>
-
-  <footer id="footer" class="footer light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p> <span data-i18n="copyright">Copyright</span> <strong class="px-1 sitename">IBA</strong> <span
-            data-i18n="all-rights">All Rights
-            Reserved</span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <!-- <div class="credits">
+        <!-- <div class="credits">
         Designed by <a href="#">IBA Team</a>
       </div> -->
-    </div>
+      </div>
+    </footer>
 
-  </footer>
+    <!-- Scroll Top -->
+    <!-- Position scroll-top button beside chatbot -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
 
-  <!-- Scroll Top -->
-  <!-- Position scroll-top button beside chatbot -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <!-- Main JS Files - Make sure script.js is loaded last -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/bot/scripts.js"></script>
 
-  <!-- Main JS Files - Make sure script.js is loaded last -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/bot/scripts.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const counters = document.querySelectorAll(".counter");
+        const speed = 200;
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const counters = document.querySelectorAll('.counter');
-      const speed = 200;
-
-      function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-      }
-
-      function animateCounter(counter) {
-        const target = +counter.dataset.target;
-        let count = 0;
-        const increment = target / speed;
-
-        function updateCount() {
-          if (count < target) {
-            count += increment;
-            counter.innerText = Math.ceil(count);
-            requestAnimationFrame(updateCount);
-          } else {
-            counter.innerText = target;
-          }
+        function isElementInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+              (window.innerWidth || document.documentElement.clientWidth)
+          );
         }
 
-        updateCount();
-      }
+        function animateCounter(counter) {
+          const target = +counter.dataset.target;
+          let count = 0;
+          const increment = target / speed;
 
-      function checkCounters() {
-        counters.forEach(counter => {
-          if (isElementInViewport(counter) && !counter.classList.contains('counted')) {
-            counter.classList.add('counted');
-            animateCounter(counter);
+          function updateCount() {
+            if (count < target) {
+              count += increment;
+              counter.innerText = Math.ceil(count);
+              requestAnimationFrame(updateCount);
+            } else {
+              counter.innerText = target;
+            }
           }
-        });
-      }
 
-      window.addEventListener('scroll', checkCounters);
-      checkCounters(); // Initial check
-    });
-  </script>
+          updateCount();
+        }
 
-</body>
+        function checkCounters() {
+          counters.forEach((counter) => {
+            if (
+              isElementInViewport(counter) &&
+              !counter.classList.contains("counted")
+            ) {
+              counter.classList.add("counted");
+              animateCounter(counter);
+            }
+          });
+        }
 
+        window.addEventListener("scroll", checkCounters);
+        checkCounters(); // Initial check
+      });
+    </script>
+  </body>
 </html>
