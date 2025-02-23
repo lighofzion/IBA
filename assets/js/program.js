@@ -52,7 +52,22 @@ const translations = {
         "nav-home": "Home",
         "nav-program": "Program",
         "nav-about": "About Us",
-        "nav-contact": "Contact"
+        "nav-contact": "Contact",
+        "enter": "Enter",
+        "enter-your": "Enter your",
+        "select": "Select",
+        "select-from": "Select from",
+        "share-expectation": "Share any specific expectation or questions...",
+        "i-agree": "I agree to the",
+        "terms-title": "Terms and Conditions",
+        "terms-desc": "By signing up for this course, you agree to the following:",
+        "terms-point1": "You will attend classes regularly.",
+        "terms-point2": "You consent to the collection of personal information for communication purposes.",
+        "terms-point3": "You may withdraw your consent at any time by contacting us.",
+        "terms-point4": "Our students come from various parts of the world, from various religions and denominations. To better assist you in the course, we want to get to know you.",
+        "terms-point5": "The following personal and basic information is required for enrollment in the education center, which will allow you to participate in the basic, intermediate, and advanced levels of Bible study classes.",
+        "terms-point6": "These informations will not transfer to any other person/institution and will be protected.",
+        "terms-point7": "For further details, please contact support."
     },
     ta: {
         "our-videos": "எங்கள் வீடியோக்கள்",
@@ -107,7 +122,22 @@ const translations = {
         "nav-home": "முகப்பு",
         "nav-program": "பாடநெறி",
         "nav-about": "எங்களை பற்றி",
-        "nav-contact": "தொடர்பு"
+        "nav-contact": "தொடர்பு",
+        "enter": "உள்ளிடவும்",
+        "enter-your": "உங்கள்",
+        "select": "தேர்ந்தெடுக்கவும்",
+        "select-from": "இதிலிருந்து தேர்ந்தெடுக்கவும்",
+        "share-expectation": "உங்கள் எதிர்பார்ப்புகள் அல்லது கேள்விகளை பகிரவும்...",
+        "i-agree": "நான் ஒப்புக்கொள்கிறேன்",
+        "terms-title": "விதிமுறைகள் மற்றும் நிபந்தனைகள்",
+        "terms-desc": "இந்த பாடநெறிக்கு பதிவு செய்வதன் மூலம், நீங்கள் பின்வருவனவற்றிற்கு ஒப்புக்கொள்கிறீர்கள்:",
+        "terms-point1": "நீங்கள் வகுப்புகளுக்கு தொடர்ந்து வருகை தருவீர்கள்.",
+        "terms-point2": "தகவல் தொடர்பு நோக்கங்களுக்காக தனிப்பட்ட தகவல்களை சேகரிப்பதற்கு நீங்கள் ஒப்புக்கொள்கிறீர்கள்.",
+        "terms-point3": "எங்களை தொடர்புகொண்டு எப்போது வேண்டுமானாலும் உங்கள் ஒப்புதலை திரும்பப் பெறலாம்.",
+        "terms-point4": "எங்கள் மாணவர்கள் உலகின் பல்வேறு பகுதிகளில் இருந்தும், பல்வேறு மதங்கள் மற்றும் பிரிவுகளில் இருந்தும் வருகிறார்கள். பாடநெறியில் உங்களுக்கு சிறப்பாக உதவ, உங்களை அறிந்துகொள்ள விரும்புகிறோம்.",
+        "terms-point5": "அடிப்படை, இடைநிலை மற்றும் மேம்பட்ட நிலை வேதாகம கற்கை வகுப்புகளில் பங்கேற்க அனுமதிக்கும் கல்வி மையத்தில் சேர, பின்வரும் தனிப்பட்ட மற்றும் அடிப்படை தகவல்கள் தேவை.",
+        "terms-point6": "இந்த தகவல்கள் வேறு எந்த நபர்/நிறுவனத்திற்கும் மாற்றப்படாது மற்றும் பாதுகாக்கப்படும்.",
+        "terms-point7": "மேலும் விவரங்களுக்கு, தயவுசெய்து ஆதரவை தொடர்புகொள்ளவும்."
     },
     hi: {
         "our-videos": "हमारे वीडियो",
@@ -162,7 +192,22 @@ const translations = {
         "nav-home": "होम",
         "nav-program": "प्रोग्राम",
         "nav-about": "हमारे बारे में",
-        "nav-contact": "संपर्क"
+        "nav-contact": "संपर्क",
+        "enter": "दर्ज करें",
+        "enter-your": "अपना",
+        "select": "चुनें",
+        "select-from": "इनमें से चुनें",
+        "share-expectation": "कोई विशिष्ट अपेक्षा या प्रश्न साझा करें...",
+        "i-agree": "मैं सहमत हूं",
+        "terms-title": "नियम और शर्तें",
+        "terms-desc": "इस पाठ्यक्रम के लिए साइन अप करके, आप निम्नलिखित से सहमत हैं:",
+        "terms-point1": "आप नियमित रूप से कक्षाओं में भाग लेंगे।",
+        "terms-point2": "आप संचार उद्देश्यों के लिए व्यक्तिगत जानकारी के संग्रह के लिए सहमत हैं।",
+        "terms-point3": "आप किसी भी समय हमसे संपर्क करके अपनी सहमति वापस ले सकते हैं।",
+        "terms-point4": "हमारे छात्र दुनिया के विभिन्न हिस्सों से, विभिन्न धर्मों और संप्रदायों से आते हैं। पाठ्यक्रम में आपकी बेहतर सहायता के लिए, हम आपको जानना चाहते हैं।",
+        "terms-point5": "शिक्षा केंद्र में नामांकन के लिए निम्नलिखित व्यक्तिगत और बुनियादी जानकारी आवश्यक है, जो आपको बाइबल अध्ययन कक्षाओं के बुनियादी, मध्यवर्ती और उन्नत स्तरों में भाग लेने की अनुमति देगी।",
+        "terms-point6": "यह जानकारी किसी अन्य व्यक्ति/संस्थान को स्थानांतरित नहीं की जाएगी और सुरक्षित रखी जाएगी।",
+        "terms-point7": "अधिक जानकारी के लिए, कृपया सहायता से संपर्क करें।"
     },
     kn: {
         "our-videos": "ನಮ್ಮ ವೀಡಿಯೊಗಳು",
@@ -217,51 +262,154 @@ const translations = {
         "nav-home": "ಮುಖಪುಟ",
         "nav-program": "ಪ್ರೋಗ್ರಾಂ",
         "nav-about": "ನಮ್ಮ ಬಗ್ಗೆ",
-        "nav-contact": "ಸಂಪರ್ಕ"
+        "nav-contact": "ಸಂಪರ್ಕ",
+        "enter": "ನಮೂದಿಸಿ",
+        "enter-your": "ನಿಮ್ಮ",
+        "select": "ಆಯ್ಕೆಮಾಡಿ",
+        "select-from": "ಇದರಿಂದ ಆಯ್ಕೆಮಾಡಿ",
+        "share-expectation": "ನಿಮ್ಮ ನಿರೀಕ್ಷೆಗಳು ಅಥವಾ ಪ್ರಶ್ನೆಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಿ...",
+        "i-agree": "ನಾನು ಒಪ್ಪುತ್ತೇನೆ",
+        "terms-title": "ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು",
+        "terms-desc": "ಈ ಕೋರ್ಸ್‌ಗೆ ಸೈನ್ ಅಪ್ ಮಾಡುವ ಮೂಲಕ, ನೀವು ಈ ಕೆಳಗಿನವುಗಳಿಗೆ ಒಪ್ಪುತ್ತೀರಿ:",
+        "terms-point1": "ನೀವು ತರಗತಿಗಳಿಗೆ ನಿಯಮಿತವಾಗಿ ಹಾಜರಾಗುತ್ತೀರಿ.",
+        "terms-point2": "ಸಂವಹನ ಉದ್ದೇಶಗಳಿಗಾಗಿ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯ ಸಂಗ್ರಹಣೆಗೆ ನೀವು ಒಪ್ಪಿಗೆ ನೀಡುತ್ತೀರಿ.",
+        "terms-point3": "ನೀವು ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುವ ಮೂಲಕ ನಿಮ್ಮ ಒಪ್ಪಿಗೆಯನ್ನು ಹಿಂತೆಗೆದುಕೊಳ್ಳಬಹುದು.",
+        "terms-point4": "ನಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ವಿಶ್ವದ ವಿವಿಧ ಭಾಗಗಳಿಂದ, ವಿವಿಧ ಧರ್ಮಗಳು ಮತ್ತು ಪಂಥಗಳಿಂದ ಬರುತ್ತಾರೆ. ಕೋರ್ಸ್‌ನಲ್ಲಿ ನಿಮಗೆ ಉತ್ತಮವಾಗಿ ಸಹಾಯ ಮಾಡಲು, ನಾವು ನಿಮ್ಮನ್ನು ತಿಳಿದುಕೊಳ್ಳಲು ಬಯಸುತ್ತೇವೆ.",
+        "terms-point5": "ಶಿಕ್ಷಣ ಕೇಂದ್ರದಲ್ಲಿ ದಾಖಲಾತಿಗಾಗಿ ಈ ಕೆಳಗಿನ ವೈಯಕ್ತಿಕ ಮತ್ತು ಮೂಲ ಮಾಹಿತಿ ಅಗತ್ಯವಿರುತ್ತದೆ, ಇದು ನಿಮಗೆ ಬೈಬಲ್ ಅಧ್ಯಯನ ತರಗತಿಗಳ ಮೂಲ, ಮಧ್ಯಂತರ ಮತ್ತು ಸುಧಾರಿತ ಮಟ್ಟಗಳಲ್ಲಿ ಭಾಗವಹಿಸಲು ಅನುವು ಮಾಡಿಕೊಡುತ್ತದೆ.",
+        "terms-point6": "ಈ ಮಾಹಿತಿಯನ್ನು ಯಾವುದೇ ಇತರ ವ್ಯಕ್ತಿ/ಸಂಸ್ಥೆಗೆ ವರ್ಗಾಯಿಸಲಾಗುವುದಿಲ್ಲ ಮತ್ತು ರಕ್ಷಿಸಲಾಗುವುದು.",
+        "terms-point7": "ಹೆಚ್ಚಿನ ವಿವರಗಳಿಗಾಗಿ, ದಯವಿಟ್ಟು ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ."
     }
 };
 
 function setLanguage(lang) {
-    // Set HTML lang attribute
     document.documentElement.lang = lang;
 
     // Update language display
-    document.getElementById('currentLang').textContent =
-        lang === 'en' ? 'English' :
-            lang === 'ta' ? 'தமிழ்' :
-                lang === 'hi' ? 'हिंदी' : 'ಕನ್ನಡ';
+    const langDisplayText = {
+        'en': 'English',
+        'ta': 'தமிழ்',
+        'hi': 'हिंदी',
+        'kn': 'ಕನ್ನಡ'
+    };
+    document.getElementById('currentLang').textContent = langDisplayText[lang];
+    document.getElementById('modalCurrentLang').textContent = langDisplayText[lang];
 
-    // Update text content for elements with data-pro attribute
+    // Update data-pro elements
     document.querySelectorAll('[data-pro]').forEach(element => {
         const key = element.getAttribute('data-pro');
-        if (translations[lang] && translations[lang][key]) {
+        if (translations[lang]?.[key]) {
             element.textContent = translations[lang][key];
         }
     });
 
-    // Update placeholders
-    document.querySelectorAll('[data-pro-placeholder]').forEach(element => {
-        const key = element.getAttribute('data-pro-placeholder');
-        if (translations[lang] && translations[lang][key]) {
-            element.placeholder = translations[lang][key];
+    // Update form fields
+    const formElements = {
+        'name': 'label-full-name',
+        'phone_number': 'label-phone-number',
+        'email': 'label-email',
+        'city': 'label-city',
+        'job_occupation': 'label-occupation',
+        'district': 'label-district',
+        'state': 'label-state',
+        'nationality': 'label-nationality',
+        'referral': 'label-referral',
+        'years_of_faith': 'label-years-of-faith'
+    };
+
+    // Update input fields with translated placeholders
+    Object.entries(formElements).forEach(([id, key]) => {
+        const input = document.getElementById(id);
+        if (input && translations[lang]?.[key]) {
+            const enterText = translations[lang]["enter-your"];
+            const labelText = translations[lang][key].toLowerCase();
+            input.placeholder = `${enterText} ${labelText}`;
         }
     });
 
-    // Update select options
-    document.querySelectorAll('select').forEach(select => {
-        select.querySelectorAll('option').forEach(option => {
-            const key = option.getAttribute('data-pro');
-            if (key && translations[lang] && translations[lang][key]) {
-                option.textContent = translations[lang][key];
+    // Special handling for referral input
+    const referralInput = document.getElementById('referral');
+    if (referralInput) {
+        referralInput.placeholder = translations[lang]["enter"] + " " +
+            translations[lang]["label-referral"].toLowerCase();
+    }
+
+    // Update select fields
+    const selectFields = {
+        'gender': {
+            placeholder: 'select-gender',
+            options: ['gender-male', 'gender-female', 'gender-other', 'gender-prefer-not-to-say']
+        },
+        'marital_status': {
+            placeholder: 'select-marital-status',
+            options: ['marital-status-single', 'marital-status-married', 'marital-status-widowed', 'marital-status-divorced']
+        },
+        'course_language': {
+            placeholder: 'label-course-language'
+        },
+        'course_type': {
+            placeholder: 'label-course-type'
+        }
+    };
+
+    Object.entries(selectFields).forEach(([id, config]) => {
+        const select = document.getElementById(id);
+        if (select) {
+            // Update placeholder option
+            const placeholderOption = select.querySelector('option[value=""]');
+            if (placeholderOption && translations[lang]?.[config.placeholder]) {
+                placeholderOption.textContent = `${translations[lang]["select-from"]} ${translations[lang][config.placeholder].toLowerCase()}`;
             }
-        });
+
+            // Update other options if they exist
+            if (config.options) {
+                config.options.forEach(optionKey => {
+                    const option = select.querySelector(`option[data-pro="${optionKey}"]`);
+                    if (option && translations[lang]?.[optionKey]) {
+                        option.textContent = translations[lang][optionKey];
+                    }
+                });
+            }
+        }
     });
 
-    // Save preference
+    // Update textarea
+    const additionalInfo = document.getElementById('additional_info');
+    if (additionalInfo) {
+        additionalInfo.placeholder = translations[lang]["share-expectation"];
+    }
+
+    // Update agreement section
+    const agreementLabel = document.querySelector('.form-check-label');
+    if (agreementLabel) {
+        agreementLabel.innerHTML = `${translations[lang]["i-agree"]} <a href="#" data-bs-toggle="collapse" data-bs-target="#termsCollapse">${translations[lang]["terms-and-conditions"]}</a>`;
+    }
+
+    // Update section titles
+    const sectionTitles = {
+        'personalDetailsTitle': 'personal-details-title',
+        'courseDetailsTitle': 'course-details-title',
+        'additionalInfoTitle': 'additional-info-title'
+    };
+
+    Object.entries(sectionTitles).forEach(([id, key]) => {
+        const element = document.getElementById(id);
+        if (element && translations[lang]?.[key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    // Update terms and conditions
+    document.querySelectorAll('[data-pro^="terms"]').forEach(element => {
+        const key = element.getAttribute('data-pro');
+        if (translations[lang]?.[key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
     localStorage.setItem('preferred-language', lang);
 }
 
-// Add debug logging
+// Add event listeners for modal language switcher
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Script loaded');
     const savedLang = localStorage.getItem('preferred-language') || 'en';
@@ -273,6 +421,15 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const lang = elem.getAttribute('data-lang');
             console.log('Language clicked:', lang);
+            setLanguage(lang);
+        });
+    });
+
+    // Add modal language switcher handlers
+    document.querySelectorAll('[data-modal-lang]').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const lang = e.target.getAttribute('data-modal-lang');
             setLanguage(lang);
         });
     });
