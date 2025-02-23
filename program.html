@@ -416,6 +416,10 @@
                       <select class="form-select" id="course_language" required>
                         <option value="" selected disabled data-pro="placeholder-select-language">Select a language
                         </option>
+                        <option value="English">English</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Kannada">Kannada</option>
                       </select>
                     </div>
                     <div class="mb-3" style="position: relative;">
@@ -676,25 +680,46 @@
       try {
         const { data, error } = await supabaseClient
           .from('dim_batches')
-          .select('batch_days, batch_lang');
+          .select('batch_days, batch_lang')
+          .order('batch_lang');  // Order by language
 
-        if (error) throw new Error(error.message);
-
-        console.log('Fetched data:', data);
-
-        // Clear previous options
-        resetDropdown('course_type', 'Select from choice');
-        resetDropdown('course_language', 'Select a language');
-
-        // Populate Course Days and Language dropdowns
-        if (data && data.length > 0) {
-          populateDropdown('course_type', data, 'batch_days');
-          populateDropdown('course_language', data, 'batch_lang');
-        } else {
-          console.log('No data available');
+        if (error) {
+          console.error('Supabase error:', error);
+          throw error;
         }
+
+        console.log('Fetched course data:', data);
+
+        // Clear and populate course language dropdown
+        const languageDropdown = document.getElementById('course_language');
+        if (languageDropdown) {
+          // Keep only the default option
+          languageDropdown.innerHTML = '<option value="" selected disabled>Select a language</option>';
+
+          // Create a Set to store unique languages
+          const uniqueLanguages = new Set();
+
+          // Add languages from the database
+          data?.forEach(item => {
+            if (item.batch_lang && !uniqueLanguages.has(item.batch_lang)) {
+              uniqueLanguages.add(item.batch_lang);
+              const option = document.createElement('option');
+              option.value = item.batch_lang;
+              option.textContent = item.batch_lang;
+              languageDropdown.appendChild(option);
+            }
+          });
+
+          console.log('Populated languages:', Array.from(uniqueLanguages));
+        } else {
+          console.error('Course language dropdown not found');
+        }
+
+        // Handle course type dropdown similarly
+        // ...existing code for course_type...
+
       } catch (err) {
-        console.error('Error fetching course details:', err);
+        console.error('Error in fetchCourseDetails:', err);
       }
     }
 
