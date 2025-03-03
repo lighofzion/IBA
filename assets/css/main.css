@@ -331,7 +331,7 @@
   overflow: hidden;
 }
 
-.stats-section::before {
+/* .stats-section::before {
   content: "";
   position: absolute;
   top: -10px;
@@ -341,7 +341,7 @@
   height: 100px;
   background: var(--background-color);
   border-radius: 50%;
-}
+} */
 
 .stats-panel {
   background: var(--surface-color);
