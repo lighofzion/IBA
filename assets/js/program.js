@@ -196,4 +196,10 @@ document.addEventListener('DOMContentLoaded', () => {
             setLanguage(lang);
         });
     });
+
+    // Check for registration hash and show modal
+    if (window.location.hash === '#registration') {
+        const courseModal = new bootstrap.Modal(document.getElementById('courseModal'));
+        courseModal.show();
+    }
 });
