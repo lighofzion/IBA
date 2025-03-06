@@ -166,18 +166,12 @@
           <li class="dropdown">
             <a href="#"><span id="currentLang">Language</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#" data-lang="en">English</a></li>
-              <li><a href="#" data-lang="ta">தமிழ்</a></li>
-              <li><a href="#" data-lang="hi">हिंदी</a></li>
-              <li><a href="#" data-lang="kn">ಕನ್ನಡ</a></li>
+              <li><a href="#" data-lang="en" data-pro="english">English</a></li>
+              <li><a href="#" data-lang="ta" data-pro="tamil">தமிழ்</a></li>
+              <li><a href="#" data-lang="hi" data-pro="hindi">हिंदी</a></li>
+              <li><a href="#" data-lang="kn" data-pro="kannada">ಕನ್ನಡ</a></li>
             </ul>
           </li>
-          <!-- <li class="login-icon">
-            <a href="login.html" class="login-link">
-
-              Login
-            </a>
-          </li> -->
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -194,7 +188,7 @@
 
         <!-- Header Section -->
         <div class="text-center mb-5">
-          <h2 class="section-title display-4 fw-bold text-gradient" data-pro="program-title">Transform Your Faith.
+          <h2 class="section-title display-4 fw-bold text-gradient" data-pro="program-title">Transform Your Faith..
             Elevate Your Life.</h2>
           <p class="section-subtitle fst-italic text-muted" data-pro="program-subtitle">
             Immerse yourself in a world of spiritual growth, dynamic learning, and leadership development with our
@@ -316,211 +310,42 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <div class="d-flex w-100 align-items-center justify-content-between">
-              <h5 class="modal-title" id="courseModalLabel" data-pro="modal-title">Sign Up for the Course</h5>
-              <div class="dropdown mx-3">
-                <button class="btn btn-light dropdown-toggle" type="button" id="modalLanguageDropdown"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  <span id="modalCurrentLang">Language</span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="modalLanguageDropdown">
-                  <li><a class="dropdown-item" href="#" data-modal-lang="en">English</a></li>
-                  <li><a class="dropdown-item" href="#" data-modal-lang="ta">தமிழ்</a></li>
-                  <li><a class="dropdown-item" href="#" data-modal-lang="hi">हिंदी</a></li>
-                  <li><a class="dropdown-item" href="#" data-modal-lang="kn">ಕನ್ನಡ</a></li>
-                </ul>
-              </div>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+            <h5 class="modal-title" id="courseModalLabel" data-pro="modal-title">Sign Up for the Course</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form id="courseForm">
-              <!-- Personal Details Section -->
-              <div class="form-section">
-                <h6 data-pro="personal-details-title">Personal Details</h6>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="name" class="form-label" data-pro="label-full-name">Full Name <span
-                          class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="phone_number" class="form-label" data-pro="label-phone-number">Phone Number <span
-                          class="text-danger">*</span></label>
-                      <input type="tel" class="form-control" id="phone_number" data-pro="placeholder-phone-number"
-                        placeholder="Enter your phone number" pattern="[0-9]{10}" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="email" class="form-label" data-pro="label-email">Email</label>
-                      <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                    </div>
-                    <div class="mb-3">
-                      <label for="city" class="form-label" data-pro="label-city">City <span
-                          class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="job_occupation" class="form-label" data-pro="label-occupation">Occupation <span
-                          class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="job_occupation" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="gender" class="form-label" data-pro="label-gender">Gender <span
-                          class="text-danger">*</span></label>
-                      <select class="form-select" id="gender" required>
-                        <option value="" selected disabled data-pro="select-gender">Select your gender</option>
-                        <option value="Male" data-pro="gender-male">Male</option>
-                        <option value="Female" data-pro="gender-female">Female</option>
-                        <option value="Other" data-pro="gender-other">Other</option>
-                        <option value="Prefer not to say" data-pro="gender-prefer-not-to-say">Prefer not to say</option>
-                      </select>
-                    </div>
-                    <div class="mb-3">
-                      <label for="marital_status" class="form-label" data-pro="label-marital-status">Marital Status<span
-                          class="text-danger">*</span></label>
-                      <select class="form-select" id="marital_status" required>
-                        <option value="" selected disabled data-pro="select-marital-status">Select your marital status
-                        </option>
-                        <option value="Single" data-pro="marital-status-single">Single</option>
-                        <option value="Married" data-pro="marital-status-married">Married</option>
-                        <option value="Widowed" data-pro="marital-status-widowed">Widowed</option>
-                        <option value="Divorced" data-pro="marital-status-divorced">Divorced</option>
-                      </select>
-                    </div>
-                    <div class="mb-3">
-                      <label for="birthdate" class="form-label" data-pro="label-birthdate">Birthdate <span
-                          class="text-danger">*</span></label>
-                      <input type="date" class="form-control" id="birthdate" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="district" class="form-label" data-pro="label-district">District <span
-                          class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="district" placeholder="Enter your district" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="state" class="form-label" data-pro="label-state">State <span
-                          class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="state" placeholder="Enter your state" required>
-                    </div>
-                  </div>
+            <div class="language-selection">
+              <h6 class="mb-4 text-center" data-pro="select-language">Please select your preferred language for registration</h6>
+              <div class="row g-3 justify-content-center">
+                <div class="col-md-4 col-sm-6">
+                  <a href="https://docs.google.com/forms/d/1DsoUPzin16EfOichLRfiM9Z7QeC5xRPwJe9AXdgrAUE/edit" target="_blank" class="btn btn-outline-primary w-100 py-3" data-pro="english">outline-primary w-100 py-3" data-pro="english">
+                    English
+                  </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <a href="https://docs.google.com/forms/d/1BDtq-sW98sD8oWoPk8ivOEIAf04Qn8HH_3qgwN1Au1w/edit" target="_blank" class="btn btn-outline-primary w-100 py-3" data-pro="tamil-full">
+                    தமிழ்
+                  </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <a href="https://docs.google.com/forms/d/1Evj0LhWf3YHMcw29HRvXFJ-PxzIuDh-moeytdCY26EM/edit" target="_blank" class="btn btn-outline-primary w-100 py-3" data-pro="hindi-full">
+                    हिंदी
+                  </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <a href="https://docs.google.com/forms/d/1UOrsjcdDhG3KxqwEB2cztF1uNGq1U_gaoz6WL4krTNo/edit" target="_blank" class="btn btn-outline-primary w-100 py-3" data-pro="telugu-full">
+                    తెలుగు
+                  </a>
                 </div>
               </div>
-
-              <!-- Course Details Section -->
-              <div class="form-section">
-                <h6 data-pro="course-details-title">Course Details</h6>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="course_language" class="form-label" data-pro="label-course-language">Course Language
-                        <span class="text-danger">*</span></label>
-                      <select class="form-select" id="course_language" required>
-                        <option value="" selected disabled data-pro="placeholder-select-language">Select a language
-                        </option>
-                        <option value="English">English</option>
-                        <option value="Tamil">Tamil</option>
-                        <option value="Hindi">Hindi</option>
-                        <option value="Kannada">Kannada</option>
-                      </select>
-                    </div>
-                    <div class="mb-3" style="position: relative;">
-                      <label for="referral" class="form-label" data-pro="label-referral">Referral Name
-                        (Optional)</label>
-                      <input type="text" class="form-control" id="referral">
-                      <ul id="suggestionsList" class="suggestions-list"></ul>
-                    </div>
-                    <!-- <div class="mb-3">
-                      <label for="course_type" class="form-label" data-pro="label-course-type">Course Type <span
-                          class="text-danger">*</span></label>
-                      <select class="form-select" id="course_type" required>
-                        <option value="" selected disabled data-pro="placeholder-select-choice">Select from choice
-                        </option>
-                      </select>
-                    </div> -->
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="nationality" class="form-label" data-pro="label-nationality">Nationality <span
-                          class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="nationality" placeholder="Enter your nationality"
-                        required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="years_of_faith" class="form-label" data-pro="label-years-of-faith">Years of Faith
-                        <span class="text-danger">*</span></label>
-                      <input type="number" class="form-control" id="years_of_faith" placeholder="Enter years of faith"
-                        min="0">
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-
-              <!-- Additional Information Section -->
-              <div class="form-section">
-                <div class="mb-3">
-                  <label for="additional_info" class="form-label" data-pro="label-additional-info">Additional
-                    Information</label>
-                  <textarea class="form-control" id="additional_info" rows="3" data-pro="placeholder-additional-info"
-                    placeholder="Share any specific expectations or questions..."></textarea>
-                </div>
-              </div>
-
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="consent" required>
-                <label class="form-check-label" for="consent">
-                  <span data-pro="consent-text">I agree to the</span> <a href="#" data-bs-toggle="collapse"
-                    data-bs-target="#termsCollapse" aria-expanded="false" aria-controls="termsCollapse"
-                    data-pro="terms-and-conditions">terms and
-                    conditions</a>
-                </label>
-              </div>
-              <!-- Collapsible Section for Terms and Conditions -->
-              <div class="collapse" id="termsCollapse">
-                <div class="alert alert-info" role="alert">
-                  <div class="card card-body">
-                    <h6 data-pro="terms-title">Terms and Conditions</h6>
-                    <p data-pro="terms-desc">
-                      By signing up for this course, you agree to the following:
-                    </p>
-                    <ul>
-                      <li data-pro="terms-point1">You will attend classes regularly.</li>
-                      <li data-pro="terms-point2">You consent to the collection of personal information for
-                        communication purposes.</li>
-                      <li data-pro="terms-point3">You may withdraw your consent at any time by contacting us.</li>
-                      <li data-pro="terms-point4">
-                        Our students come from various parts of the world, from various religions and denominations.
-                        To better assist you in the course, we want to get to know you.
-                      </li>
-                      <li data-pro="terms-point5">
-                        The following personal and basic information is required for enrollment in the education center,
-                        which will allow you to participate in the basic, intermediate, and advanced levels of Bible
-                        study
-                        classes.
-                      </li>
-                      <li data-pro="terms-point6">
-                        These informations will not transfer to any other person/institution and will be protected.
-                      </li>
-                      <li data-pro="terms-point7">
-                        For further details, please contact support.
-                    </ul>
-
-                  </div>
-                </div>
-              </div>
-
-
-              <button id="submitBtn" class="btn btn-primary" data-pro="submit">Submit</button>
-            </form>
+              <p class="mt-4 text-center text-muted small" data-pro="click-info">
+                Clicking a language will open the registration form in a new tab
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
 
     <div class="modal fade" id="consentModal" tabindex="-1" aria-labelledby="consentModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -600,7 +425,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">IBA</strong> <span data-pro="all-rights-reserved">All
+        <p>© <span data-pro="copyright">Copyright</span> <strong class="px-1 sitename">IBA</strong> <span data-pro="all-rights-reserved">All
             Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
@@ -635,285 +460,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
   <script type="module">
-    const supabaseUrl = "https://lqugerdmxqpvigfchfgz.supabase.co";
-    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxxdWdlcmRteHFwdmlnZmNoZmd6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNTcwOTY1OCwiZXhwIjoyMDUxMjg1NjU4fQ.rYe9asgVqtbiJmPJwb30THyM913FYwrMAnGHm_4AEDY";
-
-    if (!supabaseUrl || !supabaseKey) {
-      console.error('Supabase configuration is missing');
-    }
-
-    let supabaseClient;
-    try {
-      supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
-    } catch (error) {
-      console.error('Error initializing Supabase client:', error);
-      // Fallback handling when Supabase initialization fails
-      supabaseClient = {
-        from: () => ({
-          select: () => Promise.resolve({ data: [], error: null }),
-          insert: () => Promise.resolve({ data: [], error: null })
-        })
-      };
-    }
-    // Utility function to clear dropdown and set default options
-    function resetDropdown(dropdownId, defaultText) {
-      const dropdown = document.getElementById(dropdownId);
-      dropdown.innerHTML = `<option value="" selected disabled>${defaultText}</option>`;
-    }
-
-    // Function to populate dropdowns
-    function populateDropdown(dropdownId, data, valueKey) {
-      const dropdown = document.getElementById(dropdownId);
-      const uniqueValues = new Set(); // To keep track of unique values
-
-      data.forEach(item => {
-        const value = item[valueKey];
-        if (value && !uniqueValues.has(value)) {
-          uniqueValues.add(value); // Add to the set
-          const option = document.createElement('option');
-          option.value = value;
-          option.textContent = value;
-          dropdown.appendChild(option);
-        }
-      });
-    }
-
-
-    // Fetch course details from Supabase and populate dropdowns
-    async function fetchCourseDetails() {
-      try {
-        const { data, error } = await supabaseClient
-          .from('dim_batches')
-          .select('batch_days, batch_lang')
-          .order('batch_lang');  // Order by language
-
-        if (error) {
-          console.error('Supabase error:', error);
-          throw error;
-        }
-
-        console.log('Fetched course data:', data);
-
-        // Clear and populate course language dropdown
-        const languageDropdown = document.getElementById('course_language');
-        if (languageDropdown) {
-          // Keep only the default option
-          languageDropdown.innerHTML = '<option value="" selected disabled>Select a language</option>';
-
-          // Create a Set to store unique languages
-          const uniqueLanguages = new Set();
-
-          // Add languages from the database
-          data?.forEach(item => {
-            if (item.batch_lang && !uniqueLanguages.has(item.batch_lang)) {
-              uniqueLanguages.add(item.batch_lang);
-              const option = document.createElement('option');
-              option.value = item.batch_lang;
-              option.textContent = item.batch_lang;
-              languageDropdown.appendChild(option);
-            }
-          });
-
-          console.log('Populated languages:', Array.from(uniqueLanguages));
-        } else {
-          console.error('Course language dropdown not found');
-        }
-
-        // Handle course type dropdown similarly
-        // ...existing code for course_type...
-
-      } catch (err) {
-        console.error('Error in fetchCourseDetails:', err);
-      }
-    }
-
-    // Fetch referral names
-    async function fetchReferralNames() {
-      const referralNames = [];
-      try {
-        const { data, error } = await supabaseClient
-          .from('networker')
-          .select('Name');
-
-        if (error) throw new Error(error.message);
-
-        referralNames.push(...data.map(item => item.Name));
-        return referralNames;
-      } catch (err) {
-        console.error('Error fetching referral names:', err);
-        return referralNames;
-      }
-    }
-
-    // Handle modal show event to fetch course details
-    function handleModalShow() {
-      const modalElement = document.getElementById('courseModal');
-      if (modalElement) {
-        modalElement.addEventListener('show.bs.modal', () => {
-          console.log('Modal is now open');
-          fetchCourseDetails();
-        });
-      }
-    }
-
-    // Listen for input and filter referral names
-    async function handleReferralInput(event) {
-      const referralNames = await fetchReferralNames();
-      const input = event.target.value;
-      const suggestionsList = document.getElementById('suggestionsList');
-
-      if (input.length > 1) {
-        const filteredNames = referralNames.filter(name =>
-          name.toLowerCase().includes(input.toLowerCase())
-        );
-
-        suggestionsList.innerHTML = '';
-        filteredNames.forEach(name => {
-          const li = document.createElement("li");
-          li.textContent = name;
-          li.onclick = () => {
-            document.getElementById("referral").value = name;
-            suggestionsList.innerHTML = '';
-          };
-          suggestionsList.appendChild(li);
-        });
-      } else {
-        suggestionsList.innerHTML = '';
-      }
-    }
-
-    // Handle form submission
-    async function handleFormSubmission(e) {
-      e.preventDefault();
-      const studentData = {
-        name: document.getElementById('name')?.value || null,
-        phone_number: document.getElementById('phone_number')?.value || null,
-        email: document.getElementById('email')?.value || null,
-        networker: document.getElementById('referral')?.value || null,
-        city: document.getElementById('city')?.value || null,
-        district: document.getElementById('district')?.value || null,
-        state: document.getElementById('state')?.value || null,
-        nationality: document.getElementById('nationality')?.value || null,
-        birthdate: document.getElementById('birthdate')?.value || null,
-        job_occupation: document.getElementById('job_occupation')?.value || null,
-        gender: document.getElementById('gender')?.value || null,
-        marital_status: document.getElementById('marital_status')?.value || null,
-        years_of_faith: parseInt(document.getElementById('years_of_faith')?.value) || null,
-        course_type: document.getElementById('course_type')?.value || null,
-        course_language: document.getElementById('course_language')?.value || null,
-        additional_info: document.getElementById('additional_info')?.value || null
-      };
-
-      const isDuplicate = await checkDuplicateStudent(studentData.phone_number);
-
-      if (isDuplicate) {
-        $('#courseModal').modal('hide');
-        $('#alreadyRegisteredModal').modal('show');
-        return;
-      }
-
-      const isSuccessful = await insertStudentData(studentData);
-      if (isSuccessful) {
-        $('#courseModal').modal('hide');
-        $('#successModal').modal('show');
-      }
-    }
-
-    // Check for duplicate student
-    async function checkDuplicateStudent(phoneNumber) {
-      try {
-        const { data, error } = await supabaseClient
-          .from('restricted_udl_students')
-          .select('*')
-          .eq('phone_number', phoneNumber);
-
-        if (error) throw new Error(error.message);
-        return data && data.length > 0;
-      } catch (err) {
-        console.error('Error checking for duplicate student:', err);
-        return false;
-      }
-    }
-
-    // Insert student data into Supabase
-    async function insertStudentData(studentData) {
-      try {
-        // Insert into Supabase
-        const { data, error } = await supabaseClient
-          .from('restricted_udl_students')
-          .insert([studentData]);
-
-        if (error) throw new Error(error.message);
-
-        // Send to Google Sheets
-        await sendToGoogleSheets(studentData);
-        return true;
-      } catch (err) {
-        console.error('Error inserting student:', err);
-        alert('An unexpected error occurred. Please try again.');
-        return false;
-      }
-    }
-
-    // Function to send data to Google Sheets
-    async function sendToGoogleSheets(studentData) {
-      const sheetId = '1lIciljT_56noZImxBk1b2lLc3l_6Ud5zGyLAIGNZBDs';
-      const scriptUrl = `https://script.google.com/macros/s/AKfycbyPVDtjzMqMWN2lplaeEj2sTMaEo0a85ipLbpEFBFwS-DDHEKy63GiSZHULey-PbXfz/exec`;
-
-      // Get the selected modal language
-      const selectedLanguage = document.getElementById('modalCurrentLang').textContent;
-
-      // Map language display text to sheet names if needed
-      const languageMap = {
-        'English': 'English',
-        'தமிழ்': 'Tamil',
-        'हिंदी': 'Hindi',
-        'ಕನ್ನಡ': 'Kannada',
-        'Language': 'English' // Default fallback
-      };
-
-      const sheetLanguage = languageMap[selectedLanguage] || 'English';
-
-      const formattedDate = new Date().toISOString();
-
-      const formData = new FormData();
-      formData.append('timestamp', formattedDate);
-      formData.append('name', studentData.name);
-      formData.append('phone_number', studentData.phone_number);
-      formData.append('email', studentData.email || '');
-      formData.append('networker', studentData.networker || '');
-      formData.append('city', studentData.city);
-      formData.append('district', studentData.district);
-      formData.append('state', studentData.state);
-      formData.append('nationality', studentData.nationality);
-      formData.append('birthdate', studentData.birthdate);
-      formData.append('job_occupation', studentData.job_occupation);
-      formData.append('gender', studentData.gender);
-      formData.append('marital_status', studentData.marital_status);
-      formData.append('years_of_faith', studentData.years_of_faith);
-      // formData.append('course_type', studentData.course_type);
-      formData.append('course_language', studentData.course_language);
-      formData.append('additional_info', studentData.additional_info || '');
-      formData.append('sheetId', sheetId);
-      formData.append('language', sheetLanguage); // Use modal language instead of course language
-
-      try {
-        const response = await fetch(scriptUrl, {
-          method: 'POST',
-          body: formData
-        });
-
-        if (!response.ok) {
-          throw new Error('Failed to send data to Google Sheets');
-        }
-
-        console.log('Data successfully sent to Google Sheets');
-      } catch (error) {
-        console.error('Error sending data to Google Sheets:', error);
-        // Continue even if Google Sheets fails - data is still in Supabase
-      }
-    }
-
+    
     function setupModalCloseListeners() {
       // Only reload when success modal is hidden, ensuring the form is not shown again
       $('#successModal').on('hidden.bs.modal', () => {
@@ -932,21 +479,6 @@
           }
         }); // Delayed reload to ensure it's not triggered prematurely
       });
-    }
-
-    // Check if the page should reset and show the registration modal
-    function checkRegistrationHash() {
-      if (window.location.hash === '#registration') {
-        console.log('Hash is #registration, showing course modal');
-        document.getElementById('courseForm').reset();
-        document.getElementById('suggestionsList').innerHTML = '';
-        const registrationModal = new bootstrap.Modal(document.getElementById('courseModal'));
-
-        // Ensure it's not being shown multiple times
-        if (!$('#courseModal').hasClass('show')) {
-          registrationModal.show();
-        }
-      }
     }
 
     // Add this function to handle modal language selection
@@ -991,5 +523,4 @@
   </script>
 
 </body>
-
 </html>
