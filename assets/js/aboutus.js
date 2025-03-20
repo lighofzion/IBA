@@ -92,7 +92,7 @@ const translations = {
     "advanced-duration": "4 months",
     "contact-info": "Contact Information",
     "church-address":
-      "Light Of Zion Church, 31, Sembakkam Main Road, Thillai Ganga Nagar, Chennai, Tamil Nadu 600073",
+      "Light of Zion Church, No.18/28, Nagendra Nagar, Velachery Main Road, Velachery, Chennai - 600 042",
     "church-email": "ibacademy2024@gmail.com",
     "maps-hint": "Click to open in Google Maps",
     "copyright-text": "Copyright",
@@ -192,7 +192,7 @@ const translations = {
     "advanced-duration": "4 மாதங்கள்",
     "contact-info": "தொடர்பு விவரங்கள்",
     "church-address":
-      "லைட் ஆஃப் சியோன் சர்ச், 31, செம்பாக்கம் மெயின் ரோடு, தில்லை கங்கா நகர், சென்னை, தமிழ்நாடு 600073",
+      "லைட் ஆஃப் சியோன், எண் 18/28, நாகேந்திர நகர், வேலச்சேரி மெயின் சாலை, வேலச்சேரி, சென்னை - 600 042",
     "church-email": "ibacademy2024@gmail.com",
     "maps-hint": "கூகுள் மேப்ஸில் திறக்க கிளிக் செய்யவும்",
     "copyright-text": "பதிப்புரிமை",
@@ -289,7 +289,7 @@ const translations = {
     "advanced-duration": "4 महीने",
     "contact-info": "संपर्क जानकारी",
     "church-address":
-      "लाइट ऑफ़ जायन चर्च, 31, सेम्बक्कम मेन रोड, थिल्लई गंगा नगर, चेन्नई, तमिलनाडु 600073",
+      "लाइट ऑफ़ सिय्योन चर्च, नं. 18/28, नागेन्द्र नगर, वेलाचेरी मेन रोड, वेलाचेरी, चेन्नई - 600 042",
     "church-email": "ibacademy2024@gmail.com",
     "maps-hint": "Google Maps में खोलने के लिए क्लिक करें",
     "copyright-text": "कॉपीराइट",
@@ -387,7 +387,7 @@ const translations = {
     "advanced-duration": "4 ತಿಂಗಳುಗಳು",
     "contact-info": "ಸಂಪರ್ಕ ಮಾಹಿತಿ",
     "church-address":
-      "ಲೈಟ್ ಆಫ್ ಜಿಯೋನ್ ಚರ್ಚ್, 31, ಸೆಂಬಕ್ಕಂ ಮೇನ್ ರೋಡ್, ತಿಲ್ಲೈ ಗಂಗಾ ನಗರ, ಚೆನ್ನೈ, ತಮಿಳುನಾಡು 600073",
+      "ಲೈಟ್ ಆಫ್ ಸಿಯೋನ್ ಚರ್ಚ್, ನಂ. 18/28, ನಾಗೇಂದ್ರ ನಗರ, ವೇಳಾಚೇರಿ ಮೆನ್ ರೋಡ್, ವೇಳಾಚೇರಿ, ಚೆನ್ನೈ - 600 042",
     "church-email": "ibacademy2024@gmail.com",
     "maps-hint": "Google Maps ನಲ್ಲಿ ತೆರೆಯಲು ಕ್ಲಿಕ್ ಮಾಡಿ",
     "copyright-text": "ಕೃತಿಸ್ವಾಮ್ಯ",
