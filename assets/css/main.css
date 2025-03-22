@@ -13,6 +13,12 @@
 /* VIDEO SECTION */
 /* VIDEO SECTION */
 
+.baskervville-regular {
+  font-family: "Baskervville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Carousel Container */
 .carousel-container {
   display: flex;
@@ -539,6 +545,10 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+.blue-font {
+  color: var(--accent-color);
 }
 
 /* PHP Email Form Messages
