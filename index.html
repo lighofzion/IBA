@@ -53,6 +53,131 @@
     <link href="assets/css/main.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="/assets/css/bot/styles.css" rel="stylesheet" />
+    <style>
+    .learners-portal-card {
+      background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+      border-left: 5px solid #517de1;
+      transition: all 0.3s ease;
+    }
+
+    .learners-portal-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+    }
+
+    .portal-icon {
+      background-color: #517de1;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .portal-icon i {
+      font-size: 28px;
+    }
+
+    .learners-portal-card h3 {
+      color: #333;
+      font-weight: 600;
+    }
+
+    .btn-portal {
+      background-color: #517de1;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 2px solid #517de1;
+    }
+
+    .btn-portal:hover {
+      background-color: white;
+      color: #517de1;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(113, 197, 93, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .learners-portal-card {
+        padding: 1.5rem;
+      }
+
+      .portal-icon {
+        width: 50px;
+        height: 50px;
+      }
+
+      .portal-icon i {
+        font-size: 24px;
+      }
+    }
+    .dropdown ul {
+    min-width: auto;
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown ul li a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  /* Language dropdown specific */
+  .lang-select, .portal-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 4px;
+    background: transparent;
+  }
+  
+  .lang-select i, .portal-btn i {
+    font-size: 1rem;
+    margin-right: 0.25rem;
+  }
+  
+  .language-dropdown {
+    min-width: 120px !important;
+  }
+  
+  /* Portal dropdown specific */
+  .portal-btn {
+    color: #71c55d !important;
+  }
+  
+  .portal-dropdown {
+    min-width: 180px !important;
+  }
+  
+  .portal-dropdown li a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .portal-dropdown li a i {
+    margin-right: 8px;
+    color: #71c55d;
+  }
+  
+  /* Hover effects */
+  .lang-select:hover, .portal-btn:hover {
+    background: #f8f9fa;
+  }
+  
+  .dropdown ul li a:hover {
+    background: #f8f9fa;
+  }
+  </style>
   </head>
 
   <body class="index-page">
