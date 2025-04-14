@@ -19,7 +19,9 @@ const translations = {
     IBA: "International Bible Academy",
     "spiritual-direction-title": "Spiritual Direction",
     "spiritual-direction-desc":
-      "We help you to have a chance to cultivate spiritual growth by teaching the fundamentals of Bible.",
+    "We help you to have a chance to cultivate spiritual growth by teaching the fundamentals of Bible.",
+    "Learners-portal-title": "Learners Portal",
+    "Learners-portal-desc": "We help you to have a chance to cultivate spiritual growth by teaching the fundamentals of Bible.",
     "christian-studies-title": "Christian Studies",
     "christian-studies-desc":
       "No matter where you are, we help you to cultivate intimacy with God and deepen the life of prayer and openness of the heart through Bible.",
@@ -76,6 +78,8 @@ const translations = {
     "spiritual-direction-title": "ஆன்மீக வழிகாட்டல்",
     "spiritual-direction-desc":
       "பைபிளின் அடிப்படைகளைக் கற்பிப்பதன் மூலம் ஆன்மீக வளர்ச்சியை வளர்க்க உங்களுக்கு வாய்ப்பு கிடைக்கிறது.",
+      "Learners-portal-title": "கற்போர் இணையதளம்",
+      "Learners-portal-desc": "பைபிளின் அடிப்படைகளைக் கற்பிப்பதன் மூலம் ஆன்மீக வளர்ச்சியை வளர்க்க உங்களுக்கு வாய்ப்பு அளிக்கிறோம்.",
     "christian-studies-title": "கிறிஸ்தவ கல்வி",
     "christian-studies-desc":
       "நீங்கள் எங்கிருந்தாலும், பைபிள் மூலம் தேவனுடன் நெருக்கத்தை வளர்த்து, ஜெப வாழ்க்கையையும் இதயத்தின் திறந்த தன்மையையும் ஆழப்படுத்த உதவுகிறோம்.",
@@ -133,6 +137,8 @@ const translations = {
     "spiritual-direction-title": "आध्यात्मिक मार्गदर्शन",
     "spiritual-direction-desc":
       "हम बाइबल की मूल बातें सिखाकर आध्यात्मिक विकास को बढ़ावा देने का अवसर प्रदान करते हैं।",
+      "Learners-portal-desc": "बाइबिल के मूल सिद्धांतों को सिखाकर आध्यात्मिक विकास को बढ़ावा देने का अवसर प्रदान करते हैं।",
+      "Learners-portal-title": "शिक्षार्थी पोर्टल",
     "christian-studies-title": "क्रिश्चियन अध्ययन",
     "christian-studies-desc":
       "आप कहीं भी हों, हम बाइबल के माध्यम से ईश्वर के साथ घनिष्ठता को बढ़ाने और प्रार्थना के जीवन को गहरा करने में मदद करते हैं।",
@@ -188,8 +194,10 @@ const translations = {
     students: "ವಿದ್ಯಾರ್ಥಿಗಳು",
     IBA: "ಇಂಟರ್ನ್ಯಾಷನಲ್ ಬೈಬಲ್ ಅಕಾಡೆಮಿ",
     "spiritual-direction-title": "ಆಧ್ಯಾತ್ಮಿಕ ಮಾರ್ಗದರ್ಶನ",
+    "Learners-portal-title": "ವಿದ್ಯಾರ್ಥಿಗಳ ಪೋರ್ಟಲ್",
     "spiritual-direction-desc":
       "ಬೈಬಲ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ಬೋಧಿಸುವ ಮೂಲಕ ಆಧ್ಯಾತ್ಮಿಕ ಬೆಳವಣಿಗೆಯನ್ನು ಬೆಳೆಸಲು ನಿಮಗೆ ಅವಕಾಶ ನೀಡುತ್ತೇವೆ.",
+      "Learners-portal-desc": "ಬೈಬಲ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ಬೋಧಿಸುವ ಮೂಲಕ ಆಧ್ಯಾತ್ಮಿಕ ಬೆಳವಣಿಗೆಯನ್ನು ಬೆಳೆಸಲು ನಿಮಗೆ ಅವಕಾಶವನ್ನು ನೀಡುತ್ತೇವೆ.",
     "christian-studies-title": "ಕ್ರೈಸ್ತ ಅಧ್ಯಯನಗಳು",
     "christian-studies-desc":
       "ನೀವು ಎಲ್ಲಿದ್ದರೂ, ಬೈಬಲ್ ಮೂಲಕ ದೇವರೊಂದಿಗೆ ಆತ್ಮೀಯತೆಯನ್ನು ಬೆಳೆಸಲು ಮತ್ತು ಪ್ರಾರ್ಥನೆಯ ಜೀವನವನ್ನು ಆಳಗೊಳಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ.",
