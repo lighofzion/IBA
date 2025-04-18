@@ -1,561 +1,811 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>IBA</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>IBA</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="shortcut icon" href="/assets/img/temp-logo.svg" type="image/x-icon"/>
-  <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon">-->
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <script src="assets/js/pro.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/temp-logo.svg"
+      type="image/x-icon"
+    />
+    <!-- Favicons -->
+    <!-- <link href="assets/img/favicon.png" rel="icon">-->
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="assets/js/pro.js"></script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <script src="assets/js/program.js"></script>
-</head>
-<style>
-  /* Custom Modal Styling */
-  #courseModal .modal-content {
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-  }
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <script src="assets/js/program.js"></script>
+  </head>
+  <style>
+    /* Custom Modal Styling */
+    #courseModal .modal-content {
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+    }
 
-  #courseModal .modal-header {
-    background-color: #82be73;
-    display: flex;
-    /* Enables Flexbox */
-    justify-content: center;
-    /* Centers horizontally */
-    align-items: center;
-    /* Centers vertically */
-    position: relative;
-    /* Needed to position the close button correctly */
-  }
+    #courseModal .modal-header {
+      background-color: #82be73;
+      display: flex;
+      /* Enables Flexbox */
+      justify-content: center;
+      /* Centers horizontally */
+      align-items: center;
+      /* Centers vertically */
+      position: relative;
+      /* Needed to position the close button correctly */
+    }
 
-  #courseModal .btn-close {
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-    /* Vertically centers the close button */
-  }
+    #courseModal .btn-close {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      /* Vertically centers the close button */
+    }
 
-  #courseModal .modal-header h5 {
-    flex-grow: 1;
-    /* Ensures the title takes up the available space */
-    text-align: center;
-    margin: 0;
-    /* Removes default margins for consistent alignment */
-  }
+    #courseModal .modal-header h5 {
+      flex-grow: 1;
+      /* Ensures the title takes up the available space */
+      text-align: center;
+      margin: 0;
+      /* Removes default margins for consistent alignment */
+    }
 
-  #courseModal .form-label {
-    font-weight: bold;
-  }
+    #courseModal .form-label {
+      font-weight: bold;
+    }
 
-  #courseModal .form-control,
-  #courseModal .form-select {
-    margin-bottom: 1rem;
-  }
-
-  #courseModal .form-section {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-
-  #courseModal .form-section h6 {
-    margin-bottom: 1rem;
-    color: #333;
-    font-weight: 600;
-  }
-
-  #courseModal .btn-primary {
-    background-color: #71c55d;
-    border: none;
-    padding: 0.75rem 1.5rem;
-  }
-
-  #courseModal .btn-primary:hover {
-    background-color: #71c55d;
-  }
-
-  @media (max-width: 768px) {
-    #courseModal .modal-dialog {
-      margin: 1rem;
+    #courseModal .form-control,
+    #courseModal .form-select {
+      margin-bottom: 1rem;
     }
 
     #courseModal .form-section {
-      padding: 1rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      background-color: #f9f9f9;
     }
-  }
 
-  #modalLanguageDropdown {
-    font-size: 0.9rem;
-    padding: 0.25rem 0.75rem;
-    background-color: transparent;
-    border: 1px solid #ddd;
-  }
+    #courseModal .form-section h6 {
+      margin-bottom: 1rem;
+      color: #333;
+      font-weight: 600;
+    }
 
-  #modalLanguageDropdown:hover {
-    background-color: #f8f9fa;
-  }
+    #courseModal .btn-primary {
+      background-color: #71c55d;
+      border: none;
+      padding: 0.75rem 1.5rem;
+    }
 
-  .modal-header .dropdown-menu {
-    min-width: 100px;
-    font-size: 0.9rem;
-  }
+    #courseModal .btn-primary:hover {
+      background-color: #71c55d;
+    }
 
-  .modal-header .dropdown-item {
-    padding: 0.25rem 1rem;
-  }
-</style>
+    @media (max-width: 768px) {
+      #courseModal .modal-dialog {
+        margin: 1rem;
+      }
 
-<body class="index-page">
+      #courseModal .form-section {
+        padding: 1rem;
+      }
+    }
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <img
-          src="/assets//img/IBA-logo.png"
-          alt="International Bible Academy"
-          class="w-logo"
-        />
-      <!-- <a href="index.html" class="logo d-flex align-items-center">
+    #modalLanguageDropdown {
+      font-size: 0.9rem;
+      padding: 0.25rem 0.75rem;
+      background-color: transparent;
+      border: 1px solid #ddd;
+    }
+
+    #modalLanguageDropdown:hover {
+      background-color: #f8f9fa;
+    }
+
+    .modal-header .dropdown-menu {
+      min-width: 100px;
+      font-size: 0.9rem;
+    }
+
+    .modal-header .dropdown-item {
+      padding: 0.25rem 1rem;
+    }
+  </style>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img
+            src="/assets/img/IBA-logo.png"
+            alt="International Bible Academy"
+            class="w-logo"
+          />
+          <h1 class="sitename baskervville-regular blue-font">
+            <span>International</span> Bible Academy
+          </h1>
+        </a>
+        <!-- <a href="index.html" class="logo d-flex align-items-center">
          Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> 
+        <!-- <img src="assets/img/logo.png" alt=""> 
         <h1 class="sitename"><span>International</span> Bible Academy</h1>
       </a> -->
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero" data-pro="nav-home">Home</a></li>
-          <!-- <li><a href="index.html#about">About</a></li>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero" data-pro="nav-home">Home</a></li>
+            <!-- <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#services">IBA Studies</a></li>
           <li><a href="index.html#features">Features</a></li>-->
-          <li><a href="myvideo.html" data-pro="our-videos">Our Videos</a></li>
-          <li><a href="aboutus.html#contact" data-pro="nav-contact">Contact</a></li>
-          <li><a href="program.html" class="active" data-pro="nav-program">Program</a></li>
-          <li><a href="aboutus.html" data-pro="nav-about">About Us</a></li>
-          <li class="dropdown">
-            <a href="#"><span id="currentLang">Language</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#" data-lang="en" data-pro="english">English</a></li>
-              <li><a href="#" data-lang="ta" data-pro="tamil">தமிழ்</a></li>
-              <li><a href="#" data-lang="hi" data-pro="hindi">हिंदी</a></li>
-              <li><a href="#" data-lang="kn" data-pro="kannada">ಕನ್ನಡ</a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Program Section -->
-    <!-- Program Section -->
-    <section id="program" class="program section py-5">
-      <div class="container">
-
-        <!-- Header Section -->
-        <div class="text-center mb-5">
-          <h2 class="section-title display-4 fw-bold text-gradient" data-pro="program-title">Transform Your Faith..
-            Elevate Your Life.</h2>
-          <p class="section-subtitle fst-italic text-muted" data-pro="program-subtitle">
-            Immerse yourself in a world of spiritual growth, dynamic learning, and leadership development with our
-            cutting-edge Bible study programs.
-          </p>
-        </div>
-
-        <!-- Program Overview -->
-        <div class="row align-items-center gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="fw-bold text-dark" data-pro="program-overview-title">What We Offer</h3>
-            <p class="fst-italic text-muted" data-pro="program-overview-desc">
-              Unlock deep insights into Scripture, theology, and faith with a tailored online experience. Whether you’re
-              looking for personal spiritual growth or to take your leadership skills to the next level, our flexible
-              courses are designed for your unique journey.
-            </p>
-            <ul class="list-unstyled mt-3 text-muted">
-              <li data-pro="program-overview-point1"><i class="fas fa-check-circle text-success me-2"></i> Study at
-                your pace, from anywhere, anytime</li>
-              <li data-pro="program-overview-point2"><i class="fas fa-check-circle text-success me-2"></i> Expert
-                guidance with a cutting-edge learning
-                platform</li>
-              <li data-pro="program-overview-point3"><i class="fas fa-check-circle text-success me-2"></i> Earn
-                globally recognized certifications to
-                elevate your future</li>
-            </ul>
-          </div>
-          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
-            <img src="assets/img/BibleStudy1.jpg"
-              style="max-height: 300px; width: 100%; object-fit: cover; border-radius: 20px;"
-              class="img-fluid shadow-lg border border-light" alt="Explore Our Bible Study Program">
-          </div>
-        </div>
-
-
-    </section>
-
-
-    <section id="courses" class="courses section py-5">
-      <div class="container">
-        <!-- Header Section -->
-        <div class="text-center mb-5">
-          <h2 class="section-title display-4 fw-bold text-gradient" data-pro="courses-title">Our Bible Courses</h2>
-          <p class="section-subtitle fst-italic text-muted" data-pro="courses-subtitle">
-            Enhance your understanding of the Scriptures through our well-structured Bible study courses.
-          </p>
-        </div>
-
-        <!-- Course Cards -->
-        <div class="row gy-4">
-
-          <!-- Course Card 1 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card border-0 shadow rounded">
-              <img src="assets/img/course3.webp" class="card-img-top rounded-top" alt="Bible Study Basics">
-              <div class="card-body">
-                <h4 class="card-title fw-bold" data-pro="course1-title">Bible Study Basics</h4>
-                <p class="card-text text-muted" data-pro="course1-desc">
-                  A foundational course covering key themes and stories in the Bible, perfect for beginners starting
-                  their faith journey.
-                </p>
-                <a href="#" class="btn btn-outline-primary course-details" data-course="Bible Study Basics"
-                  data-description="A foundational course covering key themes and stories in the Bible, perfect for beginners starting their faith journey."
-                  data-pro="course-details">Course
-                  Details →</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Course Card 2 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card border-0 shadow rounded">
-              <img src="assets/img/course2.webp" class="card-img-top rounded-top" alt="Old Testament Studies">
-              <div class="card-body">
-                <h4 class="card-title fw-bold" data-pro="course2-title">Old Testament Studies</h4>
-                <p class="card-text text-muted" data-pro="course2-desc">
-                  Dive deep into the Old Testament, exploring the history, prophecies, and wisdom literature that shaped
-                  biblical faith.
-                </p>
-                <a href="#" class="btn btn-outline-primary course-details" data-course="Old Testament Studies"
-                  data-description="Dive deep into the Old Testament, exploring the history, prophecies, and wisdom literature that shaped biblical faith."
-                  data-pro="course-details">Course
-                  Details →</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Course Card 3 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card border-0 shadow rounded">
-              <img src="assets/img/course1.webp" class="card-img-top rounded-top" alt="New Testament Insights">
-              <div class="card-body">
-                <h4 class="card-title fw-bold" data-pro="course3-title">New Testament Insights</h4>
-                <p class="card-text text-muted" data-pro="course3-desc">
-                  Learn about the life of Jesus, the growth of the early church, and key theological teachings in the
-                  New Testament.
-                </p>
-                <a href="#" class="btn btn-outline-primary course-details" data-course="New Testament Insights"
-                  data-description="Learn about the life of Jesus, the growth of the early church, and key theological teachings in the New Testament."
-                  data-pro="course-details">Course
-                  Details →</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
+            <li><a href="myvideo.html" data-pro="our-videos">Our Videos</a></li>
+            <li>
+              <a href="aboutus.html#contact" data-pro="nav-contact">Contact</a>
+            </li>
+            <li>
+              <a href="program.html" class="active" data-pro="nav-program"
+                >Program</a
+              >
+            </li>
+            <li><a href="aboutus.html" data-pro="nav-about">About Us</a></li>
+            <li class="dropdown">
+              <a href="#"
+                ><span id="currentLang">Language</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li>
+                  <a href="#" data-lang="en" data-pro="english">English</a>
+                </li>
+                <li><a href="#" data-lang="ta" data-pro="tamil">தமிழ்</a></li>
+                <li><a href="#" data-lang="hi" data-pro="hindi">हिंदी</a></li>
+                <li><a href="#" data-lang="kn" data-pro="kannada">ಕನ್ನಡ</a></li>
+              </ul>
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
       </div>
+    </header>
 
-      <!-- Call to Action -->
-      <!-- <div class="text-center mt-5">
+    <main class="main">
+      <!-- Program Section -->
+      <!-- Program Section -->
+      <section id="program" class="program section py-5">
+        <div class="container">
+          <!-- Header Section -->
+          <div class="text-center mb-5">
+            <h2
+              class="section-title display-4 fw-bold text-gradient"
+              data-pro="program-title"
+            >
+              Transform Your Faith.. Elevate Your Life.
+            </h2>
+            <p
+              class="section-subtitle fst-italic text-muted"
+              data-pro="program-subtitle"
+            >
+              Immerse yourself in a world of spiritual growth, dynamic learning,
+              and leadership development with our cutting-edge Bible study
+              programs.
+            </p>
+          </div>
+
+          <!-- Program Overview -->
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="fw-bold text-dark" data-pro="program-overview-title">
+                What We Offer
+              </h3>
+              <p class="fst-italic text-muted" data-pro="program-overview-desc">
+                Unlock deep insights into Scripture, theology, and faith with a
+                tailored online experience. Whether you're looking for personal
+                spiritual growth or to take your leadership skills to the next
+                level, our flexible courses are designed for your unique
+                journey.
+              </p>
+              <ul class="list-unstyled mt-3 text-muted">
+                <li data-pro="program-overview-point1">
+                  <i class="fas fa-check-circle text-success me-2"></i> Study at
+                  your pace, from anywhere, anytime
+                </li>
+                <li data-pro="program-overview-point2">
+                  <i class="fas fa-check-circle text-success me-2"></i> Expert
+                  guidance with a cutting-edge learning platform
+                </li>
+                <li data-pro="program-overview-point3">
+                  <i class="fas fa-check-circle text-success me-2"></i> Earn
+                  globally recognized certifications to elevate your future
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+              <img
+                src="assets/img/BibleStudy1.jpg"
+                style="
+                  max-height: 300px;
+                  width: 100%;
+                  object-fit: cover;
+                  border-radius: 20px;
+                "
+                class="img-fluid shadow-lg border border-light"
+                alt="Explore Our Bible Study Program"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="courses" class="courses section py-5">
+        <div class="container">
+          <!-- Header Section -->
+          <div class="text-center mb-5">
+            <h2
+              class="section-title display-4 fw-bold text-gradient"
+              data-pro="courses-title"
+            >
+              Our Bible Courses
+            </h2>
+            <p
+              class="section-subtitle fst-italic text-muted"
+              data-pro="courses-subtitle"
+            >
+              Enhance your understanding of the Scriptures through our
+              well-structured Bible study courses.
+            </p>
+          </div>
+
+          <!-- Course Cards -->
+          <div class="row gy-4">
+            <!-- Course Card 1 -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card border-0 shadow rounded">
+                <img
+                  src="assets/img/course3.webp"
+                  class="card-img-top rounded-top"
+                  alt="Bible Study Basics"
+                />
+                <div class="card-body">
+                  <h4 class="card-title fw-bold" data-pro="course1-title">
+                    Bible Study Basics
+                  </h4>
+                  <p class="card-text text-muted" data-pro="course1-desc">
+                    A foundational course covering key themes and stories in the
+                    Bible, perfect for beginners starting their faith journey.
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary course-details"
+                    data-course="Bible Study Basics"
+                    data-description="A foundational course covering key themes and stories in the Bible, perfect for beginners starting their faith journey."
+                    data-pro="course-details"
+                    >Course Details →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 2 -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="card border-0 shadow rounded">
+                <img
+                  src="assets/img/course2.webp"
+                  class="card-img-top rounded-top"
+                  alt="Old Testament Studies"
+                />
+                <div class="card-body">
+                  <h4 class="card-title fw-bold" data-pro="course2-title">
+                    Old Testament Studies
+                  </h4>
+                  <p class="card-text text-muted" data-pro="course2-desc">
+                    Dive deep into the Old Testament, exploring the history,
+                    prophecies, and wisdom literature that shaped biblical
+                    faith.
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary course-details"
+                    data-course="Old Testament Studies"
+                    data-description="Dive deep into the Old Testament, exploring the history, prophecies, and wisdom literature that shaped biblical faith."
+                    data-pro="course-details"
+                    >Course Details →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="card border-0 shadow rounded">
+                <img
+                  src="assets/img/course1.webp"
+                  class="card-img-top rounded-top"
+                  alt="New Testament Insights"
+                />
+                <div class="card-body">
+                  <h4 class="card-title fw-bold" data-pro="course3-title">
+                    New Testament Insights
+                  </h4>
+                  <p class="card-text text-muted" data-pro="course3-desc">
+                    Learn about the life of Jesus, the growth of the early
+                    church, and key theological teachings in the New Testament.
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary course-details"
+                    data-course="New Testament Insights"
+                    data-description="Learn about the life of Jesus, the growth of the early church, and key theological teachings in the New Testament."
+                    data-pro="course-details"
+                    >Course Details →</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <!-- <div class="text-center mt-5">
         <a href="#enroll" class="btn btn-primary btn-lg px-5 py-3 rounded-3 shadow-lg" data-bs-toggle="modal"
           data-bs-target="#courseModal" data-pro="apply-today">Apply Today</a>
       </div> -->
-      </div>
-    </section>
+      </section>
 
-    <!-- Banner Section -->
-    <section id="banner" class="banner-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8">
-            <div class="banner" data-aos="fade-up">
-              <div class="banner-content text-center">
-                <h2>Join Our Next Bible Study Session</h2>
-                <p>
-                  Discover the depths of God's word in our supportive
-                  community
-                </p>
-                <a href="#enroll" class="btn btn-primary btn-lg px-5 py-3 rounded-3 shadow-lg" data-bs-toggle="modal"
-                data-bs-target="#courseModal" data-pro="apply-today"
-                  >Apply Now</a
+      <!-- Banner Section -->
+      <section id="banner" class="banner-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+              <div class="banner" data-aos="fade-up">
+                <div class="banner-content text-center">
+                  <h2>Join Our Next Bible Study Session</h2>
+                  <p>
+                    Discover the depths of God's word in our supportive
+                    community
+                  </p>
+                  <a
+                    href="#enroll"
+                    class="btn btn-primary btn-lg px-5 py-3 rounded-3 shadow-lg"
+                    data-bs-toggle="modal"
+                    data-bs-target="#courseModal"
+                    data-pro="apply-today"
+                    >Apply Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Banner Section -->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="courseModal"
+        tabindex="-1"
+        aria-labelledby="courseModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5
+                class="modal-title"
+                id="courseModalLabel"
+                data-pro="modal-title"
+              >
+                Sign Up for the Course
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="language-selection">
+                <h6 class="mb-4 text-center" data-pro="select-language">
+                  Please select your preferred language for registration
+                </h6>
+                <div class="row g-3 justify-content-center">
+                  <div class="col-md-4 col-sm-6">
+                    <a
+                      href="https://forms.gle/yYP956nVF34Jchqu7"
+                      target="_blank"
+                      class="btn btn-outline-primary w-100 py-3"
+                      data-pro="english"
+                    >
+                      English
+                    </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <a
+                      href="https://forms.gle/ATgmov1jyGzroMLCA"
+                      target="_blank"
+                      class="btn btn-outline-primary w-100 py-3"
+                      data-pro="tamil-full"
+                    >
+                      தமிழ்
+                    </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <a
+                      href="https://forms.gle/EsKpSLYSmvVvrndg8"
+                      target="_blank"
+                      class="btn btn-outline-primary w-100 py-3"
+                      data-pro="hindi-full"
+                    >
+                      हिंदी
+                    </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <a
+                      href="https://forms.gle/WkiCA1GR1gzS25Nt9"
+                      target="_blank"
+                      class="btn btn-outline-primary w-100 py-3"
+                      data-pro="telugu-full"
+                    >
+                      తెలుగు
+                    </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <a
+                      href="https://forms.gle/nrHmYs5BXzuPGG9A6"
+                      target="_blank"
+                      class="btn btn-outline-primary w-100 py-3"
+                      data-pro="kannada-full"
+                    >
+                      ಕನ್ನಡ
+                    </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <a
+                      href="https://forms.gle/qxTuddhuyyfB3jFZA"
+                      target="_blank"
+                      class="btn btn-outline-primary w-100 py-3"
+                      data-pro="odia-full"
+                    >
+                      ଓଡ଼ିଆ
+                    </a>
+                  </div>
+                </div>
+                <p
+                  class="mt-4 text-center text-muted small"
+                  data-pro="click-info"
                 >
-        
+                  Clicking a language will open the registration form in a new
+                  tab
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- End Banner Section -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="courseModalLabel" data-pro="modal-title">Sign Up for the Course</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div
+        class="modal fade"
+        id="consentModal"
+        tabindex="-1"
+        aria-labelledby="consentModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5
+                class="modal-title"
+                id="consentModalLabel"
+                data-pro="consent-modal-title"
+              >
+                Terms and Conditions
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p data-pro="consent-modal-desc">
+                <!-- Add your terms and conditions content here -->
+                By signing up for this course, you agree to our privacy policy,
+                course guidelines, and other related terms.
+              </p>
+              <ul>
+                <li data-pro="consent-modal-point1">
+                  You agree to attend the course regularly.
+                </li>
+                <li data-pro="consent-modal-point2">
+                  You consent to the collection of personal information for
+                  course-related communication.
+                </li>
+                <li data-pro="consent-modal-point3">
+                  You may withdraw your consent at any time by contacting
+                  support.
+                </li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+                data-pro="close"
+              >
+                Close
+              </button>
+            </div>
           </div>
-          <div class="modal-body">
-            <div class="language-selection">
-              <h6 class="mb-4 text-center" data-pro="select-language">Please select your preferred language for registration</h6>
-              <div class="row g-3 justify-content-center">
-                <div class="col-md-4 col-sm-6">
-                  <a href="https://forms.gle/yYP956nVF34Jchqu7" target="_blank" class="btn btn-outline-primary w-100 py-3" data-pro="english">
-                    English
-                  </a>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <a href="https://forms.gle/ATgmov1jyGzroMLCA" target="_blank" class="btn btn-outline-primary w-100 py-3" data-pro="tamil-full">
-                    தமிழ்
-                  </a>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <a href="https://forms.gle/EsKpSLYSmvVvrndg8" target="_blank" class="btn btn-outline-primary w-100 py-3" data-pro="hindi-full">
-                    हिंदी
-                  </a>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <a href="https://forms.gle/WkiCA1GR1gzS25Nt9" target="_blank" class="btn btn-outline-primary w-100 py-3" data-pro="telugu-full">
-                    తెలుగు
-                  </a>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <a href="https://forms.gle/nrHmYs5BXzuPGG9A6" target="_blank" class="btn btn-outline-primary w-100 py-3" data-pro="kannada-full">
-                    ಕನ್ನಡ
-                  </a>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <a href="https://forms.gle/qxTuddhuyyfB3jFZA" target="_blank" class="btn btn-outline-primary w-100 py-3" data-pro="odia-full">
-                    ଓଡ଼ିଆ
-                  </a>
-                </div>
-              </div>
-              <p class="mt-4 text-center text-muted small" data-pro="click-info">
-                Clicking a language will open the registration form in a new tab
+        </div>
+      </div>
+
+      <!-- Success Modal (for successful registration) -->
+      <div
+        class="modal fade"
+        id="successModal"
+        tabindex="-1"
+        aria-labelledby="successModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5
+                class="modal-title"
+                id="successModalLabel"
+                data-pro="success-modal-title"
+              >
+                Successfully Registered
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p data-pro="success-modal-desc">
+                Congratulations! You have successfully registered for the
+                course. Someone will contact you soon!
               </p>
             </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+                data-pro="close"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="modal fade" id="consentModal" tabindex="-1" aria-labelledby="consentModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="consentModalLabel" data-pro="consent-modal-title">Terms and Conditions</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p data-pro="consent-modal-desc">
-              <!-- Add your terms and conditions content here -->
-              By signing up for this course, you agree to our privacy policy, course guidelines, and other related
-              terms.
-            </p>
-            <ul>
-              <li data-pro="consent-modal-point1">You agree to attend the course regularly.</li>
-              <li data-pro="consent-modal-point2">You consent to the collection of personal information for
-                course-related communication.</li>
-              <li data-pro="consent-modal-point3">You may withdraw your consent at any time by contacting support.</li>
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-pro="close">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Success Modal (for successful registration) -->
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="successModalLabel" data-pro="success-modal-title">Successfully Registered</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p data-pro="success-modal-desc">Congratulations! You have successfully registered for the course. Someone
-              will contact you soon!</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-pro="close">Close</button>
+      <!-- Success Modal (for already registered user) -->
+      <div
+        class="modal fade"
+        id="alreadyRegisteredModal"
+        tabindex="-1"
+        aria-labelledby="alreadyRegisteredModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5
+                class="modal-title"
+                id="alreadyRegisteredModalLabel"
+                data-pro="already-registered-modal-title"
+              >
+                Already Registered
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p data-pro="already-registered-modal-desc">
+                You are already registered for this course. Someone will contact
+                you soon!
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+                data-pro="close"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
-    <!-- Success Modal (for already registered user) -->
-    <div class="modal fade" id="alreadyRegisteredModal" tabindex="-1" aria-labelledby="alreadyRegisteredModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="alreadyRegisteredModalLabel" data-pro="already-registered-modal-title">Already
-              Registered</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p data-pro="already-registered-modal-desc">You are already registered for this course. Someone will
-              contact you soon!</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-pro="close">Close</button>
-          </div>
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span data-pro="copyright">Copyright</span>
+            <strong class="px-1 sitename">IBA</strong>
+            <span data-pro="all-rights-reserved">All Rights Reserved</span>
+          </p>
         </div>
-      </div>
-    </div>
-
-
-
-  </main>
-
-
-
-  <footer id="footer" class="footer light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span data-pro="copyright">Copyright</span> <strong class="px-1 sitename">IBA</strong> <span data-pro="all-rights-reserved">All
-            Rights Reserved</span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <!-- <div class="credits">
+        <div class="social-links d-flex justify-content-center">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+        <!-- <div class="credits">
         Designed by <a href="#">IBA Team</a>
       </div> -->
-    </div>
+      </div>
+    </footer>
 
-  </footer>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/umd/supabase.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/umd/supabase.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script type="module">
-    
-    function setupModalCloseListeners() {
-      // Only reload when success modal is hidden, ensuring the form is not shown again
-      $('#successModal').on('hidden.bs.modal', () => {
-        console.log('Success modal closed, reloading page');
-        if (!window.location.hash.includes('registration')) {
-          location.reload();
-        }
-      });
-
-      // Ensure the already registered modal also triggers only once for reload
-      $('#alreadyRegisteredModal').on('hidden.bs.modal', () => {
-        console.log('Already registered modal closed, reloading page');
-        setTimeout(() => {
-          if (!window.location.hash.includes('registration')) {
+    <script type="module">
+      function setupModalCloseListeners() {
+        // Only reload when success modal is hidden, ensuring the form is not shown again
+        $("#successModal").on("hidden.bs.modal", () => {
+          console.log("Success modal closed, reloading page");
+          if (!window.location.hash.includes("registration")) {
             location.reload();
           }
-        }); // Delayed reload to ensure it's not triggered prematurely
-      });
-    }
-
-    // Add this function to handle modal language selection
-    function setupModalLanguageSelection() {
-      const modalLangItems = document.querySelectorAll('[data-modal-lang]');
-      const modalCurrentLang = document.getElementById('modalCurrentLang');
-
-      modalLangItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-          e.preventDefault();
-          const lang = e.target.getAttribute('data-modal-lang');
-          modalCurrentLang.textContent = e.target.textContent;
-          // Store the selected language for form submission
-          modalCurrentLang.setAttribute('data-selected-lang', lang);
         });
-      });
-    }
 
-    // Event listeners
-    document.addEventListener('DOMContentLoaded', () => {
-      handleModalShow();
-      setupModalLanguageSelection();
-      document.getElementById('referral').addEventListener('input', handleReferralInput);
-      document.getElementById('courseForm').addEventListener('submit', handleFormSubmission);
-      setupModalCloseListeners();
-      checkRegistrationHash();
-      AOS.init();
-    });
-
-    var consentCheckbox = document.getElementById('consent');
-    var termsLink = document.querySelector('a[data-bs-toggle="collapse"]');
-
-    consentCheckbox.addEventListener('change', function () {
-      if (this.checked) {
-        termsLink.setAttribute('aria-expanded', 'true');
-        document.getElementById('termsCollapse').classList.add('show');
-      } else {
-        termsLink.setAttribute('aria-expanded', 'false');
-        document.getElementById('termsCollapse').classList.remove('show');
+        // Ensure the already registered modal also triggers only once for reload
+        $("#alreadyRegisteredModal").on("hidden.bs.modal", () => {
+          console.log("Already registered modal closed, reloading page");
+          setTimeout(() => {
+            if (!window.location.hash.includes("registration")) {
+              location.reload();
+            }
+          }); // Delayed reload to ensure it's not triggered prematurely
+        });
       }
-    });
-  </script>
 
-</body>
+      // Add this function to handle modal language selection
+      function setupModalLanguageSelection() {
+        const modalLangItems = document.querySelectorAll("[data-modal-lang]");
+        const modalCurrentLang = document.getElementById("modalCurrentLang");
+
+        modalLangItems.forEach((item) => {
+          item.addEventListener("click", (e) => {
+            e.preventDefault();
+            const lang = e.target.getAttribute("data-modal-lang");
+            modalCurrentLang.textContent = e.target.textContent;
+            // Store the selected language for form submission
+            modalCurrentLang.setAttribute("data-selected-lang", lang);
+          });
+        });
+      }
+
+      // Event listeners
+      document.addEventListener("DOMContentLoaded", () => {
+        handleModalShow();
+        setupModalLanguageSelection();
+        document
+          .getElementById("referral")
+          .addEventListener("input", handleReferralInput);
+        document
+          .getElementById("courseForm")
+          .addEventListener("submit", handleFormSubmission);
+        setupModalCloseListeners();
+        checkRegistrationHash();
+        AOS.init();
+      });
+
+      var consentCheckbox = document.getElementById("consent");
+      var termsLink = document.querySelector('a[data-bs-toggle="collapse"]');
+
+      consentCheckbox.addEventListener("change", function () {
+        if (this.checked) {
+          termsLink.setAttribute("aria-expanded", "true");
+          document.getElementById("termsCollapse").classList.add("show");
+        } else {
+          termsLink.setAttribute("aria-expanded", "false");
+          document.getElementById("termsCollapse").classList.remove("show");
+        }
+      });
+    </script>
+  </body>
 </html>
