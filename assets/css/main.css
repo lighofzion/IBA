@@ -11,7 +11,19 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* VIDEO SECTION */
-/* VIDEO SECTION */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.baskervville-regular {
+  font-family: "Baskervville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* Carousel Container */
 .carousel-container {
@@ -539,6 +551,10 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+.blue-font {
+  color: var(--accent-color);
 }
 
 /* PHP Email Form Messages
@@ -1182,7 +1198,7 @@ section,
 }
 
 .w-logo {
-  width: 4rem;
+  width: 40px;
 }
 
 @media (max-width: 640px) {

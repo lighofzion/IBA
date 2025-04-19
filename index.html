@@ -26,6 +26,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
@@ -54,130 +58,133 @@
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="/assets/css/bot/styles.css" rel="stylesheet" />
     <style>
-    .learners-portal-card {
-      background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
-      border-radius: 15px;
-      padding: 2rem;
-      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
-      border-left: 5px solid #517de1;
-      transition: all 0.3s ease;
-    }
-
-    .learners-portal-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
-    }
-
-    .portal-icon {
-      background-color: #517de1;
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .portal-icon i {
-      font-size: 28px;
-    }
-
-    .learners-portal-card h3 {
-      color: #333;
-      font-weight: 600;
-    }
-
-    .btn-portal {
-      background-color: #517de1;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      border: 2px solid #517de1;
-    }
-
-    .btn-portal:hover {
-      background-color: white;
-      color: #517de1;
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(113, 197, 93, 0.3);
-    }
-
-    @media (max-width: 768px) {
       .learners-portal-card {
-        padding: 1.5rem;
+        background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+        border-left: 5px solid #517de1;
+        transition: all 0.3s ease;
+      }
+
+      .learners-portal-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
       }
 
       .portal-icon {
-        width: 50px;
-        height: 50px;
+        background-color: #517de1;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
       }
 
       .portal-icon i {
-        font-size: 24px;
+        font-size: 28px;
       }
-    }
-    .dropdown ul {
-    min-width: auto;
-    padding: 0.5rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dropdown ul li a {
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-  }
-  
-  /* Language dropdown specific */
-  .lang-select, .portal-btn {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 0.75rem !important;
-    border-radius: 4px;
-    background: transparent;
-  }
-  
-  .lang-select i, .portal-btn i {
-    font-size: 1rem;
-    margin-right: 0.25rem;
-  }
-  
-  .language-dropdown {
-    min-width: 120px !important;
-  }
-  
-  /* Portal dropdown specific */
-  .portal-btn {
-    color: #71c55d !important;
-  }
-  
-  .portal-dropdown {
-    min-width: 180px !important;
-  }
-  
-  .portal-dropdown li a {
-    display: flex;
-    align-items: center;
-  }
-  
-  .portal-dropdown li a i {
-    margin-right: 8px;
-    color: #71c55d;
-  }
-  
-  /* Hover effects */
-  .lang-select:hover, .portal-btn:hover {
-    background: #f8f9fa;
-  }
-  
-  .dropdown ul li a:hover {
-    background: #f8f9fa;
-  }
-  </style>
+
+      .learners-portal-card h3 {
+        color: #333;
+        font-weight: 600;
+      }
+
+      .btn-portal {
+        background-color: #517de1;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 2px solid #517de1;
+      }
+
+      .btn-portal:hover {
+        background-color: white;
+        color: #517de1;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(113, 197, 93, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .learners-portal-card {
+          padding: 1.5rem;
+        }
+
+        .portal-icon {
+          width: 50px;
+          height: 50px;
+        }
+
+        .portal-icon i {
+          font-size: 24px;
+        }
+      }
+      .dropdown ul {
+        min-width: auto;
+        padding: 0.5rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .dropdown ul li a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+      }
+
+      /* Language dropdown specific */
+      .lang-select,
+      .portal-btn {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0.75rem !important;
+        border-radius: 4px;
+        background: transparent;
+      }
+
+      .lang-select i,
+      .portal-btn i {
+        font-size: 1rem;
+        margin-right: 0.25rem;
+      }
+
+      .language-dropdown {
+        min-width: 120px !important;
+      }
+
+      /* Portal dropdown specific */
+      .portal-btn {
+        color: #71c55d !important;
+      }
+
+      .portal-dropdown {
+        min-width: 180px !important;
+      }
+
+      .portal-dropdown li a {
+        display: flex;
+        align-items: center;
+      }
+
+      .portal-dropdown li a i {
+        margin-right: 8px;
+        color: #71c55d;
+      }
+
+      /* Hover effects */
+      .lang-select:hover,
+      .portal-btn:hover {
+        background: #f8f9fa;
+      }
+
+      .dropdown ul li a:hover {
+        background: #f8f9fa;
+      }
+    </style>
   </head>
 
   <body class="index-page">
@@ -185,16 +192,16 @@
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
       >
-        <img
-          src="/assets//img/IBA-logo.png"
-          alt="International Bible Academy"
-          class="w-logo"
-        />
-        <!-- <a href="index.html" class="logo d-flex align-items-center">
-          <h1 data-i18n="IBA" class="sitename">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img
+            src="/assets/img/IBA-logo.png"
+            alt="International Bible Academy"
+            class="w-logo"
+          />
+          <h1 class="sitename baskervville-regular blue-font">
             <span>International</span> Bible Academy
           </h1>
-        </a> -->
+        </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
@@ -540,8 +547,9 @@
         </div>
       </section>
       <!-- End Stats Section -->
-      <!-- About Section -->
-      <section id="about" class="about section">
+
+      <!-- Banner Section -->
+      <section id="banner" class="banner-section">
         <div class="container">
           <div class="row gy-4">
             <div
@@ -610,98 +618,116 @@
 
       <!-- Services Section -->
       <section id="services" class="services section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h1>IBA Studies</h1>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container">
-        <!-- Original three service items in one row -->
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-door-open"></i>
-              </div>
-              <a href="javascript:void(0)" class="stretched-link">
-                <h3 data-i18n="spiritual-direction-title">
-                  Spiritual Direction
-                </h3>
-              </a>
-              <p data-i18n="spiritual-direction-desc">
-                We help you to have a chance to cultivate spiritual growth by
-                teaching the fundamentals of Bible.
-              </p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-book"></i>
-              </div>
-              <a href="javascript:void(0)" class="stretched-link">
-                <h3 data-i18n="christian-studies-title">Christian Studies</h3>
-              </a>
-              <p data-i18n="christian-studies-desc">
-                No matter where you are, we help you to cultivate intimacy
-                with God and deepen the life of prayer and openness of the
-                heart through Bible.
-              </p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="javascript:void(0)" class="stretched-link">
-                <h3 data-i18n="christian-ministries-title">
-                  Christian Ministries Studies
-                </h3>
-              </a>
-              <p data-i18n="christian-ministries-desc">
-                Preparing for the profound call of ministry, counseling,
-                missions, and preaching through Bible.
-              </p>
-            </div>
-          </div>
-          <!-- End Service Item -->
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h1>IBA Studies</h1>
         </div>
+        <!-- End Section Title -->
 
-        <!-- Learners Portal in a separate row with full width -->
-        <div class="row mt-5">
-          <div class="col-12" data-aos="fade-up" data-aos-delay="400">
-            <div class="learners-portal-card">
-              <div class="row align-items-center">
-                <div class="col-md-9">
-                  <div class="d-flex align-items-center mb-3">
-                    <div class="portal-icon">
-                      <i class="bi bi-laptop"></i>
+        <div class="container">
+          <!-- Original three service items in one row -->
+          <div class="row gy-4">
+            <div
+              class="col-lg-4 col-md-4"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-door-open"></i>
+                </div>
+                <a href="javascript:void(0)" class="stretched-link">
+                  <h3 data-i18n="spiritual-direction-title">
+                    Spiritual Direction
+                  </h3>
+                </a>
+                <p data-i18n="spiritual-direction-desc">
+                  We help you to have a chance to cultivate spiritual growth by
+                  teaching the fundamentals of Bible.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-book"></i>
+                </div>
+                <a href="javascript:void(0)" class="stretched-link">
+                  <h3 data-i18n="christian-studies-title">Christian Studies</h3>
+                </a>
+                <p data-i18n="christian-studies-desc">
+                  No matter where you are, we help you to cultivate intimacy
+                  with God and deepen the life of prayer and openness of the
+                  heart through Bible.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-4"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-easel"></i>
+                </div>
+                <a href="javascript:void(0)" class="stretched-link">
+                  <h3 data-i18n="christian-ministries-title">
+                    Christian Ministries Studies
+                  </h3>
+                </a>
+                <p data-i18n="christian-ministries-desc">
+                  Preparing for the profound call of ministry, counseling,
+                  missions, and preaching through Bible.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+
+          <!-- Learners Portal in a separate row with full width -->
+          <div class="row mt-5">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+              <div class="learners-portal-card">
+                <div class="row align-items-center">
+                  <div class="col-md-9">
+                    <div class="d-flex align-items-center mb-3">
+                      <div class="portal-icon">
+                        <i class="bi bi-laptop"></i>
+                      </div>
+                      <h3 data-i18n="Learners-portal-title" class="mb-0 ms-3">
+                        Learner's Portal
+                      </h3>
                     </div>
-                    <h3 data-i18n="Learners-portal-title" class="mb-0 ms-3">Learner's Portal</h3>
+                    <p data-i18n="Learners-portal-desc" class="mb-md-0">
+                      Access your courses, learning materials, and assignments
+                      through our online learning platform.
+                    </p>
                   </div>
-                  <p data-i18n="Learners-portal-desc" class="mb-md-0">
-                    Access your courses, learning materials, and assignments through our online learning platform.
-                  </p>
-                </div>
-                <div class="col-md-3 text-md-end mt-3 mt-md-0">
-                  <a href="https://iba-portal-qe8t.vercel.app/login" class="btn btn-portal" target="_blank">
-                    Access Portal <i class="bi bi-arrow-right-circle ms-2"></i>
-                  </a>
+                  <div class="col-md-3 text-md-end mt-3 mt-md-0">
+                    <a
+                      href="https://iba-portal-qe8t.vercel.app/login"
+                      class="btn btn-portal"
+                      target="_blank"
+                    >
+                      Access Portal
+                      <i class="bi bi-arrow-right-circle ms-2"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-
-    </section>
+      </section>
       <!-- /Services Section -->
 
       <!-- Features Section -->
