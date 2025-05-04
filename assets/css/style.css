@@ -532,3 +532,20 @@
     text-align: left;
   }
 }
+
+.btn-portal {
+  background-color: #517de1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid #517de1;
+}
+
+.btn-portal:hover {
+  background-color: white;
+  color: #517de1;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(113, 197, 93, 0.3);
+}
