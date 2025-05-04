@@ -41,7 +41,7 @@
   <body class="youtube-gallery-page">
     <header id="header" class="header d-flex align-items-center sticky-top">
       <div
-        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
       >
         <a href="index.html" class="logo d-flex align-items-center">
           <img
@@ -50,35 +50,54 @@
             class="w-logo"
           />
           <h1 class="sitename baskervville-regular blue-font">
-            <span>International</span> Bible Academy
+            International Bible Academy
           </h1>
         </a>
 
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <!-- <li><a href="program.html">Program</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li> -->
-            <li><a href="#" class="active">Our Videos</a></li>
-            <li><a href="aboutus.html#contact">Contact</a></li>
-            <li><a href="program.html">Program</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li class="dropdown">
-              <a href="#"
-                ><span id="currentLang">Language</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="#" data-lang="en">English</a></li>
-                <li><a href="#" data-lang="ta">தமிழ்</a></li>
-                <li><a href="#" data-lang="hi">हिंदी</a></li>
-                <li><a href="#" data-lang="kn">ಕನ್ನಡ</a></li>
-              </ul>
-            </li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+        <!-- Right Side Navigation and Portal Button -->
+        <div class="d-flex align-items-center ms-auto">
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li>
+                <a href="#hero" class="active" data-i18n="nav-home">Home</a>
+              </li>
+              <li>
+                <a href="myvideo.html" data-i18n="our-videos">Videos</a>
+              </li>
+              <li>
+                <a href="aboutus.html#contact" data-i18n="nav-contact"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="program.html" data-i18n="nav-program">Program</a>
+              </li>
+              <li><a href="aboutus.html" data-i18n="nav-about">About</a></li>
+
+              <li class="dropdown">
+                <a href="#"
+                  ><span id="currentLang">Language</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i
+                ></a>
+                <ul>
+                  <li><a href="#" data-lang="en">English</a></li>
+                  <li><a href="#" data-lang="ta">தமிழ்</a></li>
+                  <li><a href="#" data-lang="hi">हिंदी</a></li>
+                  <li><a href="#" data-lang="kn">ಕನ್ನಡ</a></li>
+                </ul>
+              </li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+
+          <!-- Portal Login Button -->
+          <a
+            href="https://iba-portal.vercel.app/"
+            class="btn-portal ms-3 d-none d-xl-inline-block"
+          >
+            Portal Login
+          </a>
+        </div>
       </div>
     </header>
 
