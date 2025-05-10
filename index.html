@@ -53,6 +53,7 @@
     <link href="assets/css/main.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="/assets/css/bot/styles.css" rel="stylesheet" />
+    <link href="assets/css/chatbot.css" rel="stylesheet" />
     <style>
       .learners-portal-card {
         background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
@@ -983,8 +984,19 @@
       <div class="chatbot">
         <header>
           <h2 data-i18n="assistant-title">IBA Assistant</h2>
-          <span class="close-btn material-symbols-outlined">close</span>
+          <div class="chatbot-controls">
+            <button class="restart-chat" title="Restart Chat">
+              <i class="bi bi-arrow-counterclockwise"></i>
+            </button>
+            <button class="clear-chat" title="Clear Chat">
+              <i class="bi bi-trash"></i>
+            </button>
+            <span class="close-btn material-symbols-outlined">close</span>
+          </div>
         </header>
+        <div class="welcome-message">
+          <p data-i18n="bot-welcome-hint">Ask me about our programs, enrollment, or any other questions about IBA!</p>
+        </div>
         <ul class="chatbox">
           <li class="chat incoming">
             <img
@@ -1000,6 +1012,7 @@
             </p>
           </li>
         </ul>
+        <div class="chat-suggestions"></div>
         <div class="chat-input">
           <textarea
             data-i18n-placeholder="bot-placeholder"
