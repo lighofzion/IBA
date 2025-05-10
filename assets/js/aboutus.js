@@ -392,6 +392,34 @@ const translations = {
     "maps-hint": "Google Maps ನಲ್ಲಿ ತೆರೆಯಲು ಕ್ಲಿಕ್ ಮಾಡಿ",
     "copyright-text": "ಕೃತಿಸ್ವಾಮ್ಯ",
   },
+  or: {
+    january: "ଜାନୁଆରୀ 2025",
+    february: "ଫେବ୍ରୁଆରୀ 2025",
+    march: "ମାର୍ଚ୍ଚ 2025",
+    current: "ଚଳିତ",
+    "foundation-title": "ଭିତ୍ତି",
+    "foundation-desc": "ଏସିଆରେ ପ୍ରାରମ୍ଭିକ ପ୍ରୋଗ୍ରାମ ସହିତ IBA ପ୍ରତିଷ୍ଠା",
+    "launch-title": "ପ୍ରୋଗ୍ରାମ ଆରମ୍ଭ",
+    "launch-desc": "ସମସ୍ତ ପାଠ୍ୟକ୍ରମ ସଫଳତାର ସହିତ ଆରମ୍ଭ ହୋଇଛି",
+    "expansion-title": "ଗ୍ଲୋବାଲ ବିସ୍ତାର",
+    "expansion-desc": "ମହାଦେଶଗୁଡ଼ିକ ମଧ୍ୟରେ ପହଞ୍ଚ ବଢିଛି",
+    "community-title": "ବଢୁଥିବା ସମ୍ପ୍ରଦାୟ",
+    "community-desc": "ଗ୍ଲୋବାଲ ନେଟ୍ୱର୍କ ନିର୍ମାଣ",
+    "equipment-section-title": "1967 ରୁ ପରମେଶ୍ବରଙ୍କ ବାକ୍ୟ ଦ୍ବାରା ଶିଷ୍ୟମାନଙ୍କୁ ସଜ୍ଜିତ କରିବା",
+    "nav-home": "ମୁଖ୍ୟପୃଷ୍ଠା",
+    "nav-program": "ପ୍ରୋଗ୍ରାମ",
+    "nav-about": "ଆମ ବିଷୟରେ",
+    "nav-contact": "ଯୋଗାଯୋଗ",
+    "our-videos": "ଆମର ଭିଡିଓ",
+    "about-title": "இଣ୍ଟରନ୍ୟାସନାଲ ବାଇବଲ ଏକାଡେମୀ ବିଷୟରେ",
+    "about-subtitle": "ବାଇବଲ ଶିକ୍ଷା ମାଧ୍ୟମରେ ଜୀବନକୁ ପରିବର୍ତ୍ତନ କରିବା",
+    "our-story-title": "ଆମର କାହାଣୀ",
+    "our-story-desc": "ଇଣ୍ଟରନ୍ୟାସନାଲ ବାଇବଲ ଏକାଡେମୀ (IBA) ପ୍ରତ୍ୟେକଙ୍କ ପାଇଁ ଅନୁକୂଳ ବାଇବଲ ଶିକ୍ଷା ପ୍ରଦାନ କରିବାର ଦୃଷ୍ଟି ସହିତ ପ୍ରତିଷ୍ଠିତ ହୋଇଥିଲା। ଆମର ଯାତ୍ରା ଏକ ସରଳ ମିଶନ ସହିତ ଆରମ୍ଭ ହୋଇଥିଲା: ସଂଗଠିତ ଶିକ୍ଷା ମାଧ୍ୟମରେ ପରମେଶ୍ବରଙ୍କ ବାକ୍ୟ ପ୍ରଚାର କରିବା।",
+    "our-vision-title": "ଆମର ଦୃଷ୍ଟି",
+    "our-vision-desc": "ବାଇବଲ ଶିକ୍ଷାରେ ଏକ ଗ୍ଲୋବାଲ ନେତା ହେବା, ସେମାନଙ୍କର ସ୍ଥାନ କିମ୍ବା ପୃଷ୍ଏଭୂମି ନିର୍ବିଶେଷରେ ସମସ୍ତ ଲୋକଙ୍କ ପାଇଁ ଗୁଣାତ୍ମକ ବାଇବଲ ଅଧ୍ୟୟନକୁ ଅନୁକୂଳ କରିବା।",
+    "our-mission-title": "ଆମର ମିଶନ",
+    "our-mission-desc": "ଉଦ୍ଭାବନମୂଳକ ଶିକ୍ଷା ପଦ୍ଧତି ମାଧ୍ୟମରେ ବ୍ୟାପକ ବାଇବଲ ଶିକ୍ଷା ପ୍ରଦାନ କରିବା, ସଂସ୍କୃତିଗୁଡିକ ମଧ୍ୟରେ ଆଧ୍ୟାତ୍ମିକ ବୃଦ୍ଧି ଏବଂ ବୁଝାମଣାକୁ ବଢାଇବା।"
+  },
 };
 
 function setLanguage(lang) {
@@ -403,16 +431,24 @@ function setLanguage(lang) {
       ? "தமிழ்"
       : lang === "hi"
       ? "हिंदी"
-      : "ಕನ್ನಡ";
+      : lang === "kn"
+      ? "ಕನ್ನಡ"
+      : "ଓଡ଼ିଆ";
 
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    element.textContent = translations[lang][key] || translations["en"][key];
+  });
+
+  // Also process data-abt attributes for backward compatibility
   document.querySelectorAll("[data-abt]").forEach((element) => {
     const key = element.getAttribute("data-abt");
     element.textContent = translations[lang][key] || translations["en"][key];
   });
 
   // Add this new section to handle placeholders
-  document.querySelectorAll("[data-abt-placeholder]").forEach((element) => {
-    const key = element.getAttribute("data-abt-placeholder");
+  document.querySelectorAll("[data-i18n-placeholder], [data-abt-placeholder]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-placeholder") || element.getAttribute("data-abt-placeholder");
     element.placeholder = translations[lang][key] || translations["en"][key];
   });
 

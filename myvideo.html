@@ -36,6 +36,9 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+    
+    <!-- Translation Script -->
+    <script src="assets/js/myvideo.js"></script>
   </head>
 
   <body class="youtube-gallery-page">
@@ -84,6 +87,7 @@
                   <li><a href="#" data-lang="ta">தமிழ்</a></li>
                   <li><a href="#" data-lang="hi">हिंदी</a></li>
                   <li><a href="#" data-lang="kn">ಕನ್ನಡ</a></li>
+                  <li><a href="#" data-lang="or">ଓଡ଼ିଆ</a></li>
                 </ul>
               </li>
             </ul>
@@ -95,7 +99,7 @@
             href="https://iba-portal.vercel.app/"
             class="btn-portal ms-3 d-none d-xl-inline-block"
           >
-            Portal Login
+            <span data-i18n="portal-login">Portal Login</span>
           </a>
         </div>
       </div>
@@ -105,8 +109,8 @@
       <section id="gallery" class="gallery section-bg py-5">
         <div class="container" data-aos="fade-up">
           <div class="section-title text-center">
-            <h2>Our Video</h2>
-            <p>Explore our collection of videos.</p>
+            <h2 data-i18n="video-section-title">Our Videos</h2>
+            <p data-i18n="video-section-subtitle">Explore our collection of videos.</p>
           </div>
 
           <div class="row gy-4">
@@ -124,8 +128,8 @@
                     allowfullscreen
                   ></iframe>
                 </div>
-                <h4 class="mt-3">Video Title 1</h4>
-                <p>Brief description of the video content.</p>
+                <h4 class="mt-3" data-i18n="video-title-1">Video Title 1</h4>
+                <p data-i18n="video-desc-1">Brief description of the video content.</p>
               </div>
             </div>
 
@@ -143,8 +147,8 @@
                     allowfullscreen
                   ></iframe>
                 </div>
-                <h4 class="mt-3">Video Title 2</h4>
-                <p>Brief description of the video content.</p>
+                <h4 class="mt-3" data-i18n="video-title-2">Video Title 2</h4>
+                <p data-i18n="video-desc-2">Brief description of the video content.</p>
               </div>
             </div>
 
@@ -162,67 +166,8 @@
                     allowfullscreen
                   ></iframe>
                 </div>
-                <h4 class="mt-3">Video Title 3</h4>
-                <p>Brief description of the video content.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="row gy-4">
-            <!-- Video Item -->
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="video-box">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe
-                    class="embed-responsive-item"
-                    src="https://www.youtube.com/embed/video_id1"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <h4 class="mt-3">Video Title 1</h4>
-                <p>Brief description of the video content.</p>
-              </div>
-            </div>
-
-            <!-- Video Item -->
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div class="video-box">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe
-                    class="embed-responsive-item"
-                    src="https://www.youtube.com/embed/video_id2"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <h4 class="mt-3">Video Title 2</h4>
-                <p>Brief description of the video content.</p>
-              </div>
-            </div>
-
-            <!-- Video Item -->
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <div class="video-box">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe
-                    class="embed-responsive-item"
-                    src="https://www.youtube.com/embed/video_id3"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <h4 class="mt-3">Video Title 3</h4>
-                <p>Brief description of the video content.</p>
+                <h4 class="mt-3" data-i18n="video-title-3">Video Title 3</h4>
+                <p data-i18n="video-desc-3">Brief description of the video content.</p>
               </div>
             </div>
           </div>
@@ -242,8 +187,8 @@
                     allowfullscreen
                   ></iframe>
                 </div>
-                <h4 class="mt-3">Video Title 1</h4>
-                <p>Brief description of the video content.</p>
+                <h4 class="mt-3" data-i18n="video-title-1">Video Title 1</h4>
+                <p data-i18n="video-desc-1">Brief description of the video content.</p>
               </div>
             </div>
 
@@ -261,8 +206,8 @@
                     allowfullscreen
                   ></iframe>
                 </div>
-                <h4 class="mt-3">Video Title 2</h4>
-                <p>Brief description of the video content.</p>
+                <h4 class="mt-3" data-i18n="video-title-2">Video Title 2</h4>
+                <p data-i18n="video-desc-2">Brief description of the video content.</p>
               </div>
             </div>
 
@@ -280,8 +225,67 @@
                     allowfullscreen
                   ></iframe>
                 </div>
-                <h4 class="mt-3">Video Title 3</h4>
-                <p>Brief description of the video content.</p>
+                <h4 class="mt-3" data-i18n="video-title-3">Video Title 3</h4>
+                <p data-i18n="video-desc-3">Brief description of the video content.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+            <!-- Video Item -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="video-box">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    class="embed-responsive-item"
+                    src="https://www.youtube.com/embed/video_id1"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h4 class="mt-3" data-i18n="video-title-1">Video Title 1</h4>
+                <p data-i18n="video-desc-1">Brief description of the video content.</p>
+              </div>
+            </div>
+
+            <!-- Video Item -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div class="video-box">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    class="embed-responsive-item"
+                    src="https://www.youtube.com/embed/video_id2"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h4 class="mt-3" data-i18n="video-title-2">Video Title 2</h4>
+                <p data-i18n="video-desc-2">Brief description of the video content.</p>
+              </div>
+            </div>
+
+            <!-- Video Item -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div class="video-box">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    class="embed-responsive-item"
+                    src="https://www.youtube.com/embed/video_id3"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h4 class="mt-3" data-i18n="video-title-3">Video Title 3</h4>
+                <p data-i18n="video-desc-3">Brief description of the video content.</p>
               </div>
             </div>
           </div>
@@ -295,15 +299,15 @@
             <div class="col-12 col-md-10 col-lg-8">
               <div class="banner" data-aos="fade-up">
                 <div class="banner-content text-center">
-                  <h2>Join Our Next Bible Study Session</h2>
-                  <p>
+                  <h2 data-i18n="banner-title">Join Our Next Bible Study Session</h2>
+                  <p data-i18n="banner-subtitle">
                     Discover the depths of God's word in our supportive
                     community
                   </p>
                   <a
                     href="/about"
                     class="btn btn-primary btn-lg px-5 py-3 rounded-3 shadow-lg"
-                    >Apply Now</a
+                    ><span data-i18n="apply-now">Apply Now</span></a
                   >
                 </div>
               </div>
@@ -318,8 +322,8 @@
       <div class="container">
         <div class="copyright text-center">
           <p>
-            © <span>Copyright</span> <strong class="px-1 sitename">IBA</strong>
-            <span>All Rights Reserved</span>
+            © <span data-i18n="copyright">Copyright</span> <strong class="px-1 sitename">IBA</strong>
+            <span data-i18n="all-rights-reserved">All Rights Reserved</span>
           </p>
         </div>
         <div class="social-links d-flex justify-content-center">
